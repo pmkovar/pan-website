@@ -1,0 +1,368 @@
+<!-- BEGIN HEADER -->
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>P A N - A Newsreader for GNOME</title>
+</head>
+<body bgcolor="black">
+
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+   <td valign="top" background="/gfx/menu2/top-stretch.jpg"><a href="/">
+   <img src="/gfx/menu2/pan-logo.jpg" border="0" alt="Pan, a newsreader for GNOME."></a></td>
+   <td><img src="/gfx/menu2/top-right-curl.jpg" alt=""></td>
+   <td width="160" valign="top" rowspan="2" align="right" background="/gfx/menu2/menu-bg.jpg">
+      &nbsp;<p>&nbsp;<p>
+      <a href="/screenshots/"><img src="/gfx/menu2/screenshots.jpg" border="0" alt="screenshots"></a><br>
+      <a href="/download"><img src="/gfx/menu2/download.jpg" border="0" alt="download"></a><br>
+      <a href="/tipjar/"><img src="/gfx/menu2/tip-jar.jpg" border="0" alt="tip jar"></a><p>
+      <a href="/requirements/"><img src="/gfx/menu2/requirements.jpg" border="0" alt="requirements"></a><br>
+      <a href="/manual/"><img src="/gfx/menu2/users-manual.jpg" border="0" alt="user's manual"></a><br>
+      <a href="/features/"><img src="/gfx/menu2/features.jpg" border="0" alt="features"></a><br>
+      <a href="/faq/"><img src="/gfx/menu2/faq.jpg" border="0" alt="FAQ"></a><p>
+      <a href="/"><img src="/gfx/menu2/whats-new.jpg" border="0" alt="what's new"></a><br>
+      <a href="/roadmap/"><img src="/gfx/menu2/roadmap.jpg" border="0" alt="roadmap"></a><br>
+      <a href="/oldnews/"><img src="/gfx/menu2/news-archives.jpg" border="0" alt="news archives"></a><p>
+      <a href="/mailing_lists/"><img src="/gfx/menu2/mailing-lists.jpg" border="0" alt="mailing lists"></a><br>
+      <a href="/bugs/"><img src="/gfx/menu2/bug-reports.jpg" border="0" alt="bug reports"></a><br>
+      <a href="/contact/"><img src="/gfx/menu2/contact.jpg" border="0" alt="contact"></a> 
+   </td>
+</tr>
+
+<tr>
+   <td bgcolor="#FFFFFF" valign="top">
+      <ul>
+
+<!-- END HEADER -->
+
+
+
+
+		<b><font size="5" color="darkred">Old News</font></b><br><p>
+
+		<p><b>February 22, 2000 - Pan 0.7.6 Released</b><br>
+		<font color="red">Note: the killfile format has changed
+		since 0.7.5.  You must delete ~/.pan/data/killfile.db if upgrading
+		from an earlier version of Pan.  All the other data files are
+		fine.</font>
+
+		<p><ul><b>New Features</b>
+		<li>Better thread tracking/killing in killfile utility
+		<li>New "Find Backwards" button in Find dialog
+		<li>New "Space Reading": hitting the space key will page down in the current article; at the end of the article, the next article is loaded.
+		<li>Added "Save Attachment As..." feature
+		<li>New ability to show all article headers
+		<li>New color for watched article threads.
+		<li>New feature: download entire article thread.
+		<li>New feature: User can now plug in an external mailer to use when replying by mail
+		</ul>
+
+		<p><ul><b>Updated</b>
+		<li>Updated Danish, French, German, Italian, Korean, Norwegian, Polish, and Spanish translations.
+		<li>Improved Preferences Dialog layout.
+		</ul>
+
+		<p><ul><b>Bug Fixes</b>
+		<li>Pan-freezes-on-startup bug fixed.
+		<li>Memory leaks fixed.
+		<li>Double-click no longer expands the article tree; it now just reads the articles like it did up through 0.7.3.  (Click on the +/- box to expand the tree.)
+		<li>Cached articles can now be read while offline, as you would expect.
+		<li>Mark article/all read/unread works properly.
+		<li>Fixed infinite loop when hitting "next" in article Find dialog if all the articles had been filtered out.
+		<li>We now collapse double periods at the start of a line as per RFC977 section 2.4.1.  This will stop a "corrupt decode" bug.
+		</ul>
+
+		<p><b>February 10, 2000 - Pan 0.7.5 Released</b><br>
+		<font color="red">The file formats have changed since Pan 0.7.3.
+		You will need to remove your ".pan" directory if upgrading from 0.7.3 or older.</font>
+		<br>This is a bugfix release.
+		<p><ul><b>New Features</b>
+		<li>Added rot13 support.
+		<li>Better author and subject message sorting.
+		  </ul>
+		<p><ul><b>Updated</b>
+		  <li>Updated French, Italian, Korean, and Norwegian translations.
+		  </ul>
+		<p><ul><b>Bug Fixes</b>
+		<li>The statusbar didn't update when the grouplists were loading in 0.7.4.
+		<li>mark-all-read-crash bug fixed.
+		<li>crash-while-loading-grouplist bug fixed.
+		<li>sincle-click article reading works again.
+		<li>fixes to the article filter
+		<li>I18N Fixes.
+		<li>A few others.
+		   </ul>
+
+		<p><b>February 8, 2000 - Pan 0.7.4 Released</b><br>
+		<p><ul><b>New Features</b>
+		  <li>Added ability to view and sort articles by the number of unread children in a thread.
+		  <li>New article filtering based on read/unread state, binary/text, etc.
+		  <li>Single-part images now are flagged as binaries
+		  <li>"Get All Articles" is now faster
+		  <li>Find Articles dialog now begins its search at the current article, rather than at the top of the article list.
+		  <li>Better (self-evaluated)  Good Newskeeping Seal of Approval conformance (ten checklist items!)
+		  <li>Friendlier new user startup
+		  <li>Added French, Norwegian translations
+		  <li>Better support for 64-bit machines
+		  </ul>
+		<p><ul><b>Updated</b>
+		  <li>Updated German, Italian, Spanish translations
+		  </ul>
+		<p><ul><b>Bug Fixes</b>
+		   <li>Many, many memory leaks & corruption bugs fixed.  (Thanks, Purify)
+		   <li>Sort-twice-and-crash bug fixed.
+		   <li>Taskbar-at-the-bottom-resizes bug fixed.
+		   <li>We now dispose of dead sockets properly.
+		   <li>Get All/Get New doesn't erase old articles' read/unread state anymore
+		   <li>Bug fixes to "Reply" feature
+		   <li>Expire-header bugfix
+		   <li>Fewer (any?) "Expected X messages; only found Y messages" messages.
+		   <li>Handle SIGPIPE errors gracefully.
+		   </ul>
+
+
+		<p><b>January 27, 2000 - Pan 0.7.3 "Snow Day"</b><br>
+		This is an interim release of all the fixes & features written by the Pan development
+		team while snowed in this week.
+		<p><ul><b>New Features</b>
+		  <li>Faster loading of binaries newsgroups</li>
+		  <li>"Delete" key mapped to delete articles.</li>
+		  <li>Threaded articles can now be sorted by author, date, or subject</li>
+		  <li>Better (self-evaluated) Good Newskeeping Seal of Approval rating</li>
+		  <li>Added support in the killfile to filter out articles with less than N lines.  For the alt.binaries fans.</li>
+		  <li>New preferences option: show only the first part of completed multipart binary posts</li>
+		</ul>
+		<p><ul><b>Bug Fixes</b>
+		  <li>Memory leaks fixed.</li>
+		  <li>Article sorting from the article list works again.</li>
+		  <li>Threaded articles default to sort by date again.</li>
+		  <li>Unsubscribe Group bug fixed.</li>
+		  <li>Bug where new posts would wrongly be posted as followups fixed.</li>
+		  <li>Solaris compile problems.</li>
+		  <li>i18n improvements</li>
+		  </ul>
+
+
+		<b>January 25, 2000 - Pan 0.7.2 released</b><br>
+		<p><ul><b>New Features</b>
+		  <li>Article filtering added.</li>
+		  <li>New article toolbar for easy filtering/sorting of articles.</li>
+		  <li>Improved killfile support.</li>
+		  <li>New Swedish translation.</li>
+		  <li>Updated Korean, Danish, and Polish translations.</li>
+		</ul>
+		<p><ul><b>Bug Fixes</b>
+		  <li>More gui lockup fixes.  Don't these things ever go away?</li>
+		  <li>Some servers wouldn't accept the date format given by Pan when posting.  Pan now uses a more universal date string.</li>
+		  <li>The "Find" dialog now works correctly.</li>
+		  <li>The default directories preferences weren't being set/used/saved correctly.</li>
+		  <li>Pan would crash if all the articles in a group were filtered out by the killfile.</li>
+		  <li>Pan would go into an infinite loop when hitting next/previous unread article if the articles were already all read.  My, but these bugfix sections are depressing to write.</li>
+		</ul>
+
+		  <b>January 12, 2000 - Pan 0.7.1 released</b><br>
+		<p><ul><b>Bug Fixes</b>
+		  <li>"Get all" groups / "get new" groups was crashing.
+		  <li>More gui lockup fixes.  Don't these things ever go away?
+		  <li>The reply/followup menu options in the articlelist popup didn't work properly.
+		  <li>Layout mode wasn't loading the articlelist when user selected a group from the keyboard.
+		  <li>Some dialogs (like the "no groups for this server; load now?") were getting lost behind the main window.  Now they are always in front of the main window.
+		  <li>Decode fixes.
+		  <li>Open multiple attachments fixed.
+		  <li>Printing articles from the main window (instead of a popup article
+		  <li>Multiple fixes to the prefs code.
+		  <li>Other stuff we forgot to document.
+		</ul>
+
+		  <b>January 10, 2000 - Pan 0.7.0 released</b><br>
+		<p><ul><b>New Features</b>
+		  <li>Added ability to download/decode more than one item at a time.  A thread for non-decode activity is reserved set aside so that messages can be read even when the decode queue is full.
+		  <li>Article cache management
+		  <li>Keyboard navigation for groups, articles, unread articles
+		  <li>Added ability to email a reply to posts
+		  <li>"Wildmat"-style pattern matching in grouplist & find dialog.  This is the style used by the find command and most shells.  In short, "comp.lang*" now works.
+		  <li>Messages can now be saved as text files.
+		  <li>Early printing support added.  (Waiting for gnome-print to finalize; this is an interim fix)
+		  <li>Followup-to, reply-to, and "followup-to: poster" headers supported
+		  <li>Added ability to change servers during a download.
+		  <li>Added new --debug command-line options
+		  <li>Group descriptions are now displayed in the grouplist.
+		  <li>Multibyte fonts now supported
+		  <li>Article list loading sped up, again.
+		  <li>Toolbar now shows number of actions (get new groups, get new headers, decode multipart, etc) queued and waiting for a server connection.
+		  <li>Better (self-evaluated) "good newskeeping seal of approval" rating
+		  <li>Better conformance to "son-of-rfc-1036" document
+		</ul>
+		<p><ul><b>Bug Fixes</b>
+		  <li>y2k posting date bug
+		  <li>many decode bugs
+		  <li>freezeup when loading articles, changing groups, decoding/reading messages.  multithreaded Gtk articles are tricky to debug; thanks for all the bug reporters.
+		  <li>decoded files were saved in the wrong directory when the user changed groups during the decode
+		  <li>multipart messages were being flagged as complete even if the last part was missing.
+		  <li>Bug fix: Pan would go into an infinite loop if corrupt data was downloaded from the nntp server.
+		  <li>and others, including our old favorites: memory leaks plugged and memory corruption fixed.
+		</ul><p>
+
+
+		  <b>December 14, 1999 - Pan 0.6.7 released</b><br>
+		<ul>
+		  <li>Fixed the bug with posting new messages, thanks to <a href="mailto:jcostom@jasons.org">Jason Costomiris</a> for reporting this bug.</li>
+		  <li>Fixed "mark unread" bug.  Thanks to <a href="mailto:nephilim@javanet.com">David Bicking</a> and <a href="sitz@onastick.net">Noah Robin</a> for reporting this bug.</li>
+		  <li>Fixed a bug with decoded attachments (with unknown filenames) overwriting the same file, thanks to <a href="mailto:rbu1@cec.wustl.edu">Rich Unger</a> for the patch.</li>
+		  <li>Fixed a bug with overwhelming X traffic during download/decode articles.  Thanks to <a href="mailto:frank@unternet.org">Frank de Lange</a> for reporting this bug.</li>
+		  <li>Many, many memory leaks plugged.  Thanks to <a href="mailto:support@rational.com">Purify</a> for reporting this bug.</li>
+		  <li>Slightly faster startup.</li>
+		  <li>Updated Korean translation, thanks to <a href="mailto:Keizi@mecom.net">Kang JeongHee</a>.</li>
+		</ul><p>
+
+		  <b>December 13, 1999 - Pan 0.6.6 released</b><br>
+		<ul>
+		  <li>New feature: "Open Article in New Window" (including ability to save full text of a message to a file.)</li>
+		  <li>New feature: "Get New Groups".</li>
+		  <li>New feature: Killfile support (filter out spam messages or authors).</li>
+		  <li>New feature: User-configurable article headers.</li>
+		  <li>Reply-To and Followup-To now supported.</li>
+		  <li>Many improvements to message Posting and Replying.</li>
+		  <li>Made the druid for first-time users even simpler.</li>
+		  <li>Article expiration improved, should only be expiring articles that no longer exist on the server now.</li>
+		  <li>Article Tree speedups; the article sort lockup bug has been fixed.</li>
+		  <li>Added support for regular expressions in group/article lists.</li>
+		  <li>Updated Italian translation.</li>
+		  <li>Updated Polish translation.</li>
+		  <li>German Translation added, thanks to <a href="mailto:s2mdalle@titan.vcu.edu">Matthew D. Allen</a>.</li>
+		  <li>Fixed bug in new fonts being applied to display even when the user hasn't specifically set or changed the font in the Preferences.</li>
+		  <li>Fixed a bug with line counts being sorted incorrectly, thanks to <a href="mailto:kncbram@hawaii.rr.com">Kevin Brammer</a> for reporting this bug.</li>
+		  <li>Fixed bugs with "Group Empty".</li>
+		  <li>Speed tweaks, bug fixes, and many code cleanups.</li>
+		</ul>
+		  <b>December 2, 1999 - Website Updates</b><br>
+		  Worked on updating the site a little bit, it's now fully <a href="http://validator.w3.org/check/referer">HTML 4.0</a> compliant.<p>
+		  
+		  <b>December 1, 1999 - Pan 0.6.5 released</b><br>
+		<ul>
+		  <li>Fixed bugs that prevented replying to messages (and improved mem usage and performance by removing old variables in the process).</li>
+		  <li>Fixed a serious bug with keyboard bindings and switching layouts.  Thanks to <a href="mailto:jshoberg@cbd.net">J.F. Shoberg</a> for reporting this bug.</li>
+		  <li>Fixed bugs with deleting/marking read/marking unread articles corrupting total/unread counts.</li>
+		  <li>Fixed memory leaks/corruption bugs in posting module.</li>
+		  <li>Fixed possible problems with TCP connection code, thanks to <a href="mailto:schornic@math.fsu.edu">Jeff Schornick</a> for the suggestion.</li>
+		  <li>Paned layout preserves pane positions (widths), thanks to <a href="mailto:chris@black-sun.co.uk">Chris Jones</a> for the patch.</li>
+		  <li>Cosmetic improvements to the article and grouplist list.</li>
+		  <li>Fixed a bug causing crashes when trying to read messages with zero lines, thanks to <a href="mailto:vega@mail.rit.edu">Michael Dungan</a> for reporting this bug.</li>
+		</ul><p>
+
+		<b>November 29, 1999 - Pan 0.6.4 released</b><br>
+		<ul>
+		  <li>Replaced gdbm use with Berkeley DB for speed reasons.  What was a 140-second load now takes 4 seconds!</li>
+		  <li>Marking articles as read, unread now works correctly.</li>
+		  <li>Deleting articles now works correctly.</li>
+		  <li>Added Italian translation, thanks to <a href="mailto:dmanzoni@racine.ra.it">Davide Manzoni</a>.</li>
+		  <li>Updated Spanish translation.</li>
+		  <li>Updated Polish translation.</li>
+		  <li>Updated Korean translation.</li>
+		  <li>Should now build and run on FreeBSD out of the box.</li>
+		  <li>Find dialog now has "find unread only" switch and remembers users' preferences each time it's popped up.</li>
+		  <li>Threading articles by message-id works again.  (Broken in 0.6.3)</li>
+		  <li>Added signature file support (set it in the User Preferences).</li>
+		  <li>Speed improvements in group list and message text displays.</li>
+		  <li>Mem leaks plugged, bugs fixed, and other speedups.</li>
+		</ul>
+
+		<b>November 15, 1999 - Pan 0.6.3 released</b><br>
+		<ul>
+		  <li>Article threading rewritten from scratch, it's now very very fast.</li>
+		  <li>Session management and --geometry string parsing added, thanks to <a href="mailto:gregm@comstar.net">Gregory McLean</a>.</li>
+		  <li>Updated Korean translation.</li>
+		  <li>Polish translation added, thanks to <a href="mailto:chatkops@safona.tuniv.szczecin.pl">Karol Chatkowski</a>.</li>
+		  <li>Spanish translation added, thanks to <a href="mailto:cadenas@arrakis.es">Antonio de la Torre</a>.</li>
+		  <li>Serbian translation added, thanks to <a href="mailto:zolika@sezampro.yu">Zoltan Csala</a>.</li>
+		  <li>Improved the Find dialog to allow searching for authors and toggling case sensitivity.</li>
+		  <li>Pan now builds on Solaris out of the box.</li>
+		  <li>Fonts used in the group listing, article listing, and in the message bodies can be customized in the Preferences now.</li>
+		  <li>Colors used in the article listing can be customized in the Preferences.</li>
+		  <li>Per-group configuration abilities added: now you can have download files from each group go to a configurable directory.</li>
+		  <li>Complete multipart messages get their line counts summed up.</li>
+		  <li>Bug fixes and mem leak fixes.</li>
+		</ul>
+
+		<b>November 1, 1999 - Pan 0.6.2 released</b><br>
+		There's just too many improvements to list here, grab it and
+		read the NEWS file.<br>
+		The <a href="/faq/">FAQ</a> is up finally too.  Take a peek at it and send us suggestions for more questions/answers
+		if you think of any that aren't there.<br>
+		<br>
+		
+		<b>October 30, 1999</b><br>
+		Welcome <a href="mailto:charles@superpimp.org">Charles Kerr</a> to the
+		development team.<br>
+		<br>
+		
+		<b>October 15, 1999 - Pan 0.6.1 released</b>
+		<ul>
+		  <li>pan.desktop donated by Datazone, now we sneak our way into your GNOME main menu (in the Internet submenu)</li>
+		  <li>Danish partial translation contributed by <a href="mailto:birger.langkjer@image.dk">Birger Langkjer</a>.. Thanks (our apologies for not having all the strings marked or all files included as of 0.6.0 to make it a 'full' translation.)</li>
+		  <li>i18n improvements, hopefully marking all strings and including all necessary files.</li>
+		  <li>serious bug in 'online/offline prompt' operation in paned mode fixed.</li>
+		  <li>improved prefs to help prevent authorization problems.</li>
+		  <li>the Log Viewer is (mostly) finished!  Check it out and give us some feedback.</li>
+		  <li>progressbar errors/miscalculations for 'get all' and 'get new' should all be fixed.</li>
+		  <li>statusbar improved to show counting of header totals while downloading.</li>
+		</ul>
+		<br>
+
+		<b>October 4, 1999 - Pan 0.6.0 released</b><br>
+		<br>
+
+		<b>September 21, 1999 - Pan 0.5.2 released</b><br>
+		Pan version 0.5.2 has been released with some significant
+		changes to the network/queue code.  Let us know how it works
+		for you!<br>
+		<br>
+
+		<b>September 16, 1999 - Pan 0.5.1 released</b><br>
+		Pan version 0.5.1 has been release with a configure
+		script that correctly checks for the right library versions.
+		Pan no longer works with the stock Redhat Gnome RPMs.
+		You will need to upgrade!<br>
+		<br>
+
+		<b>September 15, 1999 - Pan 0.5.0 released</b><br>
+		Pan version 0.5.0 is here.<br>
+		<br>
+
+		<b>September 7, 1999 - Pan 0.4.9 released</b><br>
+		Pan version 0.4.9 has been released!<br>
+		<br>
+
+		<b>September 7, 1999</b><br>
+		I setup a CVS server and a pan-devel mailing list to encourage others to 
+		help me with Pan.  If you are interested in helping please 
+		<a href="mailto:pan@superpimp.org">let us know!</a>
+		Anonymous CVS access could be made available too, if enough people are
+		interested.<br>
+		<br>
+
+		<b>August 6, 1999</b><br>
+		I started a News section so this page isn't
+		quite so boring.  Also, I'd like to thank 
+		everyone who had nice things to say about Pan,
+		it was very encouraging.<br>
+		<br>
+
+		<b>August 5, 1999 - Pan 0.4.3 released</b><br>
+		Pan version 0.4.3 is released.
+
+
+
+<!-- BEGIN FOOTER -->
+
+&nbsp;<p>&nbsp;<p>&nbsp;<p>
+		</ul>
+	</td>
+	<td bgcolor="white">&nbsp;</td><!-- this is the top-right-curl column -->
+	</tr>
+	</table>
+</body>
+</html>
+
+<!-- END FOOTER -->

@@ -1,0 +1,53 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+ <head>
+  <title>Index of /download/releases/0.110</title>
+ </head>
+ <body>
+<h1>Index of /download/releases/0.110</h1>
+<table><tr><th><img src="/icons/blank.gif" alt="[ICO]"></th><th><a href="?C=N;O=D">Name</a></th><th><a href="?C=M;O=A">Last modified</a></th><th><a href="?C=S;O=A">Size</a></th><th><a href="?C=D;O=A">Description</a></th></tr><tr><th colspan="5"><hr></th></tr>
+<tr><td valign="top"><img src="/icons/back.gif" alt="[DIR]"></td><td><a href="/download/releases/">Parent Directory</a></td><td>&nbsp;</td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="fedora-core-5/">fedora-core-5/</a></td><td align="right">11-Sep-2006 08:40  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="source/">source/</a></td><td align="right">27-Jan-2008 22:38  </td><td align="right">  - </td></tr>
+<tr><th colspan="5"><hr></th></tr>
+</table>
+<pre>
+
+August 27, 2006 - Pan 0.110: "Beable Beable"
+
+This is "weekly" beta #21 of a full Pan redesign and rewrite in C++.
+The quick turnaround time between each beta is to squash as many bugs
+as possible before the pending 1.0 release.  Feedback and bug reports
+are very much encouraged.
+
+This week's release includes a major speedup for large queues and a
+handful of minor bugs. This week's bug reports are encouraging -- there
+are fewer of them, and most of them were about minor issues.
+Next week's release will be Pan 1.0 Release Candidate 1.
+
+Thanks to the people whose suggestions were incorporated into this release:
+Jeff Berman, Frederic Bezies, Kevin Brammer, Benjamin Esham, K Haley,
+Samuli Karkkainen, Kim, Philippe Morey, Phil Richards, Walt, and
+"Chooses to Remain Anonymous".
+
+Bug tickets addressed in this release: <a href="http://tinyurl.com/pge8c">http://tinyurl.com/pge8c</a>
+
+Tweaks
+ 352170 Huge speedups when processing large task queues.
+ 351701 Can't back out of Posting Profile creation
+ 352232 gmime conditionally compiles with threads, so we need to link with gthread
+ 351258 Updated French translation.
+ 352092 small build problem when compiling Pan in a separate directory from the source.
+ 353042 Preferred Application popups refer to "OS/X" rather than "OS X"
+Bugs
+ 352116 Crash when images are left-clicked
+ 352155 "Show matching articles' Threads" option not applied upon startup
+ 352179 Alt + g shortcut double booked
+ 345626 'queued' triangle in header pane is inconsistent for articles already queued when starting Pan
+ 353018 Some phrases are italicised incorrectly, as in "/usr/bin/pan"
+ 352798 '%g' option didn't work in the group-preferences save directory.
+
+cheers,
+Charles
+</pre>
+</body></html>

@@ -1,0 +1,74 @@
+/* Basic tags */
+
+body {
+	background-color: white;
+	color: black;
+	font-family: sans-serif;
+	margin: 0px;
+}
+
+
+/* News Items */
+
+DIV.item {
+	padding-top: 10px;
+	padding-bottom: 5px;
+}
+DIV.item-title {
+	font-weight: bold;
+	color: black;
+}
+DIV.item-content {
+	margin-left: 30px;
+	color: black;
+}
+
+/* Changelog tables */
+
+.changelog {
+	border: thin solid black;
+	width: 100%;
+}
+.changelog tr {
+}
+.changelog tr td {
+	padding-top: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	font-size: smaller;
+}
+.changelog .new {
+        background: #00AA00;
+	color: white;
+	padding: 5px;
+	text-align: center;
+	font-weight: bold;
+}
+.changelog .tweaks {
+	background: yellow;
+	color: black;
+	padding: 5px;
+	text-align: center;
+	font-weight: bold;
+}
+.changelog .bugs {
+	background: red;
+	color: white;
+	padding: 5px;
+	text-align: center;
+	font-weight: bold;
+}
+.changelog .tips {
+	background: blue;
+	color: white;
+	padding: 5px;
+	text-align: center;
+	font-weight: bold;
+}
+.changelog .config {
+	background: orange;
+	color: black;
+	padding: 5px;
+	text-align: center;
+	font-weight: bold;
+}

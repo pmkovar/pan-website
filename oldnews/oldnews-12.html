@@ -1,0 +1,614 @@
+
+
+<!-- BEGIN HEADER -->
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>P A N - A Newsreader for GNOME</title>
+</head>
+<body bgcolor="black">
+
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+   <td valign="top" background="/gfx/menu2/top-stretch.jpg"><a href="/">
+   <img src="/gfx/menu2/pan-logo.jpg" border="0" alt="Pan, a newsreader for GNOME."></a></td>
+   <td><img src="/gfx/menu2/top-right-curl.jpg" alt=""></td>
+   <td width="160" valign="top" rowspan="2" align="right" background="/gfx/menu2/menu-bg.jpg">
+      &nbsp;<p>&nbsp;<p>
+      <a href="/screenshots/"><img src="/gfx/menu2/screenshots.jpg" border="0" alt="screenshots"></a><br>
+      <a href="/download"><img src="/gfx/menu2/download.jpg" border="0" alt="download"></a><br>
+      <a href="/tipjar/"><img src="/gfx/menu2/tip-jar.jpg" border="0" alt="tip jar"></a><p>
+      <a href="/requirements/"><img src="/gfx/menu2/requirements.jpg" border="0" alt="requirements"></a><br>
+      <a href="/manual/"><img src="/gfx/menu2/users-manual.jpg" border="0" alt="user's manual"></a><br>
+      <a href="/features/"><img src="/gfx/menu2/features.jpg" border="0" alt="features"></a><br>
+      <a href="/faq/"><img src="/gfx/menu2/faq.jpg" border="0" alt="FAQ"></a><p>
+      <a href="/"><img src="/gfx/menu2/whats-new.jpg" border="0" alt="what's new"></a><br>
+      <a href="/roadmap/"><img src="/gfx/menu2/roadmap.jpg" border="0" alt="roadmap"></a><br>
+      <a href="/oldnews/"><img src="/gfx/menu2/news-archives.jpg" border="0" alt="news archives"></a><p>
+      <a href="/mailing_lists/"><img src="/gfx/menu2/mailing-lists.jpg" border="0" alt="mailing lists"></a><br>
+      <a href="/bugs/"><img src="/gfx/menu2/bug-reports.jpg" border="0" alt="bug reports"></a><br>
+      <a href="/contact/"><img src="/gfx/menu2/contact.jpg" border="0" alt="contact"></a> 
+   </td>
+</tr>
+
+<tr>
+   <td bgcolor="#FFFFFF" valign="top">
+      <ul>
+
+<!-- END HEADER -->
+
+<br><b><font size="5" color="darkred">Old News</font></b><br><p>
+
+<!-- NEWS: 0.12.94 -->
+
+	<p><b>August 11, 2002 - New Release:<br>
+	<a name="01294" href="/download/">0.12.94 &quot;Are we there yet?&quot;</a></b><br>
+
+	<ul>
+	This, the fifth 0.13.0 beta, fixes a couple of bugs with reading
+	non-English articles.
+	<p>
+	0.13.0 will be released this week,
+	in time for bundling with the new Red Hat and Mandrake releases,
+	so this is a dry run to make sure we haven't screwed anything up at the last minute.
+	We <b>strongly</b> encourage testers to torture
+	this final beta and <a href="/bugs/">report any bugs</a>.
+	</ul>
+
+	<p>
+	<ul><b>Updates</b>
+	<p><li>added "galeon --new-tab" to the dropdown list
+               of browsers in the preferences dialog.
+               Thanks to Martin Tomasek for suggesting this.
+	       (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=89510">#89510</a>)
+	</ul>
+
+	<p>
+	<ul><b>Bug Fixes</b>
+	<p><li>Try harder to display articles whose newsreaders lied
+               about the charset in the headers.  I'm not naming names,
+               but the newsreader begins with a `K'. :)
+        <p><li>Fix bug that wasn't converting text to UTF-8 before populating
+               the header pane, causing some strings to be truncated or lost.
+               Thanks to Christian Lohmaier for reporting this bug.
+	       (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=90068">#90068</a>)
+        <p><li>A couple of strings needing translation weren't marked as such.
+               Thanks to Pablo del Campo for reporting this bug.
+	       (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=90115">#90115</a>)
+        <p><li>Fixed a couple of accelerator typos in the main menu and composer.
+               Thanks to Duarte "HappyGuy" Loreto and Philippe Gramoull for
+               reporting these bugs.
+        <p><li>A handful of small translation fixes.
+               Thanks to Benjamin Greiner for reporting them.
+	       (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=90036">#90036</a>,
+	        <a href="http://bugzilla.gnome.org/show_bug.cgi?id=90041">#90041</a>,
+	        <a href="http://bugzilla.gnome.org/show_bug.cgi?id=90045">#90045</a>)
+        <p><li>Fixed a couple of minor memory leaks when reading/writing
+               xml config files.
+	</ul>
+	<p>&nbsp;
+
+<!-- NEWS: 0.12.93 -->
+
+	<p><b>August 5, 2002 - New Release:<br>
+	<a name="01293" href="/download/">0.12.93 &quot;life is but a dewdrop on the lotus leaf&quot;</a></b><br>
+
+	<ul>
+	This is the fourth 0.13.0 beta release.
+	It fixes a small handful of bugs, mostly related to saving attachments or posting articles.
+	Barring any showstoppers, this <i>is</i> 0.13.0 except for the language translations,
+	so please downloaded it, test it, and report anything unusual.
+	</ul>
+
+	<p>
+	<ul><b>Bug Fixes (sorted by age)</b>
+	<p><li>Fixed another 0.12.90 crash that occurred in the composer.
+               Thanks to DevilKin for reporting this bug.
+	       (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=89603">#89603</a>)
+	<p><li>Fix 0.12.90 bug that caused the Message-Id header of some
+               outgoing posts to be folded.  This appears to be legal,
+               but annoys some NNTP servers.
+	       (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=88100">#88100</a>)
+        <p><li>Fix 0.12.90 bug that encoded outgoing posts in the wrong charset.
+               Thanks to Martin Tomasek for reporting this bug.
+	       (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=88670">#88670</a>)
+        <p><li>Fixed 0.12.90 bug that caused ``save article attachments'' to
+               not mark the article as read.  Thanks to Aaron Digulla for
+               reporting this bug.
+	       (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=88729">#88729</a>)
+        <p><li>Fixed 0.12.90 bug ``Show All Headers'' didn't show mime headers.
+               Thanks to Christian Lohmaier for reporting this bug.
+	       (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=88532">#88532</a>)
+        <p><li>Fixed some minor 0.12.90 memory leaks.
+        <p><li>Fixed 0.12.0 bug that caused Pan to crash on mouseover of some
+               URLs.  Thanks to DevilKin for reporting this bug.
+	       (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=89584">#89584</a>)
+        <p><li>Fixed 0.12.0 shortcut bug in the feedback window.
+               Thanks to Philippe Gramoull for reporting this bug.
+	</ul>
+	<p>&nbsp;
+
+<!-- NEWS: 0.12.92 -->
+
+	<p><b>July 31, 2002 - New Release:<br>
+	<a name="01292" href="/download/">0.12.92 &quot;The best writing is rewriting&quot;</a></b><br>
+
+	<ul>
+	This is the third 0.13.0 beta release.
+	It fixes twenty bugs, focusing on posting articles, charset support, and memory leaks. 
+	</ul>
+
+	<p>
+	<ul><b>Updates</b>
+	<p>
+        <li>Added windows-1250 and UTF-8 to the charset picker.
+            Thanks to Martin Tomasek for submitting this code.
+	    (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=88669">#88669</a>)
+	</ul>
+
+	<p>
+	<ul><b>Bug Fixes (sorted by age)</b>
+	<p>
+        <li>Fixed 0.12.90 bug that cut the `Newsgroups:' header out of
+            articles after posting them, and before saving them in
+            the pan.sent folder.
+	<p>
+        <li>Fixed 0.12.90 bug that crashed Pan when canceling articles.
+            Thanks to Martin Tomasek for reporting this bug.
+	    (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=88671">#88671</a>)
+	<p>
+        <li>Fixed 0.12.90 bug that crashed Pan if the user selected
+            the first row (the one with the group name) and some articles,
+            then hit `return' to read them.  Pan thought the Group was an
+            Article.  Thanks to Kevin for reporting this bug.
+	    (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=88921">#88921</a>)
+	<p>
+        <li>Fixed 0.12.90 bug that failed to honor the `Don't Generate
+            Message-ID Header' checkbox in the `Edit News Server' dialog.  
+            Thanks to Markus Schorpp for reporting this bug.
+	    (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=88092">#88092</a>)
+	<p>
+        <li>Fixed 0.12.90 bug in the toolbar that tried to invoke `Reply'
+            instead of `Followup' when the `Followup' button was pressed.
+            Thanks to Brian Morrison for reporting this bug.
+	    (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=88257">#88257</a>)
+	<p>
+        <li>Fixed 0.12.90 typo that invoked `reply' instead of `followup'
+            when pressing `followup' on the toolbar.
+            Thanks to Brian Morrison for reporting this bug.
+	    (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=88257">#88257</a>)
+	<p>
+        <li>Fixed 0.12.0 bug that would pull up the `save as' dialog
+            when clicking on replies to multipart articles or on
+            incomplete articles.
+	<p>
+        <li>Fixed 0.12.0 bug that dropped the ability to queue up a
+            handful of binary picture articles by pressing the space key
+            repeatedly.  Thanks to Alan for reporting this bug.
+	    (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=88969">#88969</a>)
+	<p>
+        <li>Fixed 0.12.0 bug that mishandled improperly-encoded headers.
+            Thanks to Toivo Leedjarv for reporting this bug. 
+	    (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=87065">#87065</a>)
+	<p>
+        <li>Fixed 0.12.0 bug that prevented the user from being able to
+            hit space repeatedly to queue downloads for a set of articles.
+            Thanks to Alan for reporting this bug.
+	    (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=88969">#88969</a>)
+	<p>
+        <li>Fixed 0.12.0 bug where the external editor used when composing
+            a message had to use UTF-8.
+            Thanks to Martin Tomasek for reporting this bug.
+	    (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=85289">#85289</a>)
+	<p>
+        <li>Fixed 0.9.3 bug that failed to notice `disk full' errors
+            when decoding attachments.  Pan now fails the decode task
+            the user can free up some space and requeue the task without
+            having to re-download the article bodies.
+            Thanks to Wolfgang Karall for reporting this bug.
+	    (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=79993">#79993</a>)
+	<p>
+        <li>Fix 0.8.1b3 bug that forced folder names to be lowercase.
+            Thanks to Himanshu Gohel for reporting this bug.
+	    (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=74892">#74892</a>)
+	<p>
+        <li>Now properly threads multiparts with subjects like
+            `some text (1of2).part01.P01 (1/45)'.
+            Thanks to Roman Moeller for reporting this bug.
+	    (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=82751">#82751</a>)
+	<p>
+        <li>Fixed old bug that caused Pan to go into an infinite loop
+            when trying to parse a completely empty post.
+            Thanks to William MacCracken for reporting this bug.
+	    (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=89260">#89260</a>)
+	<p>
+        <li>Fixed about a dozen minor memory leaks.  Julian Seward's
+            excellent tool <a href="http://developer.kde.org/~sewardj/">Valgrind</a>
+	    found these.  IMO it's the closest thing to Purify on Linux.
+	</ul>
+
+<!-- NEWS: 0.12.91 -->
+
+	<p><b>July 22, 2002 - New Release:<br>
+	<a name="01291" href="/download/">0.12.91 &quot;If you were in Peter Pigeonhole's moccasins&quot;</a></b><br>
+
+	<ul>
+	This second beta for 0.13.0 fixes some serious bugs from the first beta
+	and adds support for executable signature files (a la "fortune").
+	</ul>
+
+	<p>
+	<ul><b>Bug Fixes</b>
+	<p>
+        <li>Fix 0.12.90 bug that crashed when reading expired articles.
+            Thanks to Alex Jaques for reporting this bug.
+	    (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=88665">#88665</a>)
+	<p>
+        <li>Fix 0.12.90 bug that caused "show all headers" to not
+            take effect until the next article was read.
+	    (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=88790">#88790</a>)
+	<p>
+        <li>Fixed 0.12.0 bug the prevented the toggle "Show Group Pane",
+            "Show Header Pane", and "Show Body Pane" buttons from working.
+            Thanks to Mike Robinson for reporting this bug.
+	    (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=86881">#86881</a>)
+	<p>
+        <li>Fixed a handful of 0.12.90 Reply and Followup-To bugs.
+            Thanks to DevilKin and Laurent Duperval for reporting
+            these bugs.
+	    (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=88010">#88010</a>,
+	     <a href="http://bugzilla.gnome.org/show_bug.cgi?id=87854">#87854</a>)
+	<p>
+        <li>Fixed 0.12.90 log message that confused the log window.
+            Thanks for DevilKin for reporting this bug.
+	    (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=88008">#88008</a>)
+	<p>
+        <li>Fixed 0.12.90 problem with "%g" and "%G" not being
+            substituted correctly when saving articles/attachments.
+            Thanks to quimvy72 for reporting this bug.
+	    (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=88027">#88027</a>)
+	<p>
+        <li>Fixed 0.12.0 bug that broke "add to front of queue".
+            Thanks to Alen Williams for reporting this bug.
+	    (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=88106">#88106</a>)
+	<p>
+        <li>Fixed 0.12.0 bug that crashed when editing filters from
+            the rule dialog.
+	    (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=86215">#86215</a>)
+	<p>
+        <li>Fixed 0.12.0 bug that didn't check the user's "get new
+            headers in subscribed groups on startup" setting.
+	    (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=88255">#88255</a>)
+	<p>
+        <li>Added ctrl-return back as the shortcut for "send now".
+            Looks like this got dropped by accident in 0.12.0.
+            Thanks to Laurent Duperval for reporting this.
+	    (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=88386">#88386</a>)
+	<p>
+        <li>Fixed minor 0.11.90 bug.  When the user clicks on a line,
+            the radiobutton on that line is supposed to select itself.
+	<p>
+        <li>Fixed obscure 0.9.x bug in marking groups articles read
+            that could munge the unread article count.
+	</ul>
+ 
+
+<!-- NEWS: 0.11.4 -->
+
+	<p><b>July 15, 2002 - New Release:<br>
+        <a name="0114" href="/download/">0.11.4 &quot;Never discuss religion, politics, or toast.&quot;</a></b><br>
+
+	<ul>
+	This is a final courtesy bugfix release on the Gnome 1.4 branch,
+	consisting of about a dozen fixes already in the Gnome 2 branch,
+	for people who don't have root on their systems and can't upgrade
+	to gtk2.  Everyone else is encouraged to use Pan 0.12.1 or higher
+	instead.
+	</ul>
+
+	<p>
+	<ul><b>Bug Fixes</b>
+	<p>
+        <li>Fixed long-standing bug that could cause Pan to crash if the
+            grouplist file was corrupt.  Thanks to Adam M for reporting this bug.
+	    (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=72435">#72435</a>)
+	<p>
+        <li>Fixed long-standing bug that would cause Pan to download only a
+            subset of bodies, when getting bodies for all headers. Thanks to Si
+            for reporting this.
+	    (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=72555">#72555</a>)
+	<p>
+        <li>Fixed 0.11.2 bug that didn't show HTML messages.  We still don't
+            parse the HTML -- HTML has no place in Usenet -- but we at least
+            show the message now.  Thanks to Himanshu J. Gohel for reporting
+            this bug.
+	    (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=78723">#78723</a>)
+	<p>
+        <li>Fixed long-standing bug that didn't create user-specified
+            directories when saving article bodies via "Save As...".
+            Thanks to Colin Leroy for reporting this bug and submitting
+            a patch.
+	    (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=80292">#80292</a>)
+	<p>
+        <li>Fixed long-standing bug that didn't properly thread articles
+            that had the subject header idiom "track (n/M] part (x/y)".
+            Thanks to gaw zay for reporting this bug.
+	    (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=80901">#80901</a>)
+	<p>
+        <li>Fixed lond-standing bug that caused Pan to segfault on shutdown
+            when it could not write the threads.txt file in the data directory.
+            Thanks to Corey Rogers for reporting this bug.
+	    (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=81080">#81080</a>)
+	<p>
+        <li>Fixed 0.11.2 bug that let the article cache grow too large.
+            Thanks to Bernard Debreil for reporting this bug.
+	    (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=81464">#81464</a>)
+	<p>
+        <li>Fixed long-standing bug that could cause Pan to crash when adding
+            new tasks while the task manager dialog was open.  Thanks to
+            Thomas Gamble for reporting this bug.
+	    (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=82262">#82262</a>)
+	<p>
+        <li>Fixed minor bug that could give the wrong error message for
+            articles that users tried to post without a Subject header.
+	    (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=82828">#82828</a>)
+	<p>
+        <li>Fixed long-standing bug that could cause Pan to crash when deleting
+            articles which had crossposts in a group that was being unloaded by
+            Pan.  Thanks to bickingd for reporting this bug.
+	    (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=82865">#82865</a>)
+	<p>
+        <li>Fixed Quoted-Printable bug.  Thanks to Martin Tomasek for
+            reporting this bug.
+	    (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=84987">#84987</a>)
+	<p>
+        <li>Fixed long-standing bug that made it impossible to attach a rule to
+            a renamed newsgroup. Thanks to Carl Hudkins for reporting this. 
+	    (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=85725">#85725</a>)
+	</ul>
+
+<!-- NEWS: 0.12.1 and 0.12.90 -->
+
+	<p><b>July 10, 2002 - New Releases:<br>
+        <a name="0121" href="/download/">0.12.1 &quot;The din of other people&quot;</a><br>
+        <a name="01290" href="/download/">0.12.90 &quot;By the surly beard of Mrifk, Grignr kneels to no man!&quot;</a></b>
+
+	<ul>
+        0.12.1 is a stable bugfix release, addressing the most common
+        issues reported against 0.12.0. Most fixes are related to i18n,
+        so non-English users will want to upgrade to this release.
+	<p>
+        0.12.90 is an unstable beta release that starts with 0.12.1,
+	restores Pan's old single-click filtering buttons, then adds
+	a <a href="http://pan.rebelbase.com/screenshots/screenshot.png">toolbar</a>,
+	optional <a href="http://pan.rebelbase.com/screenshots/posting.png">spellchecking</a>,
+	the ability to restore tasks from the previous session --
+	and maybe a few bugs. :)
+	</ul>
+
+	<p>
+	<ul><b>New Features <font color="red">in 0.12.90</font></b>
+        <li>Added a toolbar in the main window.
+        <li>Added the ability to restore, on startup, tasks that were
+            queued when your last Pan session ended.
+	<li>Added optional <a href="http://pan.rebelbase.com/screenshots/posting.png">spellchecking</a>
+            in the compose window.  Thanks to Evan Martin for writing
+	    <a href="http://gtkspell.sourceforge.net/">gtkspell</a>,
+	    which Pan uses for this, and to Michael Alger, who suggested
+	    the idea and contributed a patch to use gtkspell in Pan.
+        <li>Restored, via the toolbar, single-click filtering that's been gone since 0.9.7
+	</ul>
+
+	<p>
+	<ul><b>Updates <font color="red">in 0.12.90</font></b>
+        <li>Eliminated the memory penalty for having tasks queued that
+            operated on newsgroups other than the current newsgroup.
+            This should be especially helpful to alt.binaries users.
+        <li>Flagging messages now works across all newsgroups.  Previously
+            articles could only be flagged for the current newsgroup.
+	</ul>
+
+	<p>
+	<ul><b>Updates <font color="green">in both versions</font></b>
+        <li>Better support for non-standard Subject & Author headers
+            containing 8bit characters. Thanks to Carl Hudkins,
+            Kang Jeong-Hee and William Maddler for suggesting
+            improvements in this area.
+	    (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=80002">#80002</a>,
+	     <a href="http://bugzilla.gnome.org/show_bug.cgi?id=81181">#81181</a>,
+	     <a href="http://bugzilla.gnome.org/show_bug.cgi?id=85510">#85510</a>)
+        <li>We now use the locale to determine the group's default
+            charset, rather than a hard-coded 'ISO-8859-1'.  Thanks to
+            Martin Tomasek for suggesting this.
+	    (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=84995">#84995</a>)
+	</ul>
+
+	<p>
+	<ul><b>Bug Fixes <font color="green">in both versions</font></b>
+        <li>Fixed 0.12.0 bug where Pan would lose the article's state
+            when switching newsgroups, making it difficult to see which
+            articles has already been saved. Thanks to Gabi Davar for
+            reporting this.
+	    (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=85445">#85445</a>)
+        <li>Fixed 0.12.0 bug in the Composer where the reply would be
+            corrupted if a signature contained 8bit characters.
+            Thanks to Alexander Skwar for reporting this.
+	    (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=85502">#85502</a>)
+        <li>Fixed 0.12.0 bug in the Composer where the automatic
+            wrapping would corrupt the message with 8bit characters.
+            Thanks to Alexander Skwar for reporting this.
+	    (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=85508">#85508</a>)
+        <li>Various build fixes reported for 0.12.0.
+	    (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=85968">#85968</a>,
+	     <a href="http://bugzilla.gnome.org/show_bug.cgi?id=86203">#86203</a>)
+        <li>Fixed 0.12.0 bug that caused sorting the articles in tabbed
+            view to switch to the article tab. Thanks to Fred Fraley for
+            reporting this.
+	    (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=86409">#86409</a>)
+        <li>Fixed 0.12.0 bug that didn't close the 'Are you sure you
+            want to quit' dialog if a user pressed 'no'. Thanks to
+            D.m.D. Ljungmark for reporting this.
+	    (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=87518">#87518</a>)
+        <li>Fixed 0.11.3 bug that would cause Pan to retry impossible 
+            tasks. Thanks to Carl Hudkins for reporting this.
+	    (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=86795">#86795</a>)
+        <li>Added the character encoding to outgoing email.
+            Thanks to Alexander Skwar for suggesting this.
+	    (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=85503">#85503</a>)
+        <li>Fixed long-standing bug that made it impossible to attach
+            a rule to a renamed newsgroup. Thanks to Carl Hudkins for
+            reporting this.
+	    (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=85725">#85725</a>)
+        <li>Fixed long-standing bug that would cause Pan to download
+            only a subset of bodies, when getting bodies for all headers.
+            Thanks to Si for reporting this.
+	    (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=72555">#72555</a>)
+	</ul>
+
+
+	<p><b>June 18, 2002 - New Release:<br>
+	<a name="0120" href="/download/">0.12.0 &quot;Handle all such BTs and clusters by blowing them off&quot;</a></b>
+
+	<ul>
+	This is the first non-beta release in two months.  In that time Pan has
+	been ported to gtk2, added font and charset handling in reading and
+	posting, improved offline reading, added many usability improvements,
+	dropped most library prerequisites, fixed about 15 bugs from the last stable
+	release, and had five beta releases to shake out any new bugs.
+	<p>
+	The web site has a few 0.12.0 changes too: the
+	<a href="/screenshots/">screenshots</a> page has been updated to show it off,
+	and a new keyboard shortcut <a href="/shortcuts.html">reference</a> is available.
+	</ul>
+
+	<p>
+	<ul><b>Configuration</b>
+        <li>Reduced minimum requirements to gtk2 and libxml2, for people who don't want to
+            run or even install desktop environments like Gnome or KDE.
+	</ul>
+
+	<p>
+	<ul><b>New Features</b>
+        <li>Better Internationalization: Pan can now finally display messages
+            and headers in their appropriate charsets and fonts 
+	    (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=53465">#53465</a>,
+	     <a href="http://bugzilla.gnome.org/show_bug.cgi?id=79275">#79275</a>)
+            as well as post messages in user-specified charsets
+	    (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=65161">#65161</a>).
+        <li>Added menu button "File|Work Offline" for toggling on/offline.
+        <li>Added menu button "File|Delete Last Task" (the "oops" button ;)
+        <li>Added new preferences option to get new headers, or new headers and
+            bodies, from subscribed groups automatically when starting Pan.
+        <li>Added support for message/partial mime content headers.
+            Thanks to T. Gamble for requesting this.
+	    (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=80715">#80715</a>)
+	</ul>
+
+	<p>
+	<ul><b>Updates</b>
+        <li>Decoding attachments is much faster and uses less overhead.
+        <li>Usability improvements in space reading
+	    (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=81868">#81868</a>),
+	    copying articles to folders
+	    (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=64867">#64867</a>),
+	    watching or ignoring articles
+	    (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=78006">#78006</a>),
+	    the &quot;next article&quot; button
+	    (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=82724">#82724</a>),
+	    reading a group for the first time
+	    (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=82092">#82092</a>),
+	    underlining URLs
+	    (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=65511">#65511</a>),
+	    displaying attachments
+	    (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=67554">#67554</a>),
+	    saving attachments
+	    (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=75591">#75591</a>,
+	     <a href="http://bugzilla.gnome.org/show_bug.cgi?id=79338">#79338</a>),
+	    colors in the compose window
+	    (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=75999">#75999</a>,
+	     <a href="http://bugzilla.gnome.org/show_bug.cgi?id=80470">#80470</a>),
+	    logging error messages for failed posts
+	    (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=69390">#69390</a>),
+	    and rot13'ing selected text
+	    (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=72015">#72015</a>),
+        <li>Menu cleanups for GNOME Human Interface Guidelines compliance.
+        <li>New filter dialog: The article filter GUI has been changed so that
+            it can all be driven from keyboard accelerators, so that several
+            changes can be made at once for a single refiltering, and so that
+            subject/author filters can be kept as the user changes from one
+            group to another.
+        <li>Minor speed improvements in startup, article reading, threading,
+            and sorting.
+        </ul>
+
+	<p>
+	<ul><b>Bug Fixes (sorted by age)</b>
+        <li>Fixed minor 0.11.3 memory leaks.
+        <li>Fixed 0.11.3 bug that didn't allow i18n characters in users'
+            From: headers in new posts.
+	    (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=80177">#80177</a>)
+        <li>Fixed 0.11.2.90 bug that failed to deccode yEnc-encoded text
+            messages (such as .nfo files) properly when the user tried to
+            read them.  Thanks to William McBrine for reporting this bug.
+	    (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=75136">#75136</a>)
+        <li>Fixed 0.11.2.90 bug that caused Pan to crash when showing a
+            warning dialog before posting a user's article.
+	    (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=76350">#76350</a>)
+        <li>Fixed 0.11.2 bug that didn't show HTML messages.  We still don't
+            parse the HTML -- HTML has no place in Usenet -- but we at least
+            show the message now.  Thanks to Himanshu J. Gohel for reporting
+            this bug.
+	    (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=78723">#78723</a>)
+        <li>Fixed 0.11.2 bug that let the article cache grow too large.
+            Thanks to Bernard Debreil for reporting this bug.
+	    (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=81464">#81464</a>)
+        <li>Fixed long-standing bug that didn' properly decode all
+            quoted-printable encoded headers.  Thanks to Martin Tomasek
+            for reporting this bug.
+	    (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=84987">#84987</a>)
+        <li>Fixed long-standing bug that failed to handle x-unknown
+            charsets correctly.  Thanks to Martin Tomasek for reporting this bug.
+	    (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=85082">#85082</a>)
+        <li>Fixed long-standing bug that didn't properly thread articles
+            that had the subject header idiom "track (n/M] part (x/y)".
+            Thanks to gaw zay for reporting this bug. (#80901)
+	    (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=80901">#80901</a>)
+        <li>Fixed long-standing bug that could cause Pan to crash when adding
+            new tasks while the task manager dialog was open.  Thanks to
+            Thomas Gamble for reporting this bug.
+	    (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=82262">#82262</a>)
+        <li>Fixed long-standing bug that could cause Pan to crash when deleting
+            articles which had crossposts in a group that was being unloaded by
+            Pan.  Thanks to bickingd for reporting this bug.
+	    (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=82865">#82865</a>)
+        <li>Fixed long-standing crash when rewrapping text in the
+            compose window.
+	    (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=81258">#81258</a>)
+        <li>Fixed long-standing bug that caused Pan to segfault on shutdown
+            when it could not write the threads.txt file in the data directory.
+            Thanks to Corey Rogers for reporting this bug.
+	    (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=81080">#81080</a>)
+        <li>Fixed long-standing crash when switching profiles in the compose 
+            window. Thanks to Gianpaolo Racca for reporting this bug.
+	    (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=79839">#79839</a>)
+        <li>Fixed long-standing bug that caused Pan to crash sometimes 
+            when the log view window was open.
+	    (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=65617">#65617</a>)
+        <li>Fixed long-standing bug that could cause Pan to crash if the
+            grouplist file was corrupt.  Thanks to Adam M for reporting this bug.
+	    (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=72435">#72435</a>)
+	</ul>
+
+<!-- BEGIN FOOTER -->
+
+&nbsp;<p>&nbsp;<p>&nbsp;<p>
+		</ul>
+	</td>
+	<td bgcolor="white">&nbsp;</td><!-- this is the top-right-curl column -->
+	</tr>
+	</table>
+</body>
+</html>
+
+<!-- END FOOTER -->

@@ -1,0 +1,315 @@
+<!-- BEGIN HEADER -->
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>P A N - A Newsreader for GNOME</title>
+</head>
+<body bgcolor="black">
+
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+   <td valign="top" background="/gfx/menu2/top-stretch.jpg"><a href="/">
+   <img src="/gfx/menu2/pan-logo.jpg" border="0" alt="Pan, a newsreader for GNOME."></a></td>
+   <td><img src="/gfx/menu2/top-right-curl.jpg" alt=""></td>
+   <td width="160" valign="top" rowspan="2" align="right" background="/gfx/menu2/menu-bg.jpg">
+      &nbsp;<p>&nbsp;<p>
+      <a href="/screenshots/"><img src="/gfx/menu2/screenshots.jpg" border="0" alt="screenshots"></a><br>
+      <a href="/download"><img src="/gfx/menu2/download.jpg" border="0" alt="download"></a><br>
+      <a href="/tipjar/"><img src="/gfx/menu2/tip-jar.jpg" border="0" alt="tip jar"></a><p>
+      <a href="/requirements/"><img src="/gfx/menu2/requirements.jpg" border="0" alt="requirements"></a><br>
+      <a href="/manual/"><img src="/gfx/menu2/users-manual.jpg" border="0" alt="user's manual"></a><br>
+      <a href="/features/"><img src="/gfx/menu2/features.jpg" border="0" alt="features"></a><br>
+      <a href="/faq/"><img src="/gfx/menu2/faq.jpg" border="0" alt="FAQ"></a><p>
+      <a href="/"><img src="/gfx/menu2/whats-new.jpg" border="0" alt="what's new"></a><br>
+      <a href="/roadmap/"><img src="/gfx/menu2/roadmap.jpg" border="0" alt="roadmap"></a><br>
+      <a href="/oldnews/"><img src="/gfx/menu2/news-archives.jpg" border="0" alt="news archives"></a><p>
+      <a href="/mailing_lists/"><img src="/gfx/menu2/mailing-lists.jpg" border="0" alt="mailing lists"></a><br>
+      <a href="/bugs/"><img src="/gfx/menu2/bug-reports.jpg" border="0" alt="bug reports"></a><br>
+      <a href="/contact/"><img src="/gfx/menu2/contact.jpg" border="0" alt="contact"></a> 
+   </td>
+</tr>
+
+<tr>
+   <td bgcolor="#FFFFFF" valign="top">
+      <ul>
+
+<!-- END HEADER -->
+
+
+
+
+<br>
+		<b><font size="5" color="darkred">Old News</font></b><br><p>
+
+
+
+<p><b>October 18, 2001 - New Release:<br>
+<a name="010093" href="download.html">0.10.0.93 &quot;Little Leprechaun&quot;</a></b>
+	<ul>
+		This is a big bugfix release: for once I'm unable to crash it in
+		heavy torture testing.  Undoubtedly you'll be able to correct
+		this situation. :)
+		<p>
+	</ul>
+	<ul><b>Updates</b>
+		<li>Added Preferences option to toggle custom foreground/background
+		colors in the text pane vs. using the default gtk theme colors.
+		Thanks to Justin Piszcz for suggesting this.
+	</ul>
+	<ul><b>Bug Fixes</b>
+		<li>Fixed problems with different threads manipulating articles
+		concurrently.  This should fix some of the bugs recently reported
+		which are irreproducable but all similar.
+		<li>Articles' memory management is now tied to an article refcount
+		of the group which owns them.  This resolves the Article life
+		cycle issues like "what happens if a rule deletes an article that
+		articlelist is drawing?" and "what if an article is expired while
+		a person's reading it?" etc.
+		<li>Fixes bug that caused some Tasks to get stuck in an Abort state
+		even if they completed successfully.
+		<li>Fixed bug that caused Tasks to sometimes not get run in the queue
+		until another task was added to give it a bump.  Thanks to
+		Douglas Kilpatrick for tracking down this bug. 
+		<li>Fixes for creating/saving negated filter conditions.  Thanks to
+		Jed S. Baer for reporting this bug.
+        	<li>Fixed small but nasty memory corruption bug when saving attachments.
+		<li>Fixes bug that didn't disconnect correctly from the news server
+		when an error occurred while saving attachments.
+		<li> Show the correct linecount in the Header Pane for multipart
+		binaries when reposts are included in the multipart thread.
+		<li> Fix bug that caused Pan to crash when it was started in zoom mode.
+		Thanks to Leo Lipelis for reporting this bug.
+		<li> Fix in GMime for Debian and Solaris charsets.  Thanks to
+		Volodymyr M. Lisivka for submitting a patch to GMime.
+		<li> Wrap excessively long email addresses in the header display
+		so that Pan's window doesn't strech off the screen.  Thanks to
+		David Watson for reporting this bug.
+	</ul>
+
+
+<p><b>October 6, 2001 - New Release:<br>
+<a name="010092" href="download.html">0.10.0.92 &quot;Andrew Orlowski Can Kiss My Ass&quot;</a></b>
+	<ul>
+		We're warming up to a stable release: this version has no new
+		features but fixes a lot of bugs and uses less memory and disk
+		space when decoding large multiparts.
+	</ul>
+	<ul><b>Updates</b>
+		<li>Uses less temporary disk space when decoding multiparts.
+		This is chiefly due to some very excellent GMime code written
+		by Jeffrey Stedfast.
+	</ul>
+	<ul><b>Bug Fixes</b>
+		<li>Fixed bug that misset the article pane's foreground color.
+		Thanks to war@starband.net for reporting this bug.
+		<li>Fixed bug that kept reading/deleting an article from propagating
+		to its crossposts.
+		<li>Fixed error with displaying mime articles with two or more text
+		attachments.  Thanks to Robert Tilley for reporting this bug.
+		<li>Fixed 0.10.0.91 bug where Pan confused one article as another
+		during downloading.
+		<li>Fixed 0.10.0.91 bug that made the progress bars get stuck
+		even when a task was completed.
+		<li>Fixed 0.10.0.91 bug that caused the text pane to be too large
+		or to sometimes lose its scrollbars in 0.10.0.91.  This was
+		in .91's new "show pictures without gtkhtml" code.
+		<li>Fixed fairly large memory leak when editing preferences.
+		<li>Fixed other small memory leaks.
+	</ul>
+
+
+<p><b>September 22, 2001 - New Release:<br>
+<a name="010090" href="download.html">0.10.0.91 &quot;Hildie and Satin&quot;</a></b>
+	<ul>
+		Charles' been busy with work lately and Christophe is on vacation,
+		so 0.10.0.91 has fewer sweeping code changes than usual
+		(but maybe this is a Good Thing for getting closer to a 0.10.1 release?)
+		Accordingly, most changes in this release are fixes to user-reported bugs.
+		It also removes the size limit for decoding Very Large attachments
+		and <b>removes the gtkhtml requirement</b> for hotlinks and picture attachments!
+		<p>
+		A big Thank You to the users who take the time to fill out
+		bug reports.  Squashing these beta bugs is important to us.
+		<p>
+		This release's improbable version number is to indicate that this
+		is a beta between 0.10.0 and 0.10.1, without confusing RPM with
+		sane, human-readable phrases like "beta". :)
+	</ul>
+
+	<ul><b>New Features</b>
+		<li>gtkhtml is no longer needed for hotlinks and picture attachments.  Yay!
+		<li>Added a second quote color to help distinguish
+			<br><font color="blue">&gt;&gt; One reply</font>
+			<br><font color="red">&gt; From another.</font>
+	</ul>
+	<ul><b>Updates</b>
+		<li>Uses much less memory when decoding attachments.
+	</ul>
+
+	<ul><b>Bug Fixes</b>
+		<li>Fixed crash when importing an empty .newsrc file,
+		including on startup.  Thanks to Derek Poon for first
+		reporting this problem and submitting a fix.
+		<li>Fixed crashes in the Task Manager dialog.
+		<li>Fixed crashes in the progressbar when using pixmapped Gtk+ themes.
+		<li>Fix problem with the queue running away with the CPU
+		in 0.10.0.90.  Thanks to Chris Vance for reporting this
+		bug and submitting a fix.
+		<li>Fixed problem with date header not being sent when
+		sending mail from Pan.  Thanks to Derek Poon for
+		reporting this problem and submitting a fix.
+		<li>Fix lockup from having a double-mutex thread lock
+		when we can't load the user-specified font for the
+		articlelist.  Thanks to Thomas K. Gamble for reporting
+		this bug.
+		<li>RPM and configure script build fixes.
+	</ul>
+
+<p><b>September 6, 2001 - New Release:<br><a name="010090" href="download.html">0.10.0.90 &quot;More Sugar&quot;</a></b>
+	<ul>
+	Though this was supposed to be a minor release, we've worked
+	through many requests and bug reports this time.  Per-group
+	posting identities, lots of bug fixes, and GUI cleanups are the
+	biggest parts of this release.
+	<p>
+	The improbable version number is to indicate that this is a beta
+	between 0.10.0 and 0.10.1, without confusing RPM with
+	sane, human-readable phrases like "beta". :)
+	</ul>
+
+	<ul><b>New Features</b>
+	<li>Added Profiles manager for managing posting/mailing 
+	mail, signature, etc. for different groups.
+	<li>The search field above the group and article lists are now
+	comboboxes that remember earlier search fields.
+	Thanks to Adam Nevins for suggesting this.
+	<li>Finally added support for writing posts with an external editor.
+	Thanks to Sylpheed for this.
+	<li>Added the ability to sort by read state (new, unread,
+	number of new replies, etc) and by action state (flagged,
+	queued, etc).  Thanks to David Watson and Sapient Fridge
+	for suggesting this.
+	<li>* Can now toggle between a normal font and a monospace font
+	in the article body pane.  Thanks to KNode for this.
+	<li>* Added the ability to toggle the visibility of any
+	of the three main panes.
+	<li>* Added an option to shorten names in the group pane; ie,
+	"comp.graphics.apps.gimp" can be shortened to "c.g.a.gimp".
+	</ul>
+
+	<ul><b>Updates</b>
+	<li>The "Save Article" and "Save Attachments" dialogs have been
+        merged into a single dialog.
+	<li>The menu has been rearranged to have more sensible feature
+	groupings.
+	<li>Nicer article navigation.
+	<li>Small improvements in Pan's configure script.
+	<li>When Following up an article, the focus in the composer window
+	is set to the message box, rather than being hidden wherever the
+	default was.  Thanks to Cameron Kerr for suggesting this.
+	<li>Stable sorting in the thread pane added back into Pan,
+	so sorting in one column, then another, effectively gives
+	a two-key sort.
+	</ul>
+
+	<ul><b>Bug Fixes</b>
+	<li>Fixed three different crashing bugs that occurred when torturing
+	the article threads.
+	<li>Some headers were not being saved for pending articles in
+	the pan.sendlater folder.  This caused problems when trying
+	to post offline.  Thanks to T'aZ, Frank Van Damme, and lots
+	of other people for reporting this bug.
+	<li>Fixes an i18n charset problem in 0.10.0.  Thanks to Jeffrey
+	Stedfast for reporting and fixing this big.
+	<li>Fixes xml decoding bug.  Thanks to Tõivo Leedjärv for reporting
+	this bug and providing a patch.
+	<li>Fixed annoying space reading bug that caused short articles
+	to be scrolled offscreen, then back on again, before going
+	to the next article.
+	<li>Fix small bug that didn't let the text pane's font size to
+	be changed correctly if gtkhtml was being used.  Thanks to
+	David Watson for reporting this bug.
+	<li>Header encoding Pan/GMime bug fixed.  Thanks to Christian
+	Lohmaier for reporting this bug and Jeffrey Stedfast for
+	fixing it in GMime.
+	<li>pan/text.c (text_create): fix problem with changing the background
+	color of the gtkhtml pane.  Thanks to Tõivo Leedjärv for providing
+	this fix.
+	<li>Hitting "show all headers" didn't actually show *all* headers,
+	just more headers.  Thanks to Christian Lohmaier for reporting
+	this bug.
+	<li>In the article toolbar filter, switching between Subject and
+	Author didn't cause the articles to be re-filtered.
+	<li>Tab Damage errors in 0.10.0 fixed.
+	<li>Small memory leaks fixed.
+	</ul>
+
+
+
+
+<p><b>August 20, 2001 - New RPMs, FAQ</b>
+	<ul>
+	The <a href="/faq/">FAQ</a> has been revised to add newer FAQs and to
+        remove old ones that don't apply any more.  Also, we've added new 0.10.0
+	<a href="download.html#homebrew">RPMs</a> for Red Hat.
+	Thanks to John Aldrich for helping out with this.
+	</ul>
+
+<p><b>August 16, 2001 - New Release:<br><a name="0100" href="download.html">0.10.0 &quot;You hear in the distance the chirping of a song bird.&quot;</a></b>
+	<ul>
+	This has a few bugfixes, minor UI improvements, and updated translations over 0.9.90.
+	Most of the cool changes since the last stable release are listed in the
+	<a href="#0990">0.9.90</a> announcement.
+</ul>
+
+	<ul><b>New Features</b>
+	  <li>New navigation shortcuts for the Task Manager to cancel and
+	  reorder tasks. Thanks to Ryan Daniels for suggesting this.
+	  <li>Added Slovak translation.
+	  </ul>
+
+	<ul><b>Updates</b>
+	  <li>Better charset support when posting messages.  Thanks to
+	  Volodymyr M. Lisivka for this patch.
+	  <li>More/Better icons in the thread view pane.
+	  <li>Added keyboard shortcuts to cancel and reorder tasks in the task
+          manager.  Thanks to Ryan Daniels for suggesting this.
+	  <li>Warn users if they're using an empty Filter in a rule.
+          Thanks to Huub Reuver for suggesting this.
+	  <li> Show attached images even if the mime header "content-disposition"
+          isn't set to "inline" because it's good odds the user meant to
+          inline it anyway. :)
+	  </ul>
+
+	<ul><b>Bug Fixes</b>
+	  <li> Fixes crash that occurred when parsing improperly-constructed
+          mime messages.  Thanks to Frank van Damme for reporting this bug.
+	  <li> Fixes 0.9.90 crash that occurred when applying rules when there
+          was no group loaded in the thread pane.  Thanks to T'aZ for
+          reporting this bug.
+	  <li> Follow-Ups to messages with attachments weren't being shown
+          in the thread pane.  Thanks to Jed Baer for reporting this bug.
+	  <li> 0.9.90 didn't allow the grouplist pane to shrink beyond its
+          requisition size to account for people running under lower
+          resolutions.  Thanks to mdew for reporting this problem.
+	  <li> The 'Edit' menu shortcut conflicted with the 'Message' window
+          shortcut in 0.9.90.  Thanks to David Oberbeck for pointing out
+          this bug.
+	  <li> Minor bug fixes and correctness checks.
+	  </ul>
+
+
+
+<!-- BEGIN FOOTER -->
+
+&nbsp;<p>&nbsp;<p>&nbsp;<p>
+		</ul>
+	</td>
+	<td bgcolor="white">&nbsp;</td><!-- this is the top-right-curl column -->
+	</tr>
+	</table>
+</body>
+</html>
+
+<!-- END FOOTER -->

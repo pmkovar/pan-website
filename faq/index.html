@@ -1,0 +1,230 @@
+<!-- BEGIN HEADER -->
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>PAN - A Newsreader for GNOME</title>
+</head>
+<body bgcolor="black">
+
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+   <td valign="top" background="/gfx/menu2/top-stretch.jpg"><a href="index.html">
+   <img src="/gfx/menu2/pan-logo.jpg" width="288" height="120" border="0" alt="Pan, a newsreader for GNOME"></a></td>
+   <td align="right"><img src="/gfx/menu2/top-right-curl.jpg" alt=""></td>
+   <td width="160" valign="top" rowspan="2" align="right" background="/gfx/menu2/menu-bg.jpg">
+      &nbsp;<p>&nbsp;<p>
+      <a href="/screenshots/"><img src="/gfx/menu2/screenshots.jpg" width="106" height="24" border="0" alt="screenshots"></a><br>
+      <a href="/download/"><img src="/gfx/menu2/download.jpg" width="80" height="24" border="0" alt="download"></a><br>
+      <a href="/tipjar/"><img src="/gfx/menu2/tip-jar.jpg" width="69" height="26" border="0" alt="tip jar"></a><p>
+      <a href="/requirements/"><img src="/gfx/menu2/requirements.jpg" width="130" height="25" border="0" alt="requirements"></a><br>
+      <a href="/manual/"><img src="/gfx/menu2/users-manual.jpg" width="124" height="24" border="0" alt="manual"></a><br>
+      <a href="/features/"><img src="/gfx/menu2/features.jpg" width="84" height="24" border="0" alt="features"></a><br>
+      <a href="/faq/"><img src="/gfx/menu2/faq.jpg" width="54" height="26" border="0" alt="FAQ"></a><p>
+      <a href="/"><img src="/gfx/menu2/whats-new.jpg" width="114" height="26" border="0" alt="what's new"></a><br>
+      <a href="/roadmap/"><img src="/gfx/menu2/roadmap.jpg" width="84" height="24" border="0" alt="roadmap"></a><br>
+      <a href="/oldnews/"><img src="/gfx/menu2/news-archives.jpg" width="128" height="24" border="0" alt="news archives"></a><p>
+      <a href="/mailing_lists/"><img src="/gfx/menu2/mailing-lists.jpg" width="123" height="34" border="0" alt="mailing lists"></a><br>
+      <a href="/bugs/"><img src="/gfx/menu2/bug-reports.jpg" width="106" height="24" border="0" alt="bug reports"></a><br>
+      <a href="/contact/"><img src="/gfx/menu2/contact.jpg" width="77" height="24" border="0" alt="contact"></a> 
+   </td>
+</tr>
+
+<tr>
+   <td bgcolor="#FFFFFF" valign="top">
+   <blockquote>
+
+<!-- END HEADER -->
+
+
+<p><i>FAQ Revised: Friday 07 December 2001 10:38:25</i></p>
+<hr><h2>Table of Contents</h2>
+<dl>
+<dt><b>1. General</b></dt>
+<dd><ul>
+<li><a href="#General0">1.1. What is Pan?</a></li>
+<li><a href="#General1">1.2. Do I have to use Gnome to run Pan?</a></li>
+</ul></dd>
+<dt><b>2. Installation</b></dt>
+<dd><ul>
+<li><a href="#Installation0">2.1. Where can I get Pan?</a></li>
+<li><a href="#Installation1">2.2. What package should I use?</a></li>
+<li><a href="#Installation2">2.3. What's an RPM, deb, or tarball?</a></li>
+<li><a href="#Installation3">2.4. Pan disappeared from my KDE start menu after upgrading!</a></li>
+<li><a href="#Installation4">2.5. Pan can't find -ldb1 when compiling on Mandrake.</a></li>
+<li><a href="#Installation5">2.6. Pan can't find -lesd when compiling on SuSE 7.3.</a></li>
+<li><a href="#Installation6">2.7. CVS's autogen gives me errors.</a></li>
+</ul></dd>
+<dt><b>3. Feedback</b></dt>
+<dd><ul>
+<li><a href="#Feedback0">3.1. Where do I send feature requests?</a></li>
+<li><a href="#Feedback1">3.2. Is the pan-users list archived?</a></li>
+<li><a href="#Feedback2">3.3. I found a bug!  What do I do?</a></li>
+<li><a href="#Feedback3">3.4. How can I help?</a></li>
+</ul></dd>
+<dt><b>4. Tips</b></dt>
+<dd><ul>
+<li><a href="#Tips0">4.1. Can I just select an article without downloading its body?</a></li>
+<li><a href="#Tips1">4.2. How do I choose my image viewer?</a></li>
+<li><a href="#Tips2">4.3. Where do Articles go when I save them?</a></li>
+<li><a href="#Tips3">4.4. Where are Pan's configuration files?</a></li>
+<li><a href="#Tips4">4.5. How can I use my fast net connection?</a></li>
+<li><a href="#Tips5">4.6. How can I use my slow net connection?</a></li>
+<li><a href="#Tips6">4.7. Can I change the menu key bindings?</a></li>
+</ul></dd>
+<dt><b>5. Troubleshooting</b></dt>
+<dd><ul>
+<li><a href="#Troubleshooting0">5.1. Pan just Crashed!  What do I do?</a></li>
+<li><a href="#Troubleshooting1">5.2. Writing a message is really slow, about 1 char per second.</a></li>
+<li><a href="#Troubleshooting2">5.3. Pan stops in the middle of downloading headers or articles.</a></li>
+<li><a href="#Troubleshooting3">5.4. I can't connect to my news server!</a></li>
+<li><a href="#Troubleshooting4">5.5. Pan Has 8 Processes, Each Using 40 Meg!  That's 320 Meg!</a></li>
+</ul></dd>
+</dl>
+<hr><h2>1. General</h2>
+<dl>
+<dt><b><a name="General0">1.1. What is Pan?</a></b></dt>
+<dd>Pan is a newsreader, loosely based on Agent and Gravity,
+   which attempts to be pleasant to use for new and advanced
+   users alike. It has all the typical features found in newsreaders,
+   and also supports offline reading, multiple connections, and a
+   number of features for power users and alt.binaries fans. 
+   See Pan's <a href="/features/">feature page</a>
+   for a the complete sales pitch.<br><br></dd>
+<dt><b><a name="General1">1.2. Do I have to use Gnome to run Pan?</a></b></dt>
+<dd>No.  Pan's main author frequently goes back and forth between Gnome, KDE,
+   and plain old Blackbox.<br><br></dd>
+</dl>
+<hr><h2>2. Installation</h2>
+<dl>
+<dt><b><a name="Installation0">2.1. Where can I get Pan?</a></b></dt>
+<dd><a href="http://pan.rebelbase.com/">http://pan.rebelbase.com/</a> is the
+   Pan home page.  It will have the latest news and version of Pan.<br><br></dd>
+<dt><b><a name="Installation1">2.2. What package should I use?</a></b></dt>
+<dd>The recommended way is to see if your vendor <a href="download.html#vendors">already</a>
+   has an up-to-date package of Pan.  If they don't, or if it doesn't work,
+   you can try one of the RPMs on the rebelbase.com
+   <a href="download.html#homebrew">download page</a>.
+   <p>
+   We typically make i386, i586, and i686 RPMs.
+   These programs have been compiled for different processors and can take
+   advantage of their inbuilt features, so pick the one that is the closest
+   match to your processor.
+   <p>
+   Our homemade RPMs also come in two different flavors: standard (fewer
+   library requirements) and the bells-and-whistles version <code>"_images"</code>
+   (displays attached images inline, gives clickable URLs).  When gtk2 is
+   released, we'll have bells and whistles without all the dependencies.  Until
+   then, though, the <a href="/requirements/">requirements page</a> lists what
+   you need for the _images version and where to get it.<br><br></dd>
+<dt><b><a name="Installation2">2.3. What's an RPM, deb, or tarball?</a></b></dt>
+<dd>They are different ways of packaging software.  .rpm files are used by Red Hat, Mandrake,
+   and most other versions of Linux.  .deb files are used by the Debian project.
+   Tarballs are like zip files of the Pan source code.
+   Red Hat has a <a href="http://rpm.redhat.com/">site</a> dedicated to RPMs, and Debian's
+   User Tutorial has a
+   <a href="http://www.debian.org/~hp/tutorial/debian-tutorial.html/ch-dpkg.html">section</a>
+   about deb files.<br><br></dd>
+<dt><b><a name="Installation3">2.4. Pan disappeared from my KDE start menu after upgrading!</a></b></dt>
+<dd>Use menudrake or menudrake to add it back again.<br><br></dd>
+<dt><b><a name="Installation4">2.5. Pan can't find -ldb1 when compiling on Mandrake.</a></b></dt>
+<dd>Try installing the Berkeley Database Developer Libraries RPMs from the Mandrake CD.<br><br></dd>
+<dt><b><a name="Installation5">2.6. Pan can't find -lesd when compiling on SuSE 7.3.</a></b></dt>
+<dd>Linking requires files with extension '.so' (i.e., without the version
+   number). So, you need libesd.so. On RPM-based systems, you need to
+   install the esound-devel RPM package.<br><br></dd>
+<dt><b><a name="Installation6">2.7. CVS's autogen gives me errors.</a></b></dt>
+<dd>First off understand that CVS is for bleeding-edge users and takes a little extra work.
+   If you're still interested, make sure that you have autoconf, automake, libtool, libiconv,
+   and gettext installed.  Also, please remember to file bug reports -- CVS users are
+   one of our earliest lines of defense against bugs.<br><br></dd>
+</dl>
+<hr><h2>3. Feedback</h2>
+<dl>
+<dt><b><a name="Feedback0">3.1. Where do I send feature requests?</a></b></dt>
+<dd>Mail it to the <a href="/contact/">pan-users</a> mailing
+   list, where other users can discuss your request.  Features are typically
+   discussed there for some consensus before being put into Pan.<br><br></dd>
+<dt><b><a name="Feedback1">3.2. Is the pan-users list archived?</a></b></dt>
+<dd>Yes, at
+   <a href="http://www.egroups.com/group/pan-users/">http://www.egroups.com/group/pan-users/</a>.<br><br></dd>
+<dt><b><a name="Feedback2">3.3. I found a bug!  What do I do?</a></b></dt>
+<dd>New bugs should be reported at Gnome's
+   <a href="http://bugzilla.gnome.org/enter_bug.cgi?product=Pan">bugzilla web site</a>.
+   Please read Pan's <a href="/bugs/">bug report page</a>
+   For advice on <i>what</i> to include in your report.  Just saying "I ran Pan and it
+   crashed" isn't very helpful. :)<br><br></dd>
+<dt><b><a name="Feedback3">3.4. How can I help?</a></b></dt>
+<dd>We're always looking for more programmers.  Gnome/gtk+ experience
+   isn't necessary, but knowledge of C is.  On the non-programming side,
+   we also need documentation writers, translators, RPM builders,
+   and graphic artists.<br><br></dd>
+</dl>
+<hr><h2>4. Tips</h2>
+<dl>
+<dt><b><a name="Tips0">4.1. Can I just select an article without downloading its body?</a></b></dt>
+<dd>Yes, this is frequently requested for the alt.binaries groups.  Mouse button 2
+   will select an article without downloading the body.  The mouse button ordering
+   can be configured in the Preferences dialog to suit your tastes.<br><br></dd>
+<dt><b><a name="Tips1">4.2. How do I choose my image viewer?</a></b></dt>
+<dd>Pan uses the Gnome mime settings for this information.  If you've got
+   gnome installed, you can do this by selecting
+   `Document Handlers->Default Editor->mime types' from the gnome control center (<code>gnomecc</code>).<br><br></dd>
+<dt><b><a name="Tips2">4.3. Where do Articles go when I save them?</a></b></dt>
+<dd>By default, they'll be stored in $HOME/News/Pan.  You can change the default
+   In the Preferences dialog, and you can change them for particular downloads 
+   in the "Save Article" dialog.<br><br></dd>
+<dt><b><a name="Tips3">4.4. Where are Pan's configuration files?</a></b></dt>
+<dd>Pan keeps its server, group, and article information in the `.pan' directory in your
+   home directory.   Other configuration settings are kept in the gnome-config setup,
+   which is typically in `.gnome/Pan' in your home directory.<br><br></dd>
+<dt><b><a name="Tips4">4.5. How can I use my fast net connection?</a></b></dt>
+<dd>If you've got DSL, a cable modem, or some other fast connection, you may want to
+  increase the number of simultaneous connections you can make to your news servers.
+  This can be done in the Preference dialog's NNTP settings, which lets you increase
+  the maximum total and per-server connections Pan will make.<br><br></dd>
+<dt><b><a name="Tips5">4.6. How can I use my slow net connection?</a></b></dt>
+<dd>Pan works well as an offline newsreader with no extra software needed.  In your
+   Preferences dialog, make sure the cache size is set large enough to store the
+   bodies of the groups you're interested in, and then download the articles for
+   reading later offline.<br><br></dd>
+<dt><b><a name="Tips6">4.7. Can I change the menu key bindings?</a></b></dt>
+<dd>Yes.  Move your mouse over to the shift+ctrl+n menu button (or whatever menu
+   button you're interested in) and press the key binding that you want to change
+   this menu option to.  The menu will automatically update itself.  I'd like to
+   take credit for this, but it's a Gtk+ feature.<br><br></dd>
+</dl>
+<hr><h2>5. Troubleshooting</h2>
+<dl>
+<dt><b><a name="Troubleshooting0">5.1. Pan just Crashed!  What do I do?</a></b></dt>
+<dd>Please take time to file a bug report; we appreciate them and use them to improve Pan.
+   See the Feedback section of this FAQ for details.<br><br></dd>
+<dt><b><a name="Troubleshooting1">5.2. Writing a message is really slow, about 1 char per second.</a></b></dt>
+<dd>This is reportedly a bug with your gtk theme.  Try changing your theme.<br><br></dd>
+<dt><b><a name="Troubleshooting2">5.3. Pan stops in the middle of downloading headers or articles.</a></b></dt>
+<dd>This is most often caused by an overloaded news server or a bad net connection.
+   Check your news server's stats page to see what its load is.<br><br></dd>
+<dt><b><a name="Troubleshooting3">5.4. I can't connect to my news server!</a></b></dt>
+<dd>This question gets asked most by people downloading multiple binaries at a time
+   and exceed their bandwidth or news server limitations.  If you have your maximum
+   number of connections set high and are getting socket errors, try lowering the
+   maximum number to go easier on the network.<br><br></dd>
+<dt><b><a name="Troubleshooting4">5.5. Pan Has 8 Processes, Each Using 40 Meg!  That's 320 Meg!</a></b></dt>
+<dd>These are each threads sharing the same memory, so it's only 40 Meg,
+   despite what top says.<br><br></dd>
+</dl>
+
+
+
+<!-- BEGIN FOOTER -->
+
+&nbsp;<p>&nbsp;<p>&nbsp;<p>
+		</ul>
+	</td>
+	<td bgcolor="white">&nbsp;</td><!-- this is the top-right-curl column -->
+	</tr>
+	</table>
+</body>
+</html>
+
+<!-- END FOOTER -->

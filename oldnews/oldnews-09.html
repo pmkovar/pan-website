@@ -1,0 +1,1059 @@
+<!-- BEGIN HEADER -->
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>P A N - A Newsreader for GNOME</title>
+</head>
+<body bgcolor="black">
+
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+   <td valign="top" background="/gfx/menu2/top-stretch.jpg"><a href="/">
+   <img src="/gfx/menu2/pan-logo.jpg" border="0" alt="Pan, a newsreader for GNOME."></a></td>
+   <td><img src="/gfx/menu2/top-right-curl.jpg" alt=""></td>
+   <td width="160" valign="top" rowspan="2" align="right" background="/gfx/menu2/menu-bg.jpg">
+      &nbsp;<p>&nbsp;<p>
+      <a href="/screenshots/"><img src="/gfx/menu2/screenshots.jpg" border="0" alt="screenshots"></a><br>
+      <a href="/download"><img src="/gfx/menu2/download.jpg" border="0" alt="download"></a><br>
+      <a href="/tipjar/"><img src="/gfx/menu2/tip-jar.jpg" border="0" alt="tip jar"></a><p>
+      <a href="/requirements/"><img src="/gfx/menu2/requirements.jpg" border="0" alt="requirements"></a><br>
+      <a href="/manual/"><img src="/gfx/menu2/users-manual.jpg" border="0" alt="user's manual"></a><br>
+      <a href="/features/"><img src="/gfx/menu2/features.jpg" border="0" alt="features"></a><br>
+      <a href="/faq/"><img src="/gfx/menu2/faq.jpg" border="0" alt="FAQ"></a><p>
+      <a href="/"><img src="/gfx/menu2/whats-new.jpg" border="0" alt="what's new"></a><br>
+      <a href="/roadmap/"><img src="/gfx/menu2/roadmap.jpg" border="0" alt="roadmap"></a><br>
+      <a href="/oldnews/"><img src="/gfx/menu2/news-archives.jpg" border="0" alt="news archives"></a><p>
+      <a href="/mailing_lists/"><img src="/gfx/menu2/mailing-lists.jpg" border="0" alt="mailing lists"></a><br>
+      <a href="/bugs/"><img src="/gfx/menu2/bug-reports.jpg" border="0" alt="bug reports"></a><br>
+      <a href="/contact/"><img src="/gfx/menu2/contact.jpg" border="0" alt="contact"></a> 
+   </td>
+</tr>
+
+<tr>
+   <td bgcolor="#FFFFFF" valign="top">
+      <ul>
+
+<!-- END HEADER -->
+
+
+
+<br>
+<b><font size="5" color="darkred">Old News</font></b><br><p>
+
+<p><b>June 7, 2001 - <a name="097" href="download.html">0.9.7 &quot;Just Another Victim of the Ambient Morality&quot;</a> Released!</b>
+	<ul>
+	Pan 0.9.7 has a faster startup time, smaller memory footprint,
+	more accurate decoding of binary attachments, better handling of
+	corrupt headers and .newsrc files, some usability and speed
+	improvements, and about 30 bugfixes.
+	<p>
+	This is is the first stable release in two months, so the full
+	list of improvements is fairly long.  However 0.9.7's also been
+	battle-tested by users through five prereleases, so hopefully all
+	these changes won't yield new bugs.
+	<p>
+	0.9.7 also represents a large effort to clean up Pan's internals
+	for easier maintainence and automated regression testing.
+	</ul>
+
+	<ul><b>New Features</b>
+	<li> filter-by-author to the thread toolbar.
+	<li> When deleting or marking read a crossposted article, the
+	action operates on all the crossposted copies of the article.
+	Thanks to Bob Broughton for requesting this feature.
+	<li> Added the ability to pause the task manager's queue.  Thanks to
+	Phillip Pi, Ron Youvan, Ryan Daniels, and others for requesting
+	this feature.
+	<li> Added the option to automatically import a .newsrc file on
+	startup and export it on shutdown.
+	<li> Added menu buttons for removing cached article bodies for
+	selected articles, threads, or an entire group.  Thanks to
+	Budman for suggesting this feature.
+	</ul>
+
+	<ul><b>Updates</b>
+	<li>Now loads unsubscribed groups only when the "all" group tab is
+        clicked instead of automatically on startup.  This lets Pan start
+        faster and use less memory.
+	<li>Now requires much less memory to decode attachments.  Thanks to
+        Wendell Dingus, Aluminum Foil Ball, and many others for suggesting
+        this.
+        <li> Changed the local article cache to make it likelier that a
+        failed multipart decode will keep the parts it successfully
+        downloaded for a retry.  Thanks to Frederik Vanrenterghem and
+        Aluminum Foil Ball for suggesting this change.
+        <li> Duplicate filenames during saving attachments are now renamed
+        foo_2.gif, foo_3.gif, etc. instead of foo.2.gif, foo.3.gif, for
+        beter sorting.  Thanks to Ron Youvan for suggesting this change.
+        <li> Better handling of thread tracking even when an article in the
+        thread has a corrupt References: header.  Thank to Jim Henderson
+        for reporting this problem and Adrian von Bidder for suggesting a
+        solution.
+        <li> More consistent checking for corrupt article headers from the news
+        server.  Sideways thanks to usenetserver.com for providing corrupt
+        headers repeatably so that I could track this down.
+        <li> Better recovery when importing of missing, corrupt, or
+        completely broken .newsrc files.
+        <li> Text in an alt.binaries.pictures article is now displayed before
+        the pictures, rather than after them, by request from Margus Ramst
+        and Frank Van Damme.
+        <li> Now handles FIFO .signature files.  Thanks to Daniel Burrows for
+        suggesting this feature.
+        <li> Updated some icons.  Thanks to Paolo Bacchilega for suggesting
+        these changes and providing icons.
+	</ul>
+
+	<ul><b>Bug Fixes</b>
+        <li> Fixed bug that caused Pan to crash while decoding some articles.
+        <li> Fixed crash in the "reply with external mailer" utility.  Thanks
+        to Mohit Agarwal and Gareth for reporting this bug.
+        <li> Fixed bug that caused Pan to crash sometime when posting or when
+        loading the pan.sent folder.   Thanks to Pete at gmx.net and
+        Wolfgang Schricker for reporting this bug.
+        <li> Fixed bug that caused Pan to crash when the user tried to send
+        mail without having a mail server defined.  Thanks to Cory Hill
+        for reporting this bug.
+        <li> Now correctly decodes uuencoded multipart posts that have non-uu
+        text (such as checksums or ads added by newsservers) at the end
+        of each post.  Thanks to Ken Geis, Gauze, Aluminum Foil Ball, 
+        Kim Robinson, and everyone else who reported this.
+        <li> Handle multiple UU-encoded attachments correctly.  Thanks to
+        Huub Reuver for reporting this.
+        <li> Quoted and original text are now colorized correctly in
+        HTML mode.
+        <li> Now sends "MODE READER" upon connection to make some INN news
+        servers happier.  Thanks to Achim Settelmeier for reporting
+        this bug.
+        <li> Fixed focus bug in thread view when toggling between zoomed
+        panes.  Thanks to Julien Plissonneau Duquene for reporting this
+        bug and supplying a patch.
+        <li>Resumed mulitpart downloads didn't show their progresses
+        correctly in the progress bar in the bottom of the main window.
+        Thanks to Adam Huffman and Sandor Barany for reporting this bug.
+        <li>The "open attachments" command now works properly even when there
+        is more than one attachment in the file.
+        <li>Moving back to the zoomed thread view from the zoomed article
+        view no longer moves the thread view down to the bottom of the
+        list.  Thanks <i>very</i> much to Samuel Solon for providing a
+        workaround to this gtk+ bug.
+        <li>Fixed problem with the list panes looking wrong under dark gtk
+        themes.  Lots of people reported this bug, but special thanks
+        go to Duane Healing and Jed Baer for helping track this one down.
+        <li>Attachements with filenames containing apostrophes are now
+        correctly saved.  Thanks to Ron Youvan for reporting this bug.
+        <li>Selecting all tasks in the task manager and hitting 'move task
+        down' repeatedly would cause Pan to go into a loop until the
+        task manager window was closed.  Thanks to Yannick Pollart for
+        reporting this bug.
+	<li>Is anyone still reading this?
+        <li>Save-Article-Text will now download the article's body if it
+        hasn't been downloaded already.  Thanks to Jacob Christensen
+        for reporting this bug.
+        <li>Better handling of encoded email addresses.  Thanks to
+        hristian Lohmaier for reporting a couple of encoding-related
+        bugs.
+        <li>Fixed RH problems with the RPM spec files.  Thanks to
+        Yosi Markovich for reporting this bug.
+        <li>Move and Copy articles to a folder acted the same, but Move
+        should have removed the articles from the original group.
+        Thanks to Wolfgang Schricker for reporting this bug.
+        <li>Small memory leaks and other small bugs fixed.
+
+	</ul>
+	
+
+<p><b>May 24, 2001 - <a name="097pre5" href="download.html">0.9.7pre5 &quot;Neddie Seagoon&quot;</a></b>
+
+	<ul>
+	This is intended to be the last prerelease before 0.9.7, which in
+	turn will be the last big release in the 0.9 series.  We're sick to
+	death of bugfixes and are itching to crank out some _new_ code for
+	0.10.0. :)
+	<p>
+	If your favorite bug still isn't fixed in this release, then
+	it's probably been lost behind the sofa and you should report it
+	anew at <a href="mailto:pan@rebelbase.com">pan@rebelbase.com</a>.  Thanks.
+	</ul>
+	<ul><b>New Features</b>
+	<li>Added the ability to pause the task manager's queue.  Thanks to
+            Phillip Pi, Ron Youvan, Ryan Daniels, and others for requesting
+	    this feature.
+	</ul>
+	<ul><b>Bug Fixes</b>
+	<li> Fixed crash that occurred when activating the "open in new window"
+	feature from the text window's popup menu.  Thanks to John LeMay,
+	Ron Youvan, and Margus Ramst for reporting this bug.
+	<li> Fixed problem with the list panes looking wrong under dark gtk
+	themes.  Lots of people reported this bug, but special thanks
+	go to Duane Healing and Jed Baer for helping track this one down.
+	<li> Fixed problem that caused articles to be incorrectly marked unread.
+	Thanks to Christophe Lambin for first reporting this bug.
+	<li> Fixed bug that broke the wrapping/filling code when replying to
+	a message.  Thanks to Dietmar Staab for reporting this bug.
+	<li> Move and Copy articles to a folder acted the same, but Move should
+	have removed the articles from the original group.  Thanks to
+	Wolfgang Schricker for reporting this bug.
+	<li> Fixed RH problems with the RPM spec files.  Thanks to
+	Yosi Markovich for reporting this bug.
+	<li> Small memory leaks fixed.
+	</ul>
+
+
+<p><b>May 17, 2001 - <a name="097pre4" href="download.html">0.9.7pre4 &quot;Twelve Misty Mountains&quot;</a></b>
+	<ul>
+	In addition to the usual round of bugfixes, this release works on
+	unavoidable errors: importing corrupt .newsrc files, downloading corrupt
+	headers from the news server, and broken threads are all handled a little
+	better now.
+	<p>
+	If your favorite bug isn't fixed in this release, then I've forgotten it and you
+	should re-submit it.  Thanks.
+	</ul>
+	<ul><b>Updates</b>
+		<li>Better handling of thread tracking even when an article in the thread
+		has a corrupt References: header.  Thank to Jim Henderson for
+		reporting this problem and Adrian von Bidder for suggesting a
+		solution.
+		<li>Better recovery when importing of missing, corrupt, or
+		completely broken .newsrc files.
+		<li>More consistent checking for corrupt article headers from the news
+		server.  Sideways thanks to usenetserver.com for providing corrupt
+		headers repeatably so that I could track this down.
+		<li> Text in an alt.binaries.pictures article is now displayed before the
+		picture, rather than after it, by request from Margus Ramst and
+		Frank Van Damme.
+		<li> Updated some icons.  Thanks to Paolo Bacchilega for suggesting these
+		changes and providing icons.
+	</ul>
+	<ul><b>Bug Fixes</b>
+		<li>One more attempt to get very large articles to decode properly even
+		the user's cache is set to some small size.  Thanks to the flood of
+		people reporting this problem against pre2 and pre3.
+		<li>Fix bug that caused folders to be corrupted or erased in earlier
+		prereleases when the "save setup" button was pressed.
+		<li>Moving back to the zoomed thread view from the zoomed article view
+		no longer moves the thread view down to the bottom of the list.
+		Thanks *very* much to Samuel Solon for providing a workaround to
+		this gtk+ bug.
+	</ul>
+
+
+<p><b>May 12, 2001 - <a name="097pre3" href="download.html">Pan 0.9.7pre3 &quot;Rocky and Fumble&quot;</a></b>
+	<ul>
+		This is a bugfix release to repair a number of serious bugs that
+		were reported and tracked down in pre2.  
+	</ul>
+	<ul><b>Updates</b>
+
+		<li>Reorganized the filter buttons on the article thread toolbar.
+	</ul>
+	<ul><b>Bug Fixes</b>
+		<li>Fixed bug that caused Pan to crash sometime when posting or when
+		loading the pan.sent folder.   Thanks to Pete at gmx.net and
+		Wolfgang Schricker for reporting this bug.
+		<li>Fixed bug that caused Pan to crash when the user tried to send
+		mail without having a mail server defined.  Thanks to Cory Hill
+		for reporting this bug.
+		<li>Decoding attachments that had no suffixes could cause an unwanted
+		directory to be created in pre1 and pre2.  Thanks to Ron Youvan
+		for first reporting this bug.
+		<li>Adding colorization of quoted text in html mode broke on some color 
+		alues because of stupid code.  Thanks to Ihar Viarheichy for
+		submitting a patch to fix this.
+		<li>Yet another fix for making sure that multipart articles will stay
+		around in the cache until all of them are together and ready for
+		decoding.  Thanks to Huub Reuver for helping to find this bug.
+		<li>Fixed crash when trying to import a .newsrc file that existed but
+		couldn't be opened.  Thanks to Christopher Huy for reporting this bug.
+	</ul>
+
+
+
+<p><b>May 12, 2001 - <a name="097pre3" href="download.html">Pan 0.9.7pre3 &quot;Rocky and Fumble&quot;</a></b>
+	<ul>
+		This is a bugfix release to repair a number of serious bugs that
+		were reported and tracked down in pre2.  
+	</ul>
+	<p>
+	<ul><b>Updates</b>
+
+		<li>Reorganized the filter buttons on the article thread toolbar.
+	</ul>
+	<p>
+	<ul><b>Bug Fixes</b>
+		<li>Fixed bug that caused Pan to crash sometime when posting or when
+		loading the pan.sent folder.   Thanks to Pete at gmx.net and
+		Wolfgang Schricker for reporting this bug.
+		<li>Fixed bug that caused Pan to crash when the user tried to send
+		mail without having a mail server defined.  Thanks to Cory Hill
+		for reporting this bug.
+		<li>Decoding attachments that had no suffixes could cause an unwanted
+		directory to be created in pre1 and pre2.  Thanks to Ron Youvan
+		for first reporting this bug.
+		<li>Adding colorization of quoted text in html mode broke on some color 
+		alues because of stupid code.  Thanks to Ihar Viarheichy for
+		submitting a patch to fix this.
+		<li>Yet another fix for making sure that multipart articles will stay
+		around in the cache until all of them are together and ready for
+		decoding.  Thanks to Huub Reuver for helping to find this bug.
+		<li>Fixed crash when trying to import a .newsrc file that existed but
+		couldn't be opened.  Thanks to Christopher Huy for reporting this bug.
+	</ul>
+
+
+
+<p><b>May 7, 2001 - <a name="097pre2" href="download.html">Pan 0.9.7pre2 &quot;Beware of the Leopard&quot;</a></b>
+	<ul>
+	This is another candidate for a stable 0.9.7 release.  It fixes
+	a handful of bugs from 0.9.7pre1, including a serious crashing bug.
+	</ul>
+	<p>
+	<ul><b>Updates</b>
+        <li>Changed the queue flush priorities to make it likelier that a failed
+            multipart decode will keep the parts it successfully downloaded for
+            a retry.  Thanks to Frederik Vanrenterghem and Aluminum Foil Ball
+            for suggesting this change.
+	<li>Duplicate filenames during saving attachments are now renamed
+            foo_2.gif, foo_3.gif, etc. instead of foo.2.gif, foo.3.gif, for
+            beter sorting.  Thanks to Ron Youvan for suggesting this change.
+	</ul>
+	<p>
+	<ul><b>Bug Fixes</b>
+	<li>pre1 crashed when downloading headers with certain strings.
+	<li>pre1 didn't handle multiple UU-encoded attachments correctly.
+            Thanks to Huub Reuver for reporting this.  Also, added a regression
+            test for this.
+	<li>The "open attachments" command now works properly even when there
+            is more than one attachment in the file.
+        <li>Better handling of encoded email addresses.  Thanks to Christian
+	    Lohmaier for reporting a couple of encoding-related bugs.
+	</ul>
+
+<p><b>May 4, 2001 - <a name="097pre1" href="download.html">Pan 0.9.7-pre1 &quot;Just Good Friends&quot;</a></b>
+	<ul>
+	This release has big wins for people decoding binaries, a
+	smaller memory footprint, adds auto import/export of .newsrc
+	files, and has a lot of little bugfixes.
+	<p>
+	Additionally, a lot of Pan's infrastructure has been rewritten
+	to make unit testing feasable.  The unit tests are looking good,
+	and feedback from CVS users is positive, but since the diffs from
+	0.9.6 are larger than usual I'm hedging my bets with a prerelease
+	cycle.
+	<p>
+	0.9.7 should also have more up-to-date translations than this
+	pre-release.
+	</ul>
+
+	<p>
+	<ul><b>New Features</b>
+        <li>Added filtering by author to the thread view toolbar.
+        <li>Added optional automatic support to import .newsrc files on
+            startup and export them on shutdown.
+        <li>Added menu options for purging downloaded message bodies for
+            selected articles, threads, or an entire group.  Thanks to
+            Budman for suggesting this feature.
+	</ul>
+	<p>
+	<ul><b>Updates</b>
+        <li>Now loads unsubscribed groups only when the "all" group tab is
+            clicked instead of automatically on startup.  This lets Pan start
+            faster and use less memory.
+        <li>Now requires much less memory to decode attachments.  Thanks to
+            Wendell Dingus, Aluminum Foil Ball, and many others for suggesting
+            this.
+	</ul>
+	<p>
+	<ul><b>Bug Fixes</b>
+        <li>Fixed bug that caused Pan to crash while decoding some articles.
+        <li>Fixed crash in the "reply with external mailer" utility.  Thanks to
+            Mohit Agarwal and Gareth for reporting this bug.
+        <li>Quoted and original text are now colorized correctly in HTML mode.
+        <li>Now correctly decodes uuencoded multipart posts that have non-uu
+            text (such as checksums or ads added by newsservers) at the end of
+            each post.  Thanks to Ken Geis, Gauze, Aluminum Foil Ball, 
+            Kim Robinson, and everyone else who reported this.
+        <li>When decoding attachments, if an identical filename already exists,
+            then the new copy is renumbered before the file suffix, rather than
+            after: `some_file.2.jpg', rather than `some_file.jpg.2'.  Thanks to
+            Paulo Filipe Mira for suggesting this change.
+        <li>Now sends "MODE READER" upon connection to make some INN news servers
+            happier.  Thanks to Achim Settelmeier for reporting this bug.
+        <li>Fixed focus bug in thread view when toggling between zoomed panes.
+            Thanks to Julien Plissonneau Duquene for reporting this bug and
+            supplying a patch.
+        <li>Attachements with filenames containing apostrophes are now correctly
+            saved.  Thanks to Ron Youvan for reporting this bug.
+        <li>Selecting all tasks in the task manager and hitting 'move task down'
+            repeatedly would cause Pan to go into a loop until the task manager
+            window was closed.  Thanks to Yannick Pollart for reporting this bug.
+        <li>Save-Article-Text will now download the article's body if it hasn't
+            been downloaded already.  Thanks to Jacob Christensen for reporting
+            this bug.
+        <li>Resumed mulitpart downloads didn't show their progresses correctly
+            in the progress bar in the bottom of the main window.  Thanks to
+            Adam Huffman and Sandor Barany for reporting this bug.
+        <li>Assorted small bug fixes.
+	</ul>
+
+
+
+<p><b>Mar 26, 2001 - <a name="096" href="download.html">Pan 0.9.6 &quot;Snufkin's Flag&quot;</a></b>
+	<ul>
+        Once again your friendly neighborhood Pan development team has slaved
+	night and day tracking down problems to make Pan newsreading a
+	bug-free experience.  A few small usability tweaks also slipped into
+	this release.
+	<p>
+	If all goes well this version of Pan will be included in Gnome 1.4's
+	&quot;Fifth Toe&quot; set of applications.
+	</ul>
+	<p>
+	<ul><b>New Features</b>
+	<li>Shift-Delete is now a shortcut to delete all selected articles
+            and replies.
+        <li>Now if a user has &gt;1 group selected in the grouplist when they
+            try to post a new message, all the groups are added, for
+            crossposting, to Newsgroups: entry field in the message composer.
+            Thanks to Adam Warner for suggesting this.
+	</ul>
+	<p>
+	<ul><b>Updates</b>
+	<li>The task manager, log viewer, and message composer windows all
+            now remember their sizes each time they're opened.  Thanks to
+            Garry Knight for suggesting this.
+        <li>Pan now lets users choose to reserve a server connection for
+            downloading messages to read.  That way you can keep reading
+            comfortably even while new headers or binary attachments are
+            being downloaded.  Thanks to Eric Ortega for this suggestion.
+        <li>The &quot;update article counts&quot; task is more fault-tolerant
+            now.  Thanks to Sven Neuhaus for suggesting this.
+	</ul>
+	<p>
+	<ul><b>Bug Fixes</b>
+	<li>Fixed bug that caused Pan to crash when user edited the fonts or
+            some other items in the preferences dialog for the first time.
+            Thanks to Adam Huffman and John LeMay Jr. for reporting this bug.
+        <li>Fix bug that could corrupt the article header cache files
+            when they were being saved.
+        <li>Raised gtkhtml requirement to 0.8.3 for the inline images version
+            of Pan.  This fixes some i18n font issues and some image rendering
+            problems seen in Pan under gtkhtml 0.8.2.
+        <li>Fix lockup bug that occurred when the user hit the thread filter
+            buttons repeatedly while loading a group.  Thanks to Sven Neuhaus
+            for reporting this bug.
+        <li>Fixed bug that caused Pan to crash when certain multipart binaries
+            were deleted from Pan in the thread view.  Thanks to Adam Huffman
+            for reporting this bug.
+        <li>Fix bug that crashed Pan when the user started a task to download
+            a group of articles, and then deleted some of the articles while
+            the task was running.
+        <li>Fixed Pan crash that occurred when decoding a multipart article
+            where one of the articles in the group had no body, just headers.
+            Thanks to Gauze for reporting ghis bug.
+        <li>Fixed error that prevented servers from being saved properly for
+            new users in some circumstances.
+        <li>Fixed error that corrupted memory and tallies of which
+            articles were read and which were unread.
+        <li>Small memory leak fixed.
+        <li>Fixed rate gtk+-1.2.9 build bug.  Thanks to Christophe Lambin
+            for reporting this bug.
+        <li>The message composition window was not resizable under some window
+            managers, such as BlackBox.  Thanks to Christophe Lambin,
+            Jed S. Baer, and Jan Schaumann for reporting this bug.
+        <li>Fixed bug that let invalid From: addresses slip by in 0.9.5 posts.
+        <li>Fixed bug that kept grouplist menu buttons enabled even when no
+            groups were selected.
+        <li>Problems with line wrapping fixed.  Thanks to Adam Warner for
+            reporting this bug.
+        <li>Fixed problem that caused the last line of an article body to not
+            be shown sometimes during space reading.
+        <li>Attachments with a ill-chosen directory characters in their
+            filenames caused Pan to create subdirectories with the first half
+            of the filename.  Thanks to William Peterson for reporting this bug.
+        <li>Fixed 0.9.5 bug that caused some people's names to show up as
+            &quot;Unknown&quot; in the author column of the thread tree.
+            Thanks to Felix Tilley for reporting this.
+        <li>Fixed harmless but annoying bug that caused the thread view to
+            rebuild itself after changing the thread filter and then selecting
+            an item.
+        <li>Other various fixes.
+	</ul>
+
+
+<p><b>Mar 12, 2001 - <a name="095" href="download.html">Pan 0.9.5 &quot;Will quality software be written for the hobby market?&quot; Released!</a></b>
+	<ul>
+	For once we've controlled our feature-adding desires long enough
+	to get out a bugfix release.  0.9.5 fixes about two dozen bugs,
+	large and small.  That's not sexy, I know, but what the heck. :)
+	</ul>
+	<p>
+	<ul><b>Updates</b>
+	<li>Pan is now more tolerant of headers that are missing subjects,
+            dates, and so forth.
+	</ul>
+	<p>
+	<ul><b>Bug Fixes</b>
+        <li>No longer crashes if the header cache is corrupted.  Instead it
+            skip the corrupted headers and logs an error to let the user know
+            what happened.
+        <li>Fix in parsing the 'begin' line of uuencoded attachments: file
+            permissions preceeded by a '0' (to denote an octal number) are now
+            handled.  Thanks to Brian Keefer for reporting this bug.
+        <li>Accepts articles whose Date: header has no seconds.  Some broken
+            software posts articles this way.  Thanks to Dave Hill for reporting
+            this problem and submitting a patch.
+        <li>The Group menu wouldn't appear unless a group was selected.  Thanks
+            to Craig Maloney, Lance Simmons, and others for reporting this bug.
+        <li>Fixed thread bug that corupted memory when two threads purged the
+            article cache at the same time.
+        <li>Fixed bug that occurred when thread A modified the article filter
+            that was being used in thread B to populate the article tree.
+        <li>Fix memory corruption bug that occurred when switching groups while
+            an download task was still queued for the first group.
+        <li>Fix memory corruption bug that occurred when the user deleted
+            articles that in the queue for downloading or decoding.
+        <li>Flushing the "pan.sendlater" folder didn't move the articles
+            out of the folder after posting, causing them to possibly be
+            reposted accidentally.  Thanks to Garry Knight fore reporting this
+            bug.
+        <li>Fix bug in counting read/unread article totals.
+        <li>Changing the filter settings in the article toolbar caused the
+            articles to be unsorted as a side-effect.  Thanks to Sandor Barany
+            for reporting this bug and Himanshu J. Gohel for suggesting a fix.
+        <li>New articles were being displayed with a 'new' icon instead of a
+            'read' icon even if they had been read.  Thanks to German Gomez
+            Garcia for reporting this bug.
+        <li>Fixed bug that crashed Pan when decoding an article with a '%' in
+            its subject.  Thanks to rschu for reporting this bug.
+        <li>Pan now handles port numbers greater than 32768.  Thanks to Keith
+            Miller for reporting this bug.
+        <li>Selecting text "backwards" (back to front) and pressing 'reply'
+            now works.  Thanks to A A Arendsen for reporting this bug.
+        <li>When changing news servers, the titlebar is now updated to show
+            the new server's name.  Thanks to Garry Knight for reporting this
+            bug.
+	</ul>
+
+
+<p><b>Feb 26, 2001 - <a name="094" href="download.html">Pan 0.9.4 &quot;I would have kissed his boo-boo but then I remembered he was a BAD MONKEY so I kicked his face!&quot; Released!</a></b>
+	<ul>
+	This is release is primarily a bugfix release but has a handful of user interface
+	improvements and a few nice new features as well.
+	</ul>
+	<p>
+	<ul><b>New Features</b>
+        <li>New icons to show which article bodies are cached locally for better offline reading.
+	<li>Added clickable URLs to the gtkhtml version of Pan.  URLs will be
+            opened with the appropriate application specified in your mime setup.
+        <li>Added user-configurable date format strings for how dates should be
+            displayed in the thread and article views.
+        <li>Added option to 'break' a thread when the subject line changes.
+            This is to group separately a subthread that spins off on a
+            different topic.
+	</ul>
+	<p>
+	<ul><b>Updates</b>
+        <li>The log window has been rewritten and provides more useful
+            information now.  Moreover errors are now flagged with an error
+            icon, and an error icon appears in the main window's toolbar to
+            let users know when errors are occurring.
+        <li>The local article cache is smarter about knowing when to clear out
+            old messages, and making sure that the oldest messages get purged
+            first.
+        <li>Faster loading mark saving of articles, deleting of articles,
+            marking articles read/unread, and so on.
+        <li>Text wrapping in the display is now turned off by default for
+            new users.
+        <li>Pan now accepts messages with unparseable From: headers instead
+            of discarding to them.
+	</ul>
+	<p>
+	<ul><b>Bug Fixes</b>
+        <li>Fixed a serious memory corruption bug that was introduced in 0.9.3.
+        <li>Fixed crash that occurred when deleting articles and then reading
+            more articles.  Thanks to John LeMay for reporting this bug.
+        <li>Try to authenticate as soon as we connect to the NNTP server,
+            so that members-only groups will be displayed.  Thanks to
+            Sébastien Delestaing and others for reporting this problem.
+        <li>Runs properly with gtkhtml whether it's configured with GConf
+            or not.  Thanks to Thomas Zajic and Joseph Wang for both supplying
+            patches for this.
+        <li>Setting the font for the HTML window didn't work under some
+            international fonts in 0.9.3.
+        <li>Fixed bug that kept some articles from being saved to disk.
+            This was also a 0.9.3 bug.   Guess that's what we get for going
+            two months between 0.9.2 and 0.9.3, eh.
+        <li>Pieces were dropping out of the middle of decoded multipart posts
+            if the server dropped connection in the middle of downloading an
+            article.  Thanks to Ronny Haryanto for reporting this bug and
+            correctly sussing out the problem, and to Genadz Batsyan
+            for supplying a patch.
+        <li>Make sure Pan correctly handles those darn 'cut here' messages
+            even in multipart uuencoded posts.  Thanks to Sándor Bárány for
+            reporting this bug.
+        <li>Don't substitute spaces with underscores when saving attachments.
+            Thanks to Jed S. Baer and Aluminum Foil Ball for suggesting this.
+        <li>Added a patch from James Amundson that keeps the text window
+            from growing too large when there is a long header being displayed.
+        <li>The Pan main window layouts were not being saved properly between
+            sessions when the user changed the placement of the windows.
+        <li>Fixed memory corruption problem that occurred when 'download
+            all bodies' was selected from the thread view.
+        <li>Fails more gracefully when the server refuses connection with a
+            &quot;400 - Server connection limit reached&quot; error message.  Thanks to
+            Frank Eisfeld for reporting this bug.
+        <li>Now handles smtp servers that send out multiline 200 handshake
+            messages.  Thanks to Adrian Miranda for reporting this bug.
+	</ul>
+
+
+<p><b>February 10, 2001 - <a name="093" href="download.html">Pan 0.9.3 "Ape Law" Released!</a></b>
+	<ul>
+	This is the first version of Pan since its cancellation
+	three months ago by Napster at the RIAA's request.  Pan's authors
+	have left Napster for greener pastures and are able to resume work
+	on Pan because of its GPL license.  New development is now merrily
+	copyrighted by the authors' own group,
+	<a href="#chimpanxi">ChimPanXi</a>.
+	<p>
+	This version should be faster and more reliable than previous versions,
+	and adds some much-requested features:
+	</ul>
+	<ul><b>New Features</b>
+        <li>Optional <a href="http://freshmeat.net/img/screenshots/7599.jpg">inline rendering</a> of images.  (requires <a href="requirements.html#gtkhtml">gtkhtml</a>)
+	<li>Now has a perfect <a href="http://www.xs4all.nl/~js/gnksa/Evaluations/pan-0.9.3.txt">Good Newskeeping</a> score!
+        <li>Customizable pane <a href="gfx/ss/pan_screenshot_layout.png">layout</a>.
+        <li>Added the option to automatically download new headers whenever a group is activated.
+        <li>Now handles read-only and moderated newsgroups.
+        <li>Added number of connections / total throughput <a href="http://pan.rebelbase.com/gfx/ss/pan_screenshot_main.png">status</a> in the main window's toolbar.
+	</ul>
+	<p>
+	<ul><b>Updates</b>
+	<li>Folders are saved in mbox format for <a href="gfx/ss/pan_screenshot_mutt.png">portability</a>.
+        <li>Better reading and decoding of mime attachments.
+        <li>The local header cache is now saved in smaller files.
+        <li>Faster network code for downloading articles/groups.
+        <li>Slightly faster threading, saving, and loading of articles.
+        <li>Better stability of locally-cached article bodies.
+        <li>GMime snapshot updated, including some gmime bug fixes.
+        <li>Better NNTP compliance of user authentication.
+        <li>Less UI flicker.
+	</ul>
+	<p>
+	<ul><b>Bug Fixes</b>
+	<li>Crashing bug in applying rules to incoming articles fixed.
+        <li>Crash during shutdown bug fixed.  Thanks to Christophe Lambin for reporting this bug.
+        <li>Random xlib async reply bugs fixed.
+        <li>A handful of severe memory corruption bugs fixed.
+        <li>Bug in specifying email addresses when sending email fixed.  Thanks to Jan Schaumann for reporting this bug.
+        <li>Small memory leaks fixed.
+        <li>The article body fonts weren't editable in the 0.9.2 preferences dialog.  Thanks to Dave Hill for the fix.
+        <li>The Group menu often had greyed-out items when a group was selected in the group list but hadn't yet been loaded.  Thanks to Steven Lusk for reporting this bug.
+        <li>Pan 0.9.2 gave a warning "message is all quoted text" when forwarding a message via email.  Thanks to John LeMay and Ben Elliston for reporting this.
+        <li>Fixed bug that prevented Pan from dowdnloading headers from groups that had exactly one article in them.
+        <li>Bug fix in the attribution string: the message-id was being pasted in the date's place.  Thanks to Leo Papandreou for reporting this.
+        <li>Bug fix on queued articles: dequeueing them from the task manager didn't remove the 'queued' icon in the threads view.
+        <li>Pan didn't work on file systems that didn't accept '&lt;' in in a filename.  Thanks to Arjan Drieman for reporting this bug.
+        <li>The 'external mailer' user preferences option was being misread in 0.9.2.  Thanks to Garry Knight for reporting this bug.
+        <li>Many other small bugfixes.
+	</ul>
+
+<p><b>January 24, 2001 - <a name="chimpanxi">Pan Name Change</a></b>
+	<ul>
+	Today, the new Pan Project changed its name to ChimPanXi.  The name
+	ChimPanXi (which is actually pronounced chim-"pan-'zE) differs from
+	our old name in that we can actually trademark it and thereby ward off
+	the legions of copycats who want to ride on our coattails,
+	such as the Java Pan clone "JaPan".
+	<p>
+	Napster, which owns Pan's <a href="http://www.superpimp.org/">old domain</a>,
+	has kindly agreed to redirect to our new-and-improved,
+	politically correct, and owned-by-us domain,
+	<a href="http://pan.rebelbase.com/">pan.rebelbase.com</a>.
+	<i>Thank You!</i>
+	<p>
+	Everything else about us remains unchanged. 
+	Remember: it's spelled C-H-I-M-P-A-N-X-I but it's pronounced "SuperPimpSoft".
+	</ul>	
+
+<p><b>December 8, 2000 - <a name="hooray">New Pan Project Begins!</a></b>
+	<ul>
+	The Pan development team have recently left Napster and are preparing
+	to resume development on the Pan newsreader.  This act, made possible
+	thanks to Pan's GPL license, revives the project which had been
+	<a href="#cancel">cancelled</a> by Napster last month.
+	<p>
+	We're also looking for new team members!  If you'd like to contribute
+	programming, graphic design, or some other skill to the project,
+	let us know at <a href="mailto:pan@superpimp.org">pan@superpimp.org</a>.
+	</ul>
+
+<p><b>November 28, 2000 - <a name="cancel">Napster Cancels Pan</a></b>
+	<ul>
+	After October's <a href="oldnews-09.html#riaawins">legal loss</a> over its mp3
+	decoder and parent company Napster's
+	<a href="http://www.napster.com/pressroom/001031b.html">efforts</a> to make peace with
+	the music industry, Napster announced early today that it
+	has ended development on Pan.
+	<p>
+	RIAA President Hillary Rosen and Napster CEO Hank Barry
+	spoke in a phone news conference on Monday morning.
+	"We believe that this is another step towards having the
+	music industry work with us rather than against us,"
+	said Barry.  Rosen said little during the conference, but her
+	presence was telling: The RIAA/Pan lawsuit is currently
+	in its damages phase, and Pan's fate may shave some of those
+	damages from Napster's legal bills.
+	<p>
+	The Pan development team is currently in limbo.  A lot of suits
+	are meeting right now to decide what to do with us.  I've heard
+	two rumors: one, that we're going to be tasked to do an official
+	version of Napster for KDE, and two, that we may be sold again,
+	this time to Red Hat(!).
+	</ul>
+
+
+<p><b>November 25, 2000 - <a name="0.9.2" href="download.html">Pan 0.9.2 Released!</a></b>
+<p>
+	<ul>
+	This release fixes a number of 0.9.x bugs, has some UI improvements,
+	a few new features, and adds support for mime-encoded headers.
+	<p>
+	Due to some holiday legal holdups the mp3 decoder is
+	<a href="oldnews-09.html#riaawins">still available</a> in this version of Pan.
+	</ul>
+
+	<p>
+	<ul><b>New Features</b>
+	<li>Added the option to load groups and articles by a single click
+	    instead of the previous double-click.  Mouse button 2 can also
+	    be used for selection.
+        <li>Articles posted by the user can now be cancelled and superseded.
+        <li>Added "Apply rule to subscribed groups" button in the rule tool.
+        <li>Better viewing and posting of mime-encoded headers.
+        <li>Highlighted text in the message composer can now be Rot13 encoded.
+            Thanks to Xander D Harkness for suggesting this feature.
+        <li>Added preferences option to display article dates in local time,
+            rather than UTC.  Thanks to Steve Cox for suggesting this feature.
+        <li>New feature: "Mark entire thread read".  Thanks to Jan Schaumann
+            for suggesting this.
+	</ul>
+
+	<p><ul><b>Updates</b>
+        <li>Simpler keyboard shortcuts for frequently-used commands.  Thanks to
+            Bas Mevissen for suggesting these.
+        <li>"Space reading" is working better now.  Thanks to Philippe Duperron
+            for suggesting improvements.
+        <li>A UI gotcha in the Rule Editor was fixed.
+        <li>The preferences dialog has been reorganized.
+        <li>The article list loads a little faster.
+	</ul>
+
+	<p><ul><b>Bug Fixes</b>
+        <li>0.9.1's date parser was displaying everything in 1978.  Thanks to
+            many people, including Christophe Lambin, Steve Cox, Wendell, Lisa,
+            V Pascal Nelson, Geordie, and many others for reporting this bug. :)
+        <li>The timezone offset in posted articles was always positive, even
+            when it should have been negative (such as in North America).
+        <li>Pan was incorrectly marking complete multipart messages as incomplete.
+            Thanks to gpb at seanet com for reporting this bug.
+        <li>"Catch Up" still wasn't always working properly.  Thanks to
+            Aaron Digulla for reporting this bug.
+        <li>The user preferences of sort order were not being saved in 0.9.1.
+            Thanks to Jonathan Itzhaky for reporting this bug.
+        <li>"Go to Next Thread" (ctrl-d) now works properly.  Thanks to
+            Ilja Booij for reporting this bug.
+        <li>Sorting in 0.9.1 worked most of the time, but not all of the time.
+            Thanks to Ken Geis (among others) for reporting this bug.
+        <li>"Read message in new window" works again.  Thanks to Steven Ellis
+            for reporting this bug.
+        <li>Fixed small memory leak in the rule manager module.
+        <li>The line count column in the article list wasn't resizable, which
+            was a problem for binary groups where the # of lines could be in
+            the 7 digit range.  Thanks to Rick Cosby for suggesting this.
+        <li>The "Path:" date in posted messages was being built incorrectly.
+            Thanks to Rune Kristian Viken for reporting this bug.
+        <li>GUI freeze when applying changes to the articlelist from the
+            preferences fixed.
+        <li>GUI freeze on startup bug fixed.  Thanks to Christopher
+            Lambin and Robert at freeserve for helping track down these
+            problems.
+        <li>.newsrc export bug fixed.
+        <li>Fixed bug in the From: header parsing that didn't always parse
+            old-style email addresses as well as it could.  Thanks to robert
+            at freeserve for reporting this bug.
+	</ul>
+
+
+<p><b>October 20, 2000 - <a name="0.9.1" href="download.html">Pan 0.9.1 Released!</a></b>
+<p>
+	<ul>
+	This update to 0.9 adds a number of bugfixes, better rule matching,
+	a complete rewrite of the bozo tool, and slightly better memory
+	management and startup time.  It should also be of interest to i18n
+	users because a gtk locale bug has been fixed and seventeen
+	translations have been updated.  Finally, Pan no longer relies on
+	libunicode, which caused problems for a lot of 0.9.0 users.
+	</ul>
+	<p>
+	<ul><b>New Features</b>
+	<li>Added "Expand All Threads" and "Collapse All Threads" buttons
+	</ul>
+
+	<p><ul><b>Updates</b>
+	<li>Updated British, Catalan, Dutch, Finnish, French, Galician, German,
+            Italian, Lithuanian, Norwegian, Polish, Slovenian, Swedish, Spanish,
+            Turkish, and Ukranian translations.
+	<li>Complete rewrite of the Bozo filter.
+	<li>More efficient downloading of article bodies.
+	<li>Better memory management in the newsrc module.
+	<li>Rule matching improved.
+	<li>Slightly faster startup and loading of groups.
+	</ul>
+
+	<p><ul><b>Bug Fixes</b>
+	<li>Many i18n display problems fixed.  Thanks to Robert Brady,
+            Kjartan Maraas, and Tov Are Jacobsen for this.
+        <li>Crash when saving new rules fixed.
+        <li>Crash from Post window when selecting Message|New fixed.
+        <li>Crash when following-up an article in certain circumstances
+            fixed.  Thanks to Jeroen Bron for reporting this bug.
+        <li>Crash when adding articles to a group under a strange set of
+            circumstances fixed.
+        <li>The ``apply rule to incoming articles'' setting was being ignored
+            in Pan 0.9.0, causing all rules to be applied to incoming articles.
+            Thanks to cav and Jim Henderson for reporting this bug.
+        <li>"Requeue" in the Task Manager no longer lets you requeue tasks
+            that are already running.  Thanks to Mark Hinkle for reporting
+            this bug.
+        <li>Small problem with "Catch Up" fixed.
+        <li>Small quoted-printable decoding bug fixed.  Thanks to Jan
+            Schaumann for reporting this bug.
+	 </ul>
+
+
+<p><b>October 11, 2000 - <a name="riaawins">RIAA Wins Pan Lawsuit</a></b>
+<p>
+	<ul>
+	The slow-moving <a href="oldnews-08.html#riaa">lawsuit</a> between the
+	<a href="http://www.riaa.org">RIAA</a> and 
+	<a href="index.html">SuperPimpSoft</a>
+	has come to an unforunate end.  Mere hours after today's release of
+	<a href="download.html">Pan 0.9</a>,
+	United States District Judge Mark Taylor ruled against the
+	free-software startup.  In a strongly-worded 89-page
+	ruling the Judge declared that
+	SuperPimpSoft had wrongly encouraged copyright violation
+	of pictures, music, and even movies by providing the ability
+	to decode and save files posted to Usenet.  Court is in recess
+	until Friday, when it will convene to discuss injunctive and
+	declaratory relief.
+	<p>
+	Hillary Rosen, president of the RIAA, was ebullient: ``As with
+	[the lawsuit against] mp3.com, the courts have sided with the
+	music makers -- the dreamers of dreams -- instead of high-tech
+	vultures."
+	<p>
+	The ruling must come an embarassing blow to Napster, which
+	<a href="oldnews-09.html#napster2">purchased</a> the free-software startup
+	one week ago.  Neither Napster nor SuperPimpSoft had any
+	comment at press time.
+	<p>
+	One Pan programmer, who refused to be named, hinted that today's
+	release of 0.9 was no accident:  "[Judge] Taylor's been hostile to
+	us since day one.  We wanted to release one final version with
+	the [mp3] decoder.''
+	</ul>
+
+
+<p><b>October 10, 2000 - <a name="0.9" href="download.html">Pan 0.9 Released!</a></b>
+<p>
+	<ul>
+	<b>Yes, Pan 0.9 can save binary attachments.</b>  If you want it, come
+	and get it.  But you'd better hurry 'cause <a href="index.html#riaawins">it's going fast</a>...
+	<p>
+	This is the first release of the 0.9 series, and is the first
+	stable version in almost five months.  The list of changes is
+	about as thick as a Robert Jordan novel, so go grab a cup of
+	coffee while your T3 line finishes downloading it...
+	</ul>
+	<p>
+	<ul><b>New Features</b>
+	<li>Pan now automatically adds "X-No-Productlinks: Yes" to new
+	posts so that deja.com won't insert product placements into them.
+	<li>Importing and Exporting of .newsrc files now supported.
+	<li>A Rules tool, similar to Gravity's, has been added.
+	<li>New articles being posted from Pan are now queued up until the
+	user goes online, instead of going online automatically.
+	<li>Agent-and-Gravity-like keyboard navigation of articles.
+	<li>Agent-and-Gravity-like "zooming" of panes
+	<li>Added "mute quoted text" option.
+	<li>Users can now add custom headers, such as "X-No-Archive: Yes", to a post.
+	<li>The message composer now has line wrap.
+	<li>User Folders are now supported for archiving messages.  Folders
+	can be created, deleted, and renamed; articles can be copied and
+	moved to folders.
+	<li>There is also a new "Send Later" feature that won't queue the
+	message for sending until the user tells Pan to.  Queued and
+	"Send Later" messages can be revised before being sent.
+	<li>One can now download an arbitrary number of article headers from a
+	group.  Previously, is was one of All, New, or a sample of 150.
+	<li>No longer uses libdb for storing the data files.  Corrupted libdb
+	files or incompatable versions of libdb in an RPM have been the
+	most-complained-about Pan gotcha.
+	<li>Can now Flag articles for downloading bodies in one big batch,
+	similar to Agent's "Mark for Retrieval" feature.
+	<li>New options to reply by email and followup to group at the same time,
+	as well as to forward a message by e-mail.
+	<li>Pan now uses the Evolution camel library to attempt to decode
+	mime-encoded headers properly.
+	<li>New feature "Catch Up with Selected Groups"
+	<li>Better support for international fonts: users can choose to use
+	gdk_font_load() or gdk_fontset_load() when loading fonts.
+	Apparently some international fonts work better with one or the
+	other.  Thanks to X-Chat IRC program for inspiring this workaround.
+	<li>The ability to delete unwanted groups, saving a good chunk of memory
+	by not having to load groups you'll never read.  Thanks to Jacob
+	Ilsø Christensen for suggesting this.
+	</ul>
+
+	<p><ul><b>Updates</b>
+	<li>Handles servers with lots of groups better, both in startup time
+	and in memory footprint.
+	<li>Faster manipulation of articles, including downloading, threading,
+	deleting, and marking read/unread.
+	<li>The Pan main window can now be resized even when tasks are running.
+	<li>Smaller data files.
+	<li>Tasks that can't be ever succeed (such as trying to download an
+	expired article) now abort at once, instead of waiting and retrying
+	as other tasks do.  Thanks to Simon Templar for suggesting this.
+	<li>Saving attachments now looks to see if the filename already exists.
+	If it does, the filename is changed slightly so that the original
+	file won't be overwritten.
+	<li>The Watched/Ignored state of a thread now expires after one month
+	so that the threads.txt file won't keep growing forever.
+	<li>"Get New Headers" is smarter about keeping any headers it got
+	if the task fails in the middle of a download.
+	<li>When the user selects a part of a message to reply to, and the
+	signature is in the selection, the signature is no longer trimmed
+	from the reply by Pan.  Thanks to Dave Hill for reporting this bug.
+	<li>A default Reply-To: address can now be specified in the preferences
+	dialog.  Thanks to Jan Schaumann for this patch.
+	<li>The default signature file can now be specified with ~ as the home
+	directory instead of requiring a fully-expanded path.  Thanks to
+	Jan Schaumann for submitting this patch.
+	<li>The new user wizard now asks the user for their mail server's
+	address and port number (and fills in reasonable defaults).  Thanks
+	to Jan Schaumann for submitting this patch.
+	<li>The number of retry attempts a download task makes before failing
+	is now configurable.
+	<li>The much-complained-about "Message Posted Successfully" dialog has
+	been removed.  After send, a dialog now appears only if an error
+	occurred during sending.  Thanks to Jim Henderson for this patch.
+	<li>The task manager eats fewer CPU cycles on very large task lists.
+	<li>The "Save Attachment As" dialog now lets you choose to add the save
+	task either to the front or the back of the Task queue
+	</ul>
+
+	<p><ul><b>Bug Fixes</b>
+	<li>Pan running away with 100% of CPU because of database corruption fixed.
+	<li>Pan now handles reconnecting to the server better after a dropped
+	    ppp connection has been re-established.
+	<li>Memory leaks fixed & memory use reduced.
+	<li>Multiple selections in the article list handled more gracefully.
+	    This fixes a gui lockup bug.  Thanks to Kimmo Karlsson for reporting
+	    this.
+	<li>Better sanity checking of email address in the "From" and "Mail To"
+	    headers in the compose window.  Previously Pan thought addresses like
+	    "Charles <@org>" were syntactically valid.
+	<li>Better sanity checking & warnings when the user tries to post empty
+	    messages.  Previous versions of Pan thought the attribution line
+	    "In article <sf@sd>, Joe wrote:" was new content and therefore didn't
+	    issue a warning for empty followups.
+	<li>The References: header wasn't keeping as many headers as could fit
+	    in 998 characters as recommended by the Good Newskeeping Seal of
+	    Approval.
+	<li>Signature files that contain the signature delimiter line ("-- ")
+	    were having the signature delimiter line added by pan anyway,
+	    resulting in two signature delimiters.
+	<li>"User-Agent" is now used instead of "X-Newsreader" in the headers of
+	    articles posted with Pan.  Thanks to Adam Bailey for reporting this.
+	<li>Delete-articles-in-current-group bug fixed.
+	<li>Signature delimiters not being added right bug fixed.
+	<li>Pan was posting an invalid Date: header in timezones that were
+	    minutes, instead of hours, offset from UTC (such as +0930 instead of
+	    +0900 or +1000).  Thanks to Gaelyne Gasson for reporting this bug.
+	<li>The state for the "Show All Headers in Message Body" option is now
+	    saved properly between sessions.  Thanks to Jan Schaumann for
+	    reporting this bug.
+	<li>Pan now decodes all attachments in a multi-attachment post, rather
+	    than just the first.  Thanks to Francesco Lamonica (and many others)
+	    for reporting this bug.
+	<li>"Save As" in the message composer now saves the draft of the message
+	    being composed, without the \n's typically found in dos text files.
+	    Thanks to Mark Ovens for reporting this bug.
+	<li>The article display's code for wrapping long headers didn't handle
+	    long unbroken subjects (hundreds of characters with no spaces, for
+	    example), causing Pan to become very very wide when such a subject
+	    was shown.  Thanks to Tov Are Jacobsen for a patch that fixes this.
+	<li>Handle unparsable user addresses in the From: line more elegantly
+	    when posting messages.  Thanks to Adam Bailey for reporting this bug.
+	<li>Article wrapping/filling no longer wraps/fills user signatures.
+	<li>"CR" characters are now stripped out when saving an article to
+	    a file.  Thanks to Dave Hill for reporting this bug.
+	<li>Pan was incorrectly handling groups with only one article.
+	    Thanks to Dave Hill for reporting this and submitting a patch.
+	<li>The unread article count was incorrect in the cases where exactly
+	    one article in the group had been read.
+	<li>Fix bug that could cause email being sent to be refused by the
+	    mail server.
+	<li>If a user was both posting and mailing an article, and one but not
+	    both actions failed, the next attempt would still do both actions,
+	    resulting in the same message posted or mailed multiple times.
+	<li>Fixed problem with newsgroup messages being posted with the wrong
+	    time due to timezone offset problems.  Thanks to Michael for
+	    reporting this bug.
+	<li>Fixed threading bug that sometimes cause Pan to crash when
+	    popping up the Save-Attachment-As: dialog.
+	<li>pan/article-thread.c (thread_articles): fixed bug that could thread
+	    multipart articles incorrectly in certain obscure circumstances.
+	    Thanks to Sándor Bárány for reporting this bug.
+	</ul>
+
+
+<p><b>October 4, 2000 - <a name="napster2">Napster Buys SuperPimpSoft</a></b>
+	<p><ul>
+	<a href="oldnews-08.html#riaa">Legal woes</a> may be raining down on SuperPimpSoft,
+	but it's now under the Napster umbrella, quipped SuperPimpSoft board member Eid Mitnick.
+	Earlier today Napster completed its buyout of SuperPimpSoft.
+	<p>
+	"Usenet is the mother of all P2P systems," explained Napster poster boy Shawn Fanning
+	in a press conference.  "These are our roots.  And that URL!  Even if we shitcan the
+	newsreader, owning www.superpimp.org is like money in the bank.  At least that's what
+	my uncle says."
+	<p>
+	How will this affect Pan's development path?  "We're still discussing that,"
+	answered Napster business strategist John Fanning.  "Owning the newsreader has
+	certain legal advantages for us in the short term.  In the long term, we may
+	have to move parts of Napster into a Usenet-like framework.  Owning Pan is strategic
+	for us there."
+	<p>
+	The SuperPimpSoft Pan team was less sanguine about the development.  "We didn't have
+	much choice," said one programmer who asked to not be named.  "The RIAA is trying to kill
+	both of us, and Napster has better lawyers."
+	</ul>
+
+<!-- BEGIN FOOTER -->
+
+&nbsp;<p>&nbsp;<p>&nbsp;<p>
+		</ul>
+	</td>
+	<td bgcolor="white">&nbsp;</td><!-- this is the top-right-curl column -->
+	</tr>
+	</table>
+</body>
+</html>
+
+<!-- END FOOTER -->
