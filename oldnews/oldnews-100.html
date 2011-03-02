@@ -1,0 +1,245 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" >
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	<meta name="keywords" content="pan,newsreader,usenet,nntp,gnome,gtk,linux,windows" />
+	<meta name="description" content="Pan is a Usenet newsreader that's good at both text and binaries." />
+	<meta name="robots" content="all" />
+	<title>Pan - A GNOME Newsreader</title>
+	<style type="text/css" media="all">
+		@import "../main.css";
+	</style>
+</head>
+<body>
+<div id="body">
+	<div id="head"></div>
+	<div id="menu">
+    <a href="../">what's new</a>
+		<a href="../screenshots/">screenshots</a>
+    <a href="../download/">download</a>
+    <a href="../tipjar/">tip jar</a>
+    <a href="../requirements/">requirements</a>
+    <br />
+    <a href="../manual/">manual</a>
+    <a href="../features/">features</a>
+    <a href="../faq/">faq</a>
+    <a href="../roadmap/">roadmap</a>
+    <a href="../oldnews/">news archives</a>
+    <a href="../mailing_lists/">mailing lists</a>
+    <a href="../bugs/">bug reports</a>
+    <a href="../contact/">contact</a>
+	</div>
+	<div id="content">
+		<div class="section" style="text-align: center">
+		  <script type="text/javascript"><!--
+      google_ad_client = "pub-5848608092248775";
+      google_ad_width = 468;
+      google_ad_height = 60;
+      google_ad_format = "468x60_as";
+      google_ad_type = "text_image";
+      google_ad_channel ="";
+      google_color_border = "CCCCCC";
+      google_color_bg = "FFFFFF";
+      google_color_link = "000000";
+      google_color_url = "666666";
+      google_color_text = "333333";
+      //--></script>
+     <script type="text/javascript"
+     src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+     </script>
+     <div style="font-size: x-small">(Proceeds from the above ads go to rebelbase.com for hosting Pan.<br />
+     Proceeds from the <a href="tipjar/">tip jar</a> go to Pan's programmers.)</div>
+     </div>
+<div class="section">
+<h1>Old News</h1>
+  <h2>July 23, 2006 - <a name="0104" style="font-size:small" href="download/">Pan 0.104: &quot;YES, OK!  I *AM* COMMUNIST SPICE!!!  NOW THAT YOU KNOW, I AM VERY TICKLE YOU AND THEN YOU ARE DIE!!!&quot;</a></h2>
+  <p>This is weekly beta #15 of a full Pan redesign and rewrite in C++.
+  The rewrite adds multiserver and nzb support, cuts alt.binaries' memory
+  overhead by more than two-thirds, slashes the time to load headers from
+  disk by 90%, and has many other improvements,
+  all in half the lines of source code.</p>
+  <p>This release adds the last must-have 1.0 features, so I suppose
+  it could be considered 1.0 RC 1.  Please download it and test it to
+  pieces. :)</p>
+  <p>Most of the changes in these weekly releases come from user feedback.
+  If you find a bug or something that could be better, let us know.</p>
+  <table class="changelog">
+  <tr><td colspan="2" class="new">New</td></tr>
+  <tr><td>Christophe</td>
+      <td>Menu to specify character encoding for articles' bodies.</td></tr>
+  <tr><td>Brad Sims</td>
+      <td>Added option to toggle 0.103's 'size to fit' feature. (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=347268">#347268</a>)</td></tr>
+  <tr><td>Phil Wlazlo</td>
+      <td>Instead of continuing to download, pop up a warning message and go offline when saving attachments and the disk is full.
+          (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=347654">#347654</a>)</td></tr>
+  <tr><td colspan="2" class="tweaks">Tweaks</td></tr>
+  <tr><td>Charles</td>
+      <td>Lower memory overhead (again!) in the group and header panes.</td></tr>
+  <tr><td>Kelly Martin</td>
+      <td>The 'save' dialog's default action is now 'save', not 'cancel'.</td></tr>
+  <tr><td>Sam Morris</td>
+      <td>By default, store the scorefile in ~/.pan2 rather than ~/News.
+          (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=347713">#347713</a>)</td></tr>
+  <tr><td>Christophe</td>
+      <td>Send keepalive messages to prevent idle connections from closing.
+          (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=342492">#342492</a>)</td></tr>
+  <tr><td>Douglas Bollinger</td>
+      <td>Revived 0.14 feature: subjects in the header pane show the number of hidden, unread children.
+          (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=347036">#347036</a>)</td></tr>
+  <tr><td>Steve Welch</td>
+      <td>Revived 0.14 feature: "delete group's articles".
+          (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=346986">#346986</a>)</td></tr>
+  <tr><td>Artur Jachacy</td>
+      <td>Revived 0.14 feature: header pane 'wraparound'.
+          (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=347758">#347758</a>)</td></tr>
+  <tr><td>Artur Jachacy</td>
+      <td>Revived 0.14 feature: toggled header pane threading on/off.
+          (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=348188">#348188</a>)</td></tr>
+  <tr><td colspan="2" class="bugs">Bug Fixes</td></tr>
+  <tr><td>Alen Williams</td>
+      <td>Fixed crash when reordering tasks via the task pane.
+          (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=347272">#347272</a>)</td></tr>
+  <tr><td>Valgrind</td>
+      <td>Fixed 0.103 memory leak when reading articles.</td></tr>
+  <tr><td>Charles</td>
+      <td>Fixed 0.102 code that significantly slowed down group loading.
+          (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=347275">#347275</a>)</td></tr>
+  <tr><td>Christian Lohmaier</td>
+      <td>Fixed 0.100 build error with gcc 3.2.3.</td></tr>
+  <tr><td>Richard Gilbert</td>
+      <td>Fixed ETA bug in the task pane.
+          (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=347007">#347007</a>)</td></tr>
+  <tr><td>S. Mazzola</td>
+      <td>Don't "jump" in the header pane when getting new articles.
+          (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=347862">#347862</a>)</td></tr>
+  </table>
+  <h2>July 9, 2006 - <a name="0103" href="download/">Pan 0.103: &quot;Eldarfaroth&quot;</a></h2>
+  <p>This is weekly beta #14 of a full Pan redesign and rewrite in C++.
+  The rewrite adds multiserver and nzb support, cuts alt.binaries' memory
+  overhead by more than two-thirds, slashes the time to load headers from
+  disk by 90%, and has many other improvements,
+  all in half the lines of source code.</p>
+  <p>Most of the changes in these weekly releases come from user feedback.
+  If you find a bug or something that could be better, let us know.</p>
+  <p>More details of the changes in this release can be found at:
+  <a href="http://tinyurl.com/ndgfm">http://tinyurl.com/ndgfm</a></p>
+  <table class="changelog">
+  <tr><td colspan="2" class="new">New</td></tr>
+  <tr><td>Darren Albers</td>
+      <td>Scale-to-fit of oversized images a la firefox. (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=346156">#346156</a>)</td></tr>
+  <tr><td>Various</td>
+      <td>The old 0.14.x "save-as..." dialog is back by popular demand.</td></tr>
+  <tr><td colspan="2" class="tweaks">Tweaks</td></tr>
+  <tr><td>Charles</td>
+      <td>When loading an empty group, pop up the 'download headers' dialog, defaulting to "last 7 days'.</td></tr>
+  <tr><td>Jeff Berman</td>
+      <td>When loading a group, give keyboard focus to the header pane. (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=342975">#342975</a>)</td></tr>
+  <tr><td>Jeff Berman</td>
+      <td>Remember between sessions if the body pane's headers expander was expanded. (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=342976">#342976</a>)</td></tr>
+  <tr><td>Carl Soderstrom</td>
+      <td>'Save' tasks now show their target directory in the task manager. (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=106763">#106763</a>)</td></tr>
+  <tr><td>Charles</td>
+      <td>Comply with the Gnome HiG by having a View->Toolbar checkbox to toggle the toolbar on/off. (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=110953">#110953</a>)</td></tr>
+  <tr><td colspan="2" class="bugs">Bug Fixes</td></tr>
+  <tr><td>Douglas Bollinger</td>
+      <td>"Show matching articles' threads" didn't work. (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=346408">#346408</a>)</td></tr>
+  <tr><td>Artur Jachacy</td>
+      <td>Some headers were displayed wrong when Pan was confused by their encoding. (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=346426">#346426</a>)</td></tr>
+  <tr><td>Soren Boll Overgaard</td>
+      <td>Non-ascii characters were sometimes not handled correctly. (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=337317">#337317</a>)</td></tr>
+  <tr><td>Artur Jachacy</td>
+      <td>Bracketed URLs were parsed incorrectly. (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=346543">#346543</a>)</td></tr>
+  <tr><td>Jeff Berman</td>
+      <td>The header pane wasn't properly repositioned after deleting articles. (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=342985">#342985</a>)</td></tr>
+  <tr><td>Charles</td>
+      <td>Fixed minor 0.101 bug in highlighting bold/italic/underlined text. (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=346718">#346718</a>)</td></tr>
+  <tr><td>Duncan</td>
+      <td>Fixed selection 'jumping' when changing filters.
+  <tr><td>Soren Boll Overgaard</td>
+      <td>The new scoring rule dialog didn't behave nicely. (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=338727">#338727</a>)</td></tr>
+  <tr><td>K. Haley</td>
+      <td>Fixed group description warnings on Windows. (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=346604">#346604</a>)</td></tr>
+  </table>
+  <h2>July 1, 2006 - <a name="0102" href="download/">Pan 0.102: &quot;From the Years of Neon Through Iodine&quot;</a></h2>
+  <p>This is weekly beta #13 of a full Pan redesign and rewrite in C++.
+  The rewrite adds multiserver and nzb support, cuts alt.binaries' memory
+  overhead by more than two-thirds, slashes the time to load headers from
+  disk by 90%, and has many other improvements,
+  all in half the lines of source code.</p>
+  <p>Most of the changes in these weekly releases come from user feedback.
+  If you find a bug or something that could be better, let us know.</p>
+  <table class="changelog">
+  <tr><td colspan="2" class="new">New</td></tr>
+  <tr><td>Frederic Bezies</td>
+      <td>Let users set charsets when posting articles. (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=345330">#345330</a>)</td></tr>
+  <tr><td>F. Ingelrest</td>
+      <td>Added ETA, bytes remaining to task window. (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=346339">#346339</a>)</td></tr>
+  <tr><td colspan="2" class="tweaks">Tweaks</td></tr>
+  <tr><td>Jeff Berman</td>
+      <td>Remember size of task and event windows. (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=345628">#345628</a>)</td></tr>
+  <tr><td>Mike Corbett</td>
+      <td>Improved header pane sorting for a.b.m.divx. (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=346069">#346069</a>)</td></tr>
+  <tr><td colspan="2" class="bugs">Bug Fixes</td></tr>
+  <tr><td>K. Haley</td>
+      <td>Data files were being opened in the wrong mode under Windows. (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=345941">#345941</a>)</td></tr>
+  <tr><td>Bigfoot</td>
+      <td>Fixed 0.101 bug that broke handling of URLs clicked on in the body pane. (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=345867">#345867</a>)</td></tr>
+  <tr><td>Alen Williams</td>
+      <td>Fixed crash when downloading articles with invalid `bytes' fields. (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=343257">#343257</a>)</td></tr>
+  <tr><td>Artur Jachacy</td>
+      <td>Fixed utf8 string corruption and crash when sorting by subject in some groups. (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=345784">#345784</a>)</td></tr>
+  <tr><td>Martin Zuziak</td>
+      <td>"Edit Preferences" always jumped to the group pane when in tabbed mode. (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=342517">#342517</a>)</td></tr>
+  </table>
+  <h2>June 24, 2006 - <a name="0101" href="download/">Pan 0.101: &quot;A pulse of dying power in a clenching plastic fist.&quot;</a></h2>
+  <p>This is weekly beta #12 of a full Pan redesign and rewrite in C++.
+  The rewrite adds multiserver and nzb support, cuts alt.binaries' memory
+  overhead by more than two-thirds, slashes the time to load headers from
+  disk by 90%, and has many other improvements...
+  all in half the lines of source code.</p>
+  <p>Most of the changes in these weekly releases come from user feedback.
+  If you find a bug or something that could be better, let us know.</p>
+  <table class="changelog">
+  <tr><td colspan="2" class="new">New</td></tr>
+  <tr><td>ERACC</td>
+      <td>Added text file, text, and script/command sigfile support. (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=345555">#345555</a>)</td></tr>
+  <tr><td>Mike Dee</td>
+      <td>Extra headers for outgoing posts can now be added per-posting profile.</td></tr>
+  <tr><td>Frank Olieu</td>
+      <td>Added a toggle to enable/disable spellchecking in the posting window.</td></tr>
+
+  <tr><td colspan="2" class="tweaks">Tweaks</td></tr>
+  <tr><td>Mike Dee</td>
+      <td>Added 'edit posting profiles' to the main Edit menu.</td></tr>
+  <tr><td>Kelsey Bjarnason</td>
+      <td>Better handling of *bold*, /italic/, and _underlined_ text markup.  (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=345705">#345705</a>)</td></tr>
+  <tr><td>Jeff Berman</td>
+      <td>When opening the event window, sort its list to show the latest events. (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=345630">#345630</a>)</td></tr>
+
+  <tr><td colspan="2" class="bugs">Bug Fixes</td></tr>
+  <tr><td>Charles</td>
+      <td>Multipart yEnc pictures are now displayed properly.</td></tr>
+  <tr><td>Walt</td>
+      <td>Multiple attachments in a single article weren't always displayed.  (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=345450">#345450</a>)</td></tr>
+  <tr><td>Artur Jachacy</td>
+      <td>'rot13 selected text' didn't work. (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=342149">#342149</a>)</td></tr>
+  <tr><td>Charles</td>
+      <td>Fixed fencepost error in scoring articles by Lines or Bytes.</td></tr>
+  <tr><td>Stijn Declercq</td>
+      <td>Custom fonts in the group pane weren't applied on startup.</td></tr>
+  <tr><td>Christophe Guisquet</td>
+      <td>More Win2K fixes in the networking code.</td></tr>
+  <tr><td>Yanko Kaneti</td>
+      <td>Close the 'about' dialog gracefully in gtk 2.9. (<a href="http://bugzilla.gnome.org/show_bug.cgi?id=345292">#345292</a>)</td></tr>
+  <tr><td>Valgrind</td>
+      <td>About a dozen minor memory leaks fixed.</td></tr>
+  </table>
+</div>
+</div>
+	<div id="foot">
+		Original site design by <a href="http://www.oswd.org/">Davide Rognoni</a>.
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,205 @@
+A, BODY, FORM, H1, H2, H3, LI, P, PRE, SPAN, UL {
+	margin: 0px;
+	padding: 0px;
+}
+BODY {
+  background: white;
+	font-family: Arial, Helvetica, sans-serif;
+	text-align: center;
+}
+
+INPUT, SELECT {
+	font-size: 12px;
+}
+
+PRE {
+	font-size: 12px;
+	margin-top: 5px;
+}
+
+#body {
+	width: 800px;
+	margin: 0 auto;
+	padding: 10px;
+}
+
+#head {
+	background: transparent url("pan_logo.png") no-repeat center top;
+	text-align: left;
+	padding: 20px 0 0 205px;
+	height: 88px;
+}
+#head H1 {
+	color: #444444;
+	font-size: 22px;
+}
+#head H2 {
+	color: #888888;
+	font-size: 18px;
+	margin-left: 20px;
+}
+
+#menu {
+	background-color: #666666;
+	font-size: 12px;
+}
+#menu A {
+	color: white;
+	font-weight: bold;
+	text-decoration: none;
+	padding: 0 10px 0 10px;
+}
+#menu A:hover {
+	background-color: white;
+	color: #666666;
+}
+
+#content {
+	min-height: 250px;
+	text-align: left;
+}
+#content .ajax {
+	color: #dd2222;
+	font-size: 22px;
+	font-weight: bold;
+}
+
+#foot {
+	color: #aaaaaa;
+	font-size: 10px;
+}
+#foot A {
+	color: #664444;
+}
+#foot A:hover {
+	color: #aa2222;
+	text-decoration: none;
+}
+
+.section {
+	border-bottom: 1px solid #dddddd;
+	color: #444444;
+	font-size: 14px;
+	margin-top: 10px;
+	padding-bottom: 10px;
+}
+.section P, UL {
+  margin-top: 6px;
+	margin-bottom: 6px;
+	line-height: 120%;
+}
+.section A {
+	color: #664444;
+}
+.section A:hover {
+	color: #aa2222;
+	text-decoration: none;
+}
+.section CODE {
+	color: black;
+	background-color: #f2ebdc;
+	font-size: 12px;
+}
+.section H1 {
+	font-size: 20px;
+	margin: 0 0 0 20px;
+}
+.section H2 {
+	font-size: 16px;
+	margin-top: 10px;
+}
+.section LI {
+	margin: 0 0 0 20px;
+}
+.section PRE {
+	color: black;
+	background-color: #f2ebdc;
+	font-size: 12px;
+	margin: 5px 0 10px 0;
+	border-left: 1px solid #aaa499;
+	margin-left: 10px;
+	padding-left: 10px;
+	width: 500px;
+}
+
+.section2 {
+	border-left: 4px solid #dddddd;
+	text-align: left;
+	margin: 20px 0 0 20px;
+	padding-left: 5px;
+}
+
+.sec-table {
+	color: black;
+	background-color: #f2ebdc;
+	font-size: 12px;
+	margin: 5px 0 10px 0;
+	border: 1px solid #aaa499;
+	margin-left: 10px;
+	padding-left: 10px;
+	width: 500px;
+}
+.sec-table th, td {
+	text-align: left;
+	border-spacing: 3px;
+	padding: 3px;
+}
+
+.item {
+	padding-top: 10px;
+	padding-bottom: 5px;
+}
+.item-title {
+	font-weight: bold;
+	color: black;
+}
+.item-content {
+	margin-left: 30px;
+	color: black;
+}
+
+.changelog {
+	border: thin solid black;
+	width: 100%;
+}
+.changelog tr td {
+	padding-top: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	font-size: smaller;
+}
+.changelog .new {
+  background: #00aa00;
+	color: white;
+	padding: 5px;
+	text-align: center;
+	font-weight: bold;
+}
+.changelog .tweaks {
+	background: yellow;
+	color: black;
+	padding: 5px;
+	text-align: center;
+	font-weight: bold;
+}
+.changelog .bugs {
+	background: red;
+	color: white;
+	padding: 5px;
+	text-align: center;
+	font-weight: bold;
+}
+.changelog .tips {
+	background: blue;
+	color: white;
+	padding: 5px;
+	text-align: center;
+	font-weight: bold;
+}
+.changelog .config {
+	background: orange;
+	color: black;
+	padding: 5px;
+	text-align: center;
+	font-weight: bold;
+}
