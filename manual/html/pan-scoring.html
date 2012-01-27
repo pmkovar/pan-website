@@ -1,0 +1,120 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Scoring</title>
+<link rel="stylesheet" type="text/css" href="en.css">
+<script type="text/javascript" src="jquery.js"></script><script type="text/javascript" src="jquery.syntax.js"></script><script type="text/javascript" src="yelp.js"></script>
+</head>
+<body>
+<div class="header"><div class="trails"><div class="trail">
+<a class="trail" href="index.html" title="Pan Manual"><span class="app application">Pan</span> Manual</a> » </div></div></div>
+<div class="body">
+<div class="links nextlinks">
+<a class="nextlinks-prev" href="pan-tasks.html" title="Tasks">Previous</a>  |  <a class="nextlinks-next" href="pan-custom.html" title="Customization">Next</a>
+</div>
+<div class="sect1 contents" id="pan-scoring"><div class="inner">
+<div class="hgroup"><h1 class="title">Scoring</h1></div>
+<div class="region">
+<p class="para">Scoring allows the user to give an article a rating based on user-defined scoring rules.  This rating can then be
+	  used by <span class="app application">Pan</span> to perform score-based actions.</p>
+<p class="para">When a group's article headers are first downloaded from the news server, all the articles have a score of 0.
+	  Then the list of scoring rules in the score file are applied to each article.  The score file rules might give an
+	  article from John Smith a high score, while articles with a subject line containing the phrase "For Sale" a negative
+	  score.</p>
+<div class="list itemizedlist"><ul class="list itemizedlist">
+<li class="list itemizedlist">
+	  <p class="para">
+	    <a class="xref" href="pan-scoring.html#pan-scoring-actions" title="Scoring Actions">Scoring Actions</a></p>
+	</li>
+<li class="list itemizedlist">
+	  <p class="para">
+	    <a class="xref" href="pan-scoring.html#pan-scoring-addrules" title="Adding Scoring Rules">Adding Scoring Rules</a></p>
+	</li>
+<li class="list itemizedlist">
+	  <p class="para">
+	    <a class="xref" href="pan-scoring.html#pan-scoring-editrules" title="Editing or Deleting Scoring Rules">Editing or Deleting Scoring Rules</a></p>
+    </li>
+<li class="list itemizedlist">
+	  <p class="para">
+	    <a class="xref" href="pan-scoring.html#pan-scoring-advanced" title="Advanced Scoring">Advanced Scoring</a></p>
+    </li>
+</ul></div>
+<div class="links sectionlinks"><ul>
+<li class="links"><a class="xref" href="pan-scoring.html#pan-scoring-actions" title="Scoring Actions">Scoring Actions</a></li>
+<li class="links"><a class="xref" href="pan-scoring.html#pan-scoring-addrules" title="Adding Scoring Rules">Adding Scoring Rules</a></li>
+<li class="links"><a class="xref" href="pan-scoring.html#pan-scoring-editrules" title="Editing or Deleting Scoring Rules">Editing or Deleting Scoring Rules</a></li>
+<li class="links"><a class="xref" href="pan-scoring.html#pan-scoring-advanced" title="Advanced Scoring">Advanced Scoring</a></li>
+</ul></div>
+<div class="sect2 sect" id="pan-scoring-actions"><div class="inner">
+<div class="hgroup"><h2 class="title">Scoring Actions</h2></div>
+<div class="region"><p class="para"><span class="app application">Pan</span> can perform two actions based on a article's score:
+			 <div class="list itemizedlist"><ul class="list itemizedlist">
+<li class="list itemizedlist"><p class="para">View a article by using
+					  <span class="guiseq menuchoice"><span class="gui guimenu">View</span> ▸ <span class="gui guisubmenu">Header Pane</span> ▸ <span class="gui guimenuitem">Match Scores of xxxx</span></span>
+					  .  The default is to hide articles (by not matching) with a score of -9999. and view all other
+					  scores.</p></li>
+<li class="list itemizedlist"><p class="para">Change the background and text color of the score column in the Header Pane.  This is
+						  defined in
+					  <span class="guiseq menuchoice"><span class="gui guimenu">Edit</span> ▸ <span class="gui guisubmenu">Preferences</span> ▸ <span class="gui guimenuitem">Colors</span></span>
+				</p></li>
+</ul></div>
+		</p></div>
+</div></div>
+<div class="sect2 sect" id="pan-scoring-addrules"><div class="inner">
+<div class="hgroup"><h2 class="title">Adding Scoring Rules</h2></div>
+<div class="region">
+<p class="para">There are several ways to add rules to the score file.  Select a article in the Header Pane and then
+			  select
+				  <span class="guiseq menuchoice"><span class="gui guimenu">Articles</span> ▸ <span class="gui guisubmenu">Watch Thread</span></span>
+				 .  This rule sets the score of any post located in the thread of the selected article to 9999.
+		  </p>
+<p class="para">The opposite of the above rule is
+				  <span class="guiseq menuchoice"><span class="gui guimenu">Articles</span> ▸ <span class="gui guisubmenu">Ignore Thread</span></span>
+				 .  This rule sets the score of any post located in the thread of the selected article to -9999.
+		  </p>
+<p class="para">Both of these scoring rules only work in the selected group and expire in one month.</p>
+<p class="para">Selecting a article and selecting
+				  <span class="guiseq menuchoice"><span class="gui guimenu">Articles</span> ▸ <span class="gui guisubmenu">Ignore Author</span></span>
+				  will open the <span class="gui interface">New Scoring Rule dialog</span>.</p>
+<p class="para">The default of this scoring rule is to score all the posts of the author of the selected article -9999 for
+			  the next month in the selected group.  By clicking on various fields and selecting different options in the
+			  New Scoring Rule dialog, you can customize the rule further.  For instance, instead of having the rule expire
+			  in one month, you can have the rule last forever.  Also note that you can make the rule add to the score of a
+			  article, making it a watch rule.  So the name "Ignore Author" can be somewhat of a misnomer.</p>
+<p class="para">When finished, click add and rescore to close the dialog box.</p>
+<p class="para">Selecting a article and selecting
+				  <span class="guiseq menuchoice"><span class="gui guimenu">Articles</span> ▸ <span class="gui guisubmenu">Add a Scoring Rule</span></span>
+				  is very similar to the Ignore Author section described above as it opens the same <span class="gui interface">New Scoring
+					  Rule</span> dialog, just with different defaults.  Construct a rule in the same fashion as
+				  described above.</p>
+</div>
+</div></div>
+<div class="sect2 sect" id="pan-scoring-editrules"><div class="inner">
+<div class="hgroup"><h2 class="title">Editing or Deleting Scoring Rules</h2></div>
+<div class="region"><p class="para">Selecting a article that is currently being scored and choosing
+			  <span class="guiseq menuchoice"><span class="gui guimenu">Articles</span> ▸ <span class="gui guisubmenu">Edit Article's Watch/Ignore/Score</span></span>
+			  will open the <span class="gui interface">Article's Scores</span> dialog box.  From this dialog you can manipulate the
+			  scoring rule for the currently selected article.  Each rule will have its own row describing the scoring
+			  action (plus or minus points), locations and line number of this rule in the score file and the texts of the
+			  rule.  Select the rule and click <span class="gui guibutton">+Add</span> button to alter the rule or
+			  <span class="gui guibutton">-Remove</span> button to delete the rule from the score file.  Click <span class="gui guibutton">close and
+				  rescore</span> when finished.</p></div>
+</div></div>
+<div class="sect2 sect" id="pan-scoring-advanced"><div class="inner">
+<div class="hgroup"><h2 class="title">Advanced Scoring</h2></div>
+<div class="region"><p class="para">The scoring file is located at <span class="file filename" dir="ltr">~/.pan2/Scoring</span>.  Advanced users might want to edit this
+			  file directly with a text editor to create advanced scoring rules that are difficult or impossible to
+			  construct from the <span class="gui interface">New Scoring Rule</span> dialog.  The format of the scoring rules is
+			  similar to the application <span class="app application">slrn</span>, but be aware that not all
+			  <span class="app application">slrn</span> scoring functions will work in <span class="app application">Pan</span>.</p></div>
+</div></div>
+</div>
+</div></div>
+<div class="links nextlinks">
+<a class="nextlinks-prev" href="pan-tasks.html" title="Tasks">Previous</a>  |  <a class="nextlinks-next" href="pan-custom.html" title="Customization">Next</a>
+</div>
+<div class="clear"></div>
+</div>
+<div class="footer"></div>
+</body>
+</html>

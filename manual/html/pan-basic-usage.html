@@ -1,0 +1,165 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Basic Usage</title>
+<link rel="stylesheet" type="text/css" href="en.css">
+<script type="text/javascript" src="jquery.js"></script><script type="text/javascript" src="jquery.syntax.js"></script><script type="text/javascript" src="yelp.js"></script>
+</head>
+<body>
+<div class="header"><div class="trails"><div class="trail">
+<a class="trail" href="index.html" title="Pan Manual"><span class="app application">Pan</span> Manual</a> » </div></div></div>
+<div class="body">
+<div class="links nextlinks">
+<a class="nextlinks-prev" href="pan-nutshell.html" title="Usenet in a Nutshell">Previous</a>  |  <a class="nextlinks-next" href="pan-groups.html" title="Groups">Next</a>
+</div>
+<div class="sect1 contents" id="pan-basic-usage"><div class="inner">
+<div class="hgroup"><h1 class="title">Basic Usage</h1></div>
+<div class="region">
+<p class="para">This section is an overview on how to perform basic Usenet actions with <span class="app application">Pan</span>.
+      <div class="list itemizedlist"><ul class="list itemizedlist">
+<li class="list itemizedlist">
+		  <p class="para">
+			<a class="xref" href="pan-basic-usage.html#pan-basic-server" title="Setup a News Server">Setup a News Server</a></p>
+		</li>
+<li class="list itemizedlist">
+		  <p class="para">
+			<a class="xref" href="pan-basic-usage.html#pan-basic-groups" title="Selecting a News Group">Selecting a News Group</a></p>
+		</li>
+<li class="list itemizedlist">
+		  <p class="para">
+			<a class="xref" href="pan-basic-usage.html#pan-basic-articles" title="Reading Articles">Reading Articles</a></p>
+		</li>
+<li class="list itemizedlist">
+		  <p class="para">
+			<a class="xref" href="pan-basic-usage.html#pan-basic-post" title="Posting Articles">Posting Articles</a></p>
+		</li>
+<li class="list itemizedlist">
+		  <p class="para">
+			<a class="xref" href="pan-basic-usage.html#pan-basic-reply" title="Replying to Articles">Replying to Articles</a></p>
+		</li>
+<li class="list itemizedlist">
+		  <p class="para">
+			<a class="xref" href="pan-basic-usage.html#pan-basic-binaries" title="Downloading Binaries">Downloading Binaries</a></p>
+		</li>
+</ul></div> </p>
+<div class="links sectionlinks"><ul>
+<li class="links"><a class="xref" href="pan-basic-usage.html#pan-basic-server" title="Setup a News Server">Setup a News Server</a></li>
+<li class="links"><a class="xref" href="pan-basic-usage.html#pan-basic-groups" title="Selecting a News Group">Selecting a News Group</a></li>
+<li class="links"><a class="xref" href="pan-basic-usage.html#pan-basic-articles" title="Reading Articles">Reading Articles</a></li>
+<li class="links"><a class="xref" href="pan-basic-usage.html#pan-basic-post" title="Posting Articles">Posting Articles</a></li>
+<li class="links"><a class="xref" href="pan-basic-usage.html#pan-basic-reply" title="Replying to Articles">Replying to Articles</a></li>
+<li class="links"><a class="xref" href="pan-basic-usage.html#pan-basic-binaries" title="Downloading Binaries">Downloading Binaries</a></li>
+</ul></div>
+<div class="sect2 sect" id="pan-basic-server"><div class="inner">
+<div class="hgroup"><h2 class="title">Setup a News Server</h2></div>
+<div class="region">
+<p class="para">When you start <span class="app application">Pan</span> for the first time, the <span class="gui interface">Add a Server</span> dialog is displayed.</p>
+<p class="para">At this point, you must enter the connection information for the server you wish to access.  After you
+				enter this information, <span class="app application">Pan</span> will contact the server and download a list of all the groups the server
+				carries and save it to disk.. </p>
+<p class="para"> Refer to <a class="xref" href="pan-custom.html#pan-custom-servers" title="News Servers">News Servers</a> for more detailed information:</p>
+</div>
+</div></div>
+<div class="sect2 sect" id="pan-basic-groups"><div class="inner">
+<div class="hgroup"><h2 class="title">Selecting a News Group</h2></div>
+<div class="region">
+<p class="para">The Group Pane contains a list of all the news groups available on the server.  Scroll through the list
+		 and enter a group by clicking on it's name.</p>
+<p class="para">If this is the first time you have entered this group, you will be prompted on how many article headers you wish to
+		 retrieve from the server.  You can choose to retreive all article headers available for that group or limit the
+		 retrieval by either quantity of articles or number of days. </p>
+<p class="para">After making a selection from this dialog, <span class="app application">Pan</span> will download the article headers for the
+		 selected group and save them locally on the computer.</p>
+<div class="note note" title="Note"><div class="inner"><div class="region"><div class="contents"><p class="para">Depending on the news server, certain groups might be "dead" and have no headers available for
+			 download.</p></div></div></div></div>
+<p class="para">After article header retrieval, the group name in the Group Pane will turn bold, which means there are unread
+	 articles in that particular group.  Also the number of unread articles in the group will be displayed in parenthesis
+	 following the group name.</p>
+<p class="para">It's not unusual for a server to have tens of thousands of groups, but usually a user is only interested in a few.
+	 To better keep track of the interesting groups, select the group name by middle-clicking on it and choose
+	 <span class="guiseq menuchoice"><span class="gui guimenu">Groups</span> ▸ <span class="gui guimenuitem">Subscribe</span></span>
+	 .  Scroll the group window to the top if necessary and you will see that the selected newsgroup is listed directly under
+	 the Subscribed Groups section.</p>
+</div>
+</div></div>
+<div class="sect2 sect" id="pan-basic-articles"><div class="inner">
+<div class="hgroup"><h2 class="title">Reading Articles</h2></div>
+<div class="region">
+<p class="para">After entering a group, the header pane will be filled with article headers.  The header pane can be sorted by
+		  clicking on the topmost row of a column, where the column name is located.  Clicking again will reverse the sort.
+		  The column that is used for sorting will have a downward arrow after the column name and the entire column will
+		  darken.</p>
+<p class="para"><span class="app application">Pan</span> defaults to showing collapsed threads.  Only the first article of the thread is shown with a number in
+		  parenthesis indicating how many posts are hidden.  Clicking on the right-facing arrow before the header text will
+		  expand the thread, showing the hidden articles in the thread.  Reading the first article of the thread will also
+		  expand the thread.  The keyboard shortcut for expanding threads is shift-right arrow.  Shift-left arrow will collapse
+		  the thread.</p>
+<p class="para">Clicking on a header will download the article from the server, store it in the article cache and display it in the
+		  article pane.  The article is then marked as read.  Read articles are distinguished in the header pane by using a
+		  normal (not bold) font and by showing a open envelope icon in the state column.</p>
+<p class="para">You can scroll the message in the Article Pane by using the scrollbar or by pressing the spacebar.  Whenever
+		  the bottom of the retreived article is already displayed, press the spacebar will download the next
+		  article.</p>
+</div>
+</div></div>
+<div class="sect2 sect" id="pan-basic-post"><div class="inner">
+<div class="hgroup"><h2 class="title">Posting Articles</h2></div>
+<div class="region">
+<p class="para">To post an article in a group and start a new thread, select the group you wish to post to in the Group Pane
+		  and then choose
+		 <span class="guiseq menuchoice"><span class="gui guimenu">Post</span> ▸ <span class="gui guimenuitem">Post to a Newsgroup</span></span>.
+		 If this is the first time you have posted an article to a newsgroup, the <span class="gui interface">Posting Profile</span>
+		 dialog will appear and you will be required to fill in some information.  Next, the
+		 <span class="gui interface">Post Article</span> dialog will appear.  Type in a subject and then enter the body of the message
+		 at the bottom.  When done, choose
+		 <span class="guiseq menuchoice"><span class="gui guimenu">File</span> ▸ <span class="gui guimenuitem">Send Article</span></span>
+       to send the article to the news server and out to the rest of Usenet.</p>
+<p class="para"> Refer to <a class="xref" href="pan-posting.html#pan-posting-profiles" title="Posting Profiles Dialog">Posting Profiles Dialog</a>  and <a class="xref" href="pan-posting.html#pan-posting-dialog" title="Post Article Dialog">Post Article Dialog</a> for more detailed
+		   information:</p>
+</div>
+</div></div>
+<div class="sect2 sect" id="pan-basic-reply"><div class="inner">
+<div class="hgroup"><h2 class="title">Replying to Articles</h2></div>
+<div class="region">
+<p class="para">If you want to post a reply to a specific	article and have your followup appear in that article's thread,
+			highlight that article in the Header Pane with the middle mouse button and use
+		 <span class="guiseq menuchoice"><span class="gui guimenu">Post</span> ▸ <span class="gui guimenuitem">Followup to Newsgroup</span></span>.
+		 The highlighted article's text will appear as quoted text (each line is preceeded by a "&gt;") in the editor window.
+		 Type in your response and then choose
+		 <span class="guiseq menuchoice"><span class="gui guimenu">File</span> ▸ <span class="gui guimenuitem">Send Article</span></span>
+         to send the article to the news server. </p>
+<p class="para">If you want to send a reply to a specfic article via email, highlight that article in the Header Pane with
+			 the middle mouse button and choose
+		 <span class="guiseq menuchoice"><span class="gui guimenu">Post</span> ▸ <span class="gui guimenuitem">Reply to Author in Mail</span></span>
+		 .  The highlighted article's text will appear as quoted text (each line is preceeded by a "&gt;") in the editor window.
+		 Type in your response and then choose
+		 <span class="guiseq menuchoice"><span class="gui guimenu">File</span> ▸ <span class="gui guimenuitem">Send Article</span></span>
+		 and the text will be sent to the default external email application.  Double-check the To: field and then send the
+		 email as you normally would with that application.</p>
+</div>
+</div></div>
+<div class="sect2 sect" id="pan-basic-binaries"><div class="inner">
+<div class="hgroup"><h2 class="title">Downloading Binaries</h2></div>
+<div class="region">
+<p class="para">A binary file in Usenet is usually composed of many smaller articles.  <span class="app application">Pan</span> automatically organizes all
+			these articles under one special article header.  If all the data that comprises the binary header made it
+			through the Usenet network successfully, a green, full  puzzle-piece is displayed in the first column.  To save
+			the data, select the special header in the header window and use
+		 <span class="guiseq menuchoice"><span class="gui guimenu">Articles</span> ▸ <span class="gui guimenuitem">Save Articles</span></span>
+		 to download and save the binary data to disk.</p>
+<p class="para">If the binary posts are corrupted by missing or incorrect data, a red, incomplete puzzle-piece is displayed
+			in the first column.  The file may be saved, but it will probably be corrupt in some way.</p>
+<div class="note note" title="Note"><div class="inner"><div class="region"><div class="contents"><p class="para">Supporting binary newsgroups takes a large amount of bandwidth.  Unless you are using a premium news
+				server provider, it is not unusual for many binary files to be missing or corrupt.</p></div></div></div></div>
+</div>
+</div></div>
+</div>
+</div></div>
+<div class="links nextlinks">
+<a class="nextlinks-prev" href="pan-nutshell.html" title="Usenet in a Nutshell">Previous</a>  |  <a class="nextlinks-next" href="pan-groups.html" title="Groups">Next</a>
+</div>
+<div class="clear"></div>
+</div>
+<div class="footer"></div>
+</body>
+</html>
