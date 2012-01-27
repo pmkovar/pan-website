@@ -1,0 +1,148 @@
+<?xml version="1.0"?>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Customization</title><link rel="stylesheet" type="text/css" href="en.css"/><script type="text/javascript" src="jquery.js"/><script type="text/javascript" src="jquery.syntax.js"/><script type="text/javascript" src="yelp.js"/></head><body><div class="header"><div class="trails"><div class="trail"><a class="trail" href="index.xhtml" title="Pan Manual"><span class="app application">Pan</span> Manual</a> » </div></div></div><div class="body"><div class="links nextlinks"><a class="nextlinks-prev" href="pan-scoring.xhtml" title="Scoring">Previous</a></div><div class="sect1 contents" id="pan-custom"><div class="inner"><div class="hgroup"><h1 class="title">Customization</h1></div><div class="region"><p class="para">This section describes how certain features or actions in <span class="app application">Pan</span> can be customized.</p><div class="list itemizedlist"><ul class="list itemizedlist"><li class="list itemizedlist">
+	  <p class="para">
+	    <a class="xref" href="pan-custom.xhtml#pan-custom-behavior" title="Behavior">Behavior</a></p>
+	</li><li class="list itemizedlist">
+	  <p class="para">
+	    <a class="xref" href="pan-custom.xhtml#pan-custom-gui" title="GUI Composition">GUI Composition</a></p>
+	</li><li class="list itemizedlist">
+	  <p class="para">
+	    <a class="xref" href="pan-custom.xhtml#pan-custom-externalapps" title="External Applications">External Applications</a></p>
+	</li><li class="list itemizedlist">
+	  <p class="para">
+	    <a class="xref" href="pan-custom.xhtml#pan-custom-articlecache" title="Article Cache Size">Article Cache Size</a></p>
+	</li><li class="list itemizedlist">
+	  <p class="para">
+	    <a class="xref" href="pan-custom.xhtml#pan-custom-servers" title="News Servers">News Servers</a></p>
+	</li></ul></div><div class="links sectionlinks"><ul><li class="links"><a class="xref" href="pan-custom.xhtml#pan-custom-behavior" title="Behavior">Behavior</a></li><li class="links"><a class="xref" href="pan-custom.xhtml#pan-custom-gui" title="GUI Composition">GUI Composition</a></li><li class="links"><a class="xref" href="pan-custom.xhtml#pan-custom-externalapps" title="External Applications">External Applications</a></li><li class="links"><a class="xref" href="pan-custom.xhtml#pan-custom-articlecache" title="Article Cache Size">Article Cache Size</a></li><li class="links"><a class="xref" href="pan-custom.xhtml#pan-custom-servers" title="News Servers">News Servers</a></li></ul></div><div class="sect2 sect" id="pan-custom-behavior"><div class="inner"><div class="hgroup"><h2 class="title">Behavior</h2></div><div class="region"><p class="para">Many of the default actions of <span class="app application">Pan</span>, such as mouse clicks, actions when entering or leaving
+		  a group and the action of the space bar can be altered.</p><div class="terms variablelist"><dl class="terms variablelist"><dt class="terms">In
+				  <span class="guiseq menuchoice"><span class="gui guimenu">Edit</span> ▸ <span class="gui guisubmenu">Preferences</span> ▸ <span class="gui guimenuitem">Behavior</span></span>
+			  </dt><dd class="terms">
+				  <div class="list itemizedlist"><ul class="list itemizedlist"><li class="list itemizedlist">
+						  <p class="para"><span class="gui guilabel">Mouse</span></p>
+						  <p class="para">The two boxes of the mouse section change the default action of the left mouse button.
+							  If unselected, you would have to double click on a group or article to activate it.</p>
+					  </li><li class="list itemizedlist">
+						  <p class="para"><span class="gui guilabel">Groups</span></p>
+						  <p class="para">The selections in the group section control what commands <span class="app application">Pan</span> will automatically run
+									  when manipulating groups.</p>
+						  <div class="list itemizedlist"><ul class="list itemizedlist"><li class="list itemizedlist">
+								  <p class="para">The first box, when activated, will automatically get new headers for all
+									  subscribed groups whenever Pan is started.  This is the equivilant of using
+									 <span class="guiseq menuchoice"><span class="gui guimenu">Groups</span> ▸ <span class="gui guimenuitem">Get New Headers in Subscribed Groups</span></span>
+									 from the menubar.
+								  </p>
+							  </li><li class="list itemizedlist">
+								 <p class="para">The next box, when activated, will automatically get new headers when entering a
+									  group.  This is the equivilant of using
+								 <span class="guiseq menuchoice"><span class="gui guimenu">Groups</span> ▸ <span class="gui guimenuitem">Get New Headers in Selected Group</span></span>
+								 from the menubar.
+								 </p>
+							 </li><li class="list itemizedlist">
+								 <p class="para">The next box, when activated, will mark the entire group read when leaving a group.
+									 This is the equivilant of using
+									 <span class="guiseq menuchoice"><span class="gui guimenu">Groups</span> ▸ <span class="gui guimenuitem">Mark Group Read</span></span>
+									 from the menubar.
+								 </p>
+							 </li><li class="list itemizedlist">
+								 <p class="para"> The last box in the Groups section, when activated, will expand all threads in the
+									 Header Pane when entering a group.</p>
+							 </li></ul></div>
+					     </li><li class="list itemizedlist">
+						  <p class="para"><span class="gui guilabel">Articles</span></p>
+						  <p class="para">The first option, when activated, makes the spacebar select the next article rather than
+							  the next unread article.  This is handy if you are viewing a thread with read and unread
+							  articles mixed together.</p>
+						  <p class="para">The next option activates smooth scrolling in the Article Pane.</p>
+					  </li></ul></div>
+			   </dd></dl></div></div></div></div><div class="sect2 sect" id="pan-custom-gui"><div class="inner"><div class="hgroup"><h2 class="title">GUI Composition</h2></div><div class="region"><p class="para">The layout and view of the Group, Header and Body Panes in <span class="app application">Pan</span> can customized in serveral ways.</p><div class="terms variablelist"><dl class="terms variablelist"><dt class="terms"><span class="gui guilabel">Pane Layout</span></dt><dd class="terms">
+			  <p class="para">In
+				  <span class="guiseq menuchoice"><span class="gui guimenu">Edit</span> ▸ <span class="gui guisubmenu">Preferences</span> ▸ <span class="gui guimenuitem">Layout</span></span>
+			   the orientation of the Groups, Header and Body Panes can be manipulated.</p>
+			  </dd><dt class="terms"><span class="gui guilabel">Tabbed Layout</span></dt><dd class="terms">
+				  <p class="para">Instead of having all three panes share the <span class="app application">Pan</span> main window at one time, another view, called
+					  Tabbed Layout, can be activated by choosing
+					 <span class="guiseq menuchoice"><span class="gui guimenu">View</span> ▸ <span class="gui guisubmenu">Layout</span> ▸ <span class="gui guimenuitem">Tabbed Layout</span></span>
+				  .  Now, only one of the three Panes will displayed at a time.  Each Pane is brought to the front of
+				  other Panes by clicking on it's tab located directly under the tool bar or by pressing "1", "2" or "3"
+				  for the Group, Header or Body Pane respectively.</p>
+			  </dd><dt class="terms"><span class="gui guilabel">Show/Hide Panes</span></dt><dd class="terms">
+			 <p class="para">You can hide a specific Pane by choosing from
+				 <span class="guiseq menuchoice"><span class="gui guimenu">View</span> ▸ <span class="gui guisubmenu">Layout</span></span>
+				and using the selection box to show/hide each of the Panes.</p>
+			</dd><dt class="terms"><span class="gui guilabel">Fonts</span></dt><dd class="terms">
+			   <p class="para">Choose
+				 <span class="guiseq menuchoice"><span class="gui guimenu">Edit</span> ▸ <span class="gui guisubmenu">Preferences</span> ▸ <span class="gui guimenuitem">Fonts</span></span>
+				to select a font.</p>
+				<p class="para"><span class="app application">Pan</span> can use the monospace font in the article Pane, if activated.</p>
+		   </dd><dt class="terms"><span class="gui guilabel">Colors</span></dt><dd class="terms">
+			   <p class="para">Choose
+				 <span class="guiseq menuchoice"><span class="gui guimenu">Edit</span> ▸ <span class="gui guisubmenu">Preferences</span> ▸ <span class="gui guimenuitem">Colors</span></span>
+			   to customize the colors used in <span class="app application">Pan</span>.</p>
+			   <p class="para">The first section allows you to customize the colors used by scoring in the Header Pane.  See <a class="xref" href="pan-scoring.xhtml" title="Scoring">Scoring</a> for more information on how to use this feature.</p>
+			   <p class="para">The second section allows you to customize the colors used in the Body Pane.</p>
+		   </dd></dl></div></div></div></div><div class="sect2 sect" id="pan-custom-externalapps"><div class="inner"><div class="hgroup"><h2 class="title">External Applications</h2></div><div class="region"><p class="para">In this section you setup external applications that <span class="app application">Pan</span> can use.</p><div class="terms variablelist"><dl class="terms variablelist"><dt class="terms">In
+				  <span class="guiseq menuchoice"><span class="gui guimenu">Edit</span> ▸ <span class="gui guisubmenu">Preferences</span> ▸ <span class="gui guimenuitem">Applications</span></span>
+			  </dt><dd class="terms">
+				  <div class="list itemizedlist"><ul class="list itemizedlist"><li class="list itemizedlist">
+						  <p class="para"><span class="gui guilabel">Web Browser</span></p>
+						  <p class="para">Click the Web Button to choose which external application to launch when clicking on a HTML
+							  link.</p>
+					  </li><li class="list itemizedlist">
+						  <p class="para"><span class="gui guilabel">Mail Reader</span></p>
+						  <p class="para">Choose which external application to launch when clicking on a email address or when
+							  sending a post via email.</p>
+					  </li></ul></div>
+			  </dd></dl></div><p class="para">To setup an external text editor, choose
+				  <span class="guiseq menuchoice"><span class="gui guimenu">Post</span> ▸ <span class="gui guisubmenu">Post to Newsgroup</span></span>
+				.  From the Post Article dialog menubar, choose
+				  <span class="guiseq menuchoice"><span class="gui guimenu">Edit</span> ▸ <span class="gui guisubmenu">Set Editor</span></span>
+			</p></div></div></div><div class="sect2 sect" id="pan-custom-articlecache"><div class="inner"><div class="hgroup"><h2 class="title">Article Cache Size</h2></div><div class="region"><p class="para">The article cache is a fixed-size disk buffer where <span class="app application">Pan</span> stores articles when they are downloaded from a
+		  news server.  If the user downloads a large amount of binary attachments, the default cache size might be
+		  inadequate.</p><p class="para">The article cache size can be altered by changing
+      <span class="guiseq menuchoice"><span class="gui guimenu">Edit</span> ▸ <span class="gui guisubmenu">Preferences</span> ▸ <span class="gui guimenuitem">Behavior</span></span>
+	  </p></div></div></div><div class="sect2 sect" id="pan-custom-servers"><div class="inner"><div class="hgroup"><h2 class="title">News Servers</h2></div><div class="region"><p class="para"><span class="app application">Pan</span> must connect to a special computer called a news server.  The news server is the gateway used to access
+		  Usenet.</p><p class="para">Choose
+		<span class="guiseq menuchoice"><span class="gui guimenu">Edit</span> ▸ <span class="gui guisubmenu">Edit News Servers</span></span>
+		and the <span class="gui interface">Servers</span> dialog will appear.  Click on a server name and you can edit or remove it
+		via the buttons.  Click the add button to add another server.</p><p class="para">When you add or edit an existing server, the <span class="gui interface">Edit a Server's Settings</span> dialog will
+		  appear.</p><p class="para">In the location section:</p><div class="list itemizedlist"><ul class="list itemizedlist"><li class="list itemizedlist">
+			  <p class="para"><span class="gui guilabel">Address</span></p>
+			  <p class="para">The internet address of the server.</p>
+		  </li><li class="list itemizedlist">
+			  <p class="para"><span class="gui guilabel">Port</span></p>
+			  <p class="para">The port of the server.  Port 119 is the standard port number for unsecured NNTP connections, 563 is for TLS/SSL connections.</p>
+		  </li></ul></div><p class="para">The next section is the login information for the server.  If you server requires a username and password,
+		  enter them here.  If the server allows anonymous login or does not require authentication, just let these
+		  fields blank.</p><div class="list itemizedlist"><ul class="list itemizedlist"><li class="list itemizedlist">
+			  <p class="para"><span class="gui guilabel">Username</span></p>
+			  <p class="para">Enter the login name if required.</p>
+		  </li><li class="list itemizedlist">
+			  <p class="para"><span class="gui guilabel">Password</span></p>
+			  <p class="para">Enter the password if required.</p>
+		  </li></ul></div><p class="para">The next section allows you to enter certain <span class="app application">Pan</span> settings that are server specific.</p><div class="list itemizedlist"><ul class="list itemizedlist"><li class="list itemizedlist">
+			  <p class="para"><span class="gui guilabel">Connection Limit</span></p>
+			  <p class="para"><span class="app application">Pan</span> can open multiple connections to a server so the user can perform simultaneous actions like
+				  download a binary attachment will reading articles in a text group.</p>
+			  <p class="para">In order to follow the GNKSA rules, the maximum number of connections <span class="app application">Pan</span> can have open with a server
+				  is 4.</p>
+		  </li><li class="list itemizedlist">
+			  <p class="para"><span class="gui guilabel">Expire Old Articles</span></p>
+			  <p class="para">From this toggle box, you can pick a time when <span class="app application">Pan</span> will expire old articles and remove them from it's
+				  article index.</p>
+		  </li><li class="list itemizedlist">
+			  <p class="para"><span class="gui guilabel">Server Rank</span></p>
+			  <p class="para">When you have more than 1 server configured, <span class="app application">Pan</span> uses server rank to decide from which server to
+				  download the article.  Only after all primary servers have been tried for the article will <span class="app application">Pan</span> use the
+				  fallback servers.</p>
+			  <p class="para">The reason for this feature is that a user might have access to a free server and also have access to a
+				  byte-limited premium server.  Server ranking allows <span class="app application">Pan</span> to use the fallback server as little as
+				  possible.</p>
+		  </li><li class="list itemizedlist">
+			  <p class="para"><span class="gui guilabel">TLS (SSL) Options</span></p>
+			  <p class="para">If security and privacy are concerns, choose secured connections if the server supports it.
+				  article index.</p>
+		  </li><li class="list itemizedlist">
+			  <p class="para"><span class="gui guilabel">Always trust</span></p>
+			  <p class="para">If you want to trust the server regardless of the authenticity of its certificate, you can enable this option. Use with caution!</p>
+		  </li></ul></div></div></div></div></div></div></div><div class="links nextlinks"><a class="nextlinks-prev" href="pan-scoring.xhtml" title="Scoring">Previous</a></div><div class="clear"/></div><div class="footer"/></body></html>
