@@ -1,3 +1,6 @@
 # don't waste time/bandwidth downloading obsolete versions
 User-agent: *
 Disallow: /download/obsolete/
+
+User-agent: MJ12bot
+Disallow: /
