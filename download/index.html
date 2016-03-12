@@ -16,19 +16,20 @@
 	<div id="head"></div>
 	<div id="menu">
     <a href="../">what's new</a>
-		<a href="../screenshots/">screenshots</a>
+    <a href="../screenshots/">screenshots</a>
     <a href="../download/">download</a>
     <a href="../tipjar/">tip jar</a>
     <a href="../requirements/">requirements</a>
-    <br/>
-    <a href="../manual/">manual</a>
     <a href="../features/">features</a>
+    <br />
+    <a href="../manual/">manual</a>
     <a href="../faq/">faq</a>
     <a href="../roadmap/">roadmap</a>
     <a href="../oldnews/">news archives</a>
     <a href="../mailing_lists/">mailing lists</a>
     <a href="../bugs/">bug reports</a>
     <a href="../contact/">contact</a>
+    <a href="https://wiki.gnome.org/Apps/Pan">wiki</a>
 	</div>
 	<div id="content">
 		<div class="section" style="text-align: center">
@@ -63,17 +64,24 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 <!-- CONTRIBUTED PACKAGES -->
 <div id="homebrew" class="section">
   <h1>Contributed Packages</h1>
-  <p>These packages were contributed by users.
-  RPMs for some prerequisites have also been
-	<a href="http://pan.rebelbase.com/download/extras/">contributed</a>.<br/>
-  <em>If your platform is not here, consider contributing packages.</em></p>
+  <p>These packages were contributed by users and are not officially supported by the Pan project.
+  <br/>
+  <em>If your platform is not listed, consider contributing packages.</em></p>
 <table class="sec-table">
 <tr>
 	<th>OS</th>
-<!--	<th>Stable</th>-->
-	<th>Beta</th>
+	<th>Version</th>
 	<th>Packager</th>
 </tr>
+<tr>
+	<td>Ubuntu</td>
+	<td><a href="https://launchpad.net/~klaus-vormweg/+archive/pan">0.139</a></td>
+	<td>Klaus Vormweg</td>
+</tr>
+<tr>
+	<td><a href="http://sites.google.com/site/paninstall/">Windows (installer)</a></td>
+	<td><a href="http://sites.google.com/site/paninstall/">current</a></td>
+	<td><a href="mailto:davies147@gmail.com">Steve Davies</a></td>
 <!--
 <tr>
 	<td>Debian</td>
@@ -111,24 +119,13 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 	<td><a href="http://software.opensuse.org/download/repositories/home:/sdrahn/">0.129</a></td>
 	<td><a href="mailto:drahn@suse.de">Daniel Rahn</a></td>
 </tr>-->
-<tr>
-	<td>Ubuntu</td>
-	<td><a href="https://launchpad.net/~klaus-vormweg/+archive/pan">current</a></td>
-	<td>Klaus Vormweg</td>
-</tr>
 <!--<tr>
 	<td>Ubuntu Feisty AMD64</td>
 	<td>&nbsp;</td>
 	<td><a href="http://codefix.net/ubuntu/pan/">0.131</a></td>
 	<td><a href="mailto:garrison@codefix.net">Garrison Hoffman</a></td>
 </tr>
--->
-<tr>
-	<td><a href="http://sites.google.com/site/paninstall/">Windows (installer)</a></td>
-<!--	<td><a href="/download/releases/0.14.2/WINDOWS/">0.14.2</a></td>-->
-	<td><a href="http://sites.google.com/site/paninstall/">current</a></td>
-	<td><a href="mailto:davies147@gmail.com">Steve Davies</a></td>
-<!--</tr>
+</tr>
 <tr>
 	
 	<td><a href="http://sites.google.com/site/panbuilds/">Windows (zip archive)</a></td>
@@ -147,21 +144,22 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 <!-- GIT -->
 <div class="section">
   <h1>Code Repository</h1>
-  <p>If you want to test Pan between releases, you can download it from <a href="http://git.gnome.org/browse/pan2/">
-  GNOME GIT repository</a>. live.gnome.org has <a href="http://live.gnome.org/Git">instructions</a> for getting it.</p>
-  <p>If you have <code>git</code> installed, you can clone the <code>pan2</code> repository,
-	which contains the actively developed 2006 Pan rewrite in C++, by running:</p>
+  <p>If you want to try Pan between releases, you can get the sources from the official
+  GNOME Git repository at <a href="http://git.gnome.org/browse/pan2/">http://git.gnome.org/browse/pan2/</a>.
+  For details on using Git, see <a href="https://wiki.gnome.org/Git">https://wiki.gnome.org/Git</a>.</p>
+  <p>To clone the Git repository, run:</p>
   <pre>git clone git://git.gnome.org/pan2</pre>
-  <p>To clone the older, unmaintained version, run:</p>
-  <pre>git clone git://git.gnome.org/pan</pre>
-  <p>If all goes well, runnning <code>./autogen.sh; make</code> in the <code>pan2</code> directory will
+  <p>To clone the older, archived version, run:</p>
+  <pre>git clone git://git.gnome.org/archive/pan</pre>
+  <p>If all goes well, running <code>./autogen.sh; make</code> in the <code>pan2</code> directory will
   result in the executable <code>pan2/pan/gui/pan</code>.</p>
   <p>Compiling Pan requires the header files for <code>gtk2</code> and <code>gmime</code>.
   On most systems these are optional packages named <code>gtk2-devel</code> and <code>gmime-devel</code>.
-  You'll need one more optional package for a basic compile run, <code>gnome-common</code>.</p>
-  If you plan to use advanced features like SSL with <code>GnuTLS</code> or <code>GNOME Keyring</code> - based password support 
-  you'll have to install their appropriate -dev packages or compile from source. See the <code>README</code> for more details 
-  on the required versions of these add-ins.</p>
+  You will need one more optional package for a basic compile run, <code>gnome-common</code>.</p>
+  If you plan to use advanced features like SSL with <code>GnuTLS</code> or <code>GNOME Keyring</code> password support,
+  you will have to install their appropriate development packages or compile from source.
+  See <a href="https://git.gnome.org/browse/pan2/plain/README">README</a>
+  for more details on the required versions of these add-ins.</p>
   <p>Remaining tools typically come built-in on systems configured for development:
   <code>gcc</code>, <code>m4</code>, <code>automake</code>, <code>autoconf</code>, <code>pkg-config</code>,
   and <code>intltool</code>.</p>
