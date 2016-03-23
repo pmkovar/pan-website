@@ -50,16 +50,19 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 <!-- TARBALLS -->
 <div id="source" class="section">
   <h1>Source Code</h1>
-  <ul>
-     <li><a href="http://pan.rebelbase.com/download/releases/0.139/source/">pan 0.139</a>
-		 <span style="color: red">(beta)</span></li>
-  </ul>
+  <table class="sec-table">
+    <tr>
+    <td style="font-size: medium">
+    <a href="http://pan.rebelbase.com/download/releases/0.139/source/">pan 0.139</a>
+    <span style="color: red">(beta)</span></td>
+    </tr>
+  </table>
 </div>
 <!-- VENDOR -->
 <div id="vendors" class="section">
   <h1>Vendor-made Packages</h1>
-  <p>Many Linux distributions have their own Pan package,
-  so first check for an up-to-date version for your distribution.</p>
+  <p>Many Linux distributions and BSD systems have their own Pan package,
+  so first check for an up-to-date version for your distribution or system.</p>
 </div>
 <!-- CONTRIBUTED PACKAGES -->
 <div id="homebrew" class="section">
@@ -67,6 +70,16 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
   <p>These packages were contributed by users and are not officially supported by the Pan project.
   <br/>
   <em>If your platform is not listed, consider contributing packages.</em></p>
+  <h2>Ubuntu PPA</h2>
+  <p>There is a Ubuntu PPA available, maintained by Klaus Vormweg.</p>
+  <table class="sec-table">
+    <tr>
+    <td style="font-size: medium">
+    <a href="https://launchpad.net/~klaus-vormweg/+archive/pan">Ubuntu PPA</a>
+    </td>
+    </tr>
+  </table>
+<!--
 <table class="sec-table">
 <tr>
 	<th>OS</th>
@@ -78,11 +91,6 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 	<td><a href="https://launchpad.net/~klaus-vormweg/+archive/pan">0.139</a></td>
 	<td>Klaus Vormweg</td>
 </tr>
-<tr>
-	<td><a href="http://sites.google.com/site/paninstall/">Windows (installer)</a></td>
-	<td><a href="http://sites.google.com/site/paninstall/">current</a></td>
-	<td><a href="mailto:davies147@gmail.com">Steve Davies</a></td>
-<!--
 <tr>
 	<td>Debian</td>
 	<td><a href="http://packages.debian.org/cgi-bin/search_packages.pl?searchon=names&version=all&exact=1&keywords=pan">0.14.2.91</a></td>
@@ -127,23 +135,29 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 </tr>
 </tr>
 <tr>
-	
 	<td><a href="http://sites.google.com/site/panbuilds/">Windows (zip archive)</a></td>
 	<td><a href="/download/releases/0.14.2/WINDOWS/">0.14.2</a></td>
 	<td><a href="http://sites.google.com/site/panbuilds/">0.132</a></td>
 	<td><a href="mailto:arturj.usenet@gmail.com">Artur Jachacy</a></td>
-</tr>-->
+</tr>
 </table>
-</div>
-<!-- OLD -->
-<div id="old" class="section">
-  <h1>Old Releases</h1>
-  <p>Older releases are archived permanently at<br/>
-  <a href="http://pan.rebelbase.com/download/releases/">http://pan.rebelbase.com/download/releases/</a>.</p>
+-->
+<!-- Win32 -->
+  <h2>Windows Installer</h2>
+  <p>There is a Pan installer available for Windows, contributed by Steve Davies.</p>
+  <table class="sec-table">
+    <tr>
+    <td style="font-size: medium">
+    <a href="http://sites.google.com/site/paninstall/">Pan Newsreader for Windows</a>
+    </td>
+    </tr>
+  </table>
+  <p>See the Pan Newsreader for Windows website for information on the latest
+  installers and prerequisites.</p>
 </div>
 <!-- GIT -->
 <div class="section">
-  <h1>Code Repository</h1>
+  <h1>Git Repository</h1>
   <p>If you want to try Pan between releases, you can get the sources from the official
   GNOME Git repository at <a href="http://git.gnome.org/browse/pan2/">http://git.gnome.org/browse/pan2/</a>.
   For details on using Git, see <a href="https://wiki.gnome.org/Git">https://wiki.gnome.org/Git</a>.</p>
@@ -151,12 +165,13 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
   <pre>git clone git://git.gnome.org/pan2</pre>
   <p>To clone the older, archived version, run:</p>
   <pre>git clone git://git.gnome.org/archive/pan</pre>
+  <h2>Compiling from Source</h2>
   <p>If all goes well, running <code>./autogen.sh; make</code> in the <code>pan2</code> directory will
   result in the executable <code>pan2/pan/gui/pan</code>.</p>
   <p>Compiling Pan requires the header files for <code>gtk2</code> and <code>gmime</code>.
   On most systems these are optional packages named <code>gtk2-devel</code> and <code>gmime-devel</code>.
   You will need one more optional package for a basic compile run, <code>gnome-common</code>.</p>
-  If you plan to use advanced features like SSL with <code>GnuTLS</code> or <code>GNOME Keyring</code> password support,
+  <p>If you plan to use advanced features like SSL with <code>GnuTLS</code> or <code>GNOME Keyring</code> password support,
   you will have to install their appropriate development packages or compile from source.
   See <a href="https://git.gnome.org/browse/pan2/plain/README">README</a>
   for more details on the required versions of these add-ins.</p>
@@ -172,6 +187,12 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
   Change to the <code>pan2</code> directory and run:</p>
   <p>The same prerequisites as for the building Pan from the GNOME GIT repository should apply.</p>
 -->
+</div>
+<!-- OLD -->
+<div id="old" class="section">
+  <h1>Old Releases</h1>
+  <p>Older releases are archived permanently at<br/>
+  <a href="http://pan.rebelbase.com/download/releases/">http://pan.rebelbase.com/download/releases/</a>.</p>
 </div>
 </div>
 	<div id="foot">
