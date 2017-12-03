@@ -1,61 +1,60 @@
+<!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <title>Getting Started</title>
-<link rel="stylesheet" type="text/css" href="en.css">
+<link rel="stylesheet" type="text/css" href="C.css">
 <script type="text/javascript" src="jquery.js"></script><script type="text/javascript" src="jquery.syntax.js"></script><script type="text/javascript" src="yelp.js"></script>
 </head>
-<body>
-<div class="header"><div class="trails"><div class="trail">
+<body><div class="page" role="main">
+<div class="header"><div class="trails" role="navigation"><div class="trail">
 <a class="trail" href="index.html" title="Pan Manual"><span class="app application">Pan</span> Manual</a> » </div></div></div>
 <div class="body">
 <div class="links nextlinks">
-<a class="nextlinks-prev" href="pan-introduction.html" title="Introduction">Previous</a>  |  <a class="nextlinks-next" href="pan-nutshell.html" title="Usenet in a Nutshell">Next</a>
+<a class="nextlinks-prev" href="pan-introduction.html" title="Introduction">Previous</a><a class="nextlinks-next" href="pan-nutshell.html" title="Usenet in a Nutshell">Next</a>
 </div>
-<div class="sect1 contents" id="pan-getstart"><div class="inner">
 <div class="hgroup"><h1 class="title">Getting Started</h1></div>
 <div class="region">
-<p class="para">This section provides information on how to start <span class="app application">Pan</span>, and describes the <span class="app application">Pan</span> user interface.</p>
-<div class="links sectionlinks"><ul>
+<div class="contents"><p class="para">This section provides information on how to start <span class="app application">Pan</span>, and describes the <span class="app application">Pan</span> user interface.</p></div>
+<div class="links sectionlinks" role="navigation"><ul>
 <li class="links"><a class="xref" href="pan-getstart.html#pan-getstart-start" title="To Start Pan">To Start <span class="app application">Pan</span></a></li>
 <li class="links"><a class="xref" href="pan-getstart.html#pan-getstart-mainwindow" title="When You Start Pan">When You Start <span class="app application">Pan</span></a></li>
 </ul></div>
 <div class="sect2 sect" id="pan-getstart-start"><div class="inner">
 <div class="hgroup"><h2 class="title">To Start <span class="app application">Pan</span>
 </h2></div>
-<div class="region">
-<p class="para">You can start <span class="app application">Pan</span> in the following ways:
+<div class="region"><div class="contents">
+<p class="para">How to start <span class="app application">Pan</span> depends on your desktop environment.
     </p>
 <div class="terms variablelist"><dl class="terms variablelist">
-<dt class="terms">
-<span class="gui guimenu">Applications</span> menu</dt>
+<dt class="terms">The GNOME Desktop Environment</dt>
 <dd class="terms">
-    		<p class="para">Choose
-    		<span class="guiseq menuchoice"><span class="gui guisubmenu">Internet </span> ▸ <span class="gui guimenuitem">Pan Newsreader</span></span>. </p>
+    		<p class="para">Press the <span class="key keycap"><kbd>Super</kbd></span> key to enter the Activities
+    		Overview, type <span class="input userinput">pan</span>, and then press
+    		<span class="key keycap"><kbd>Enter</kbd></span>.</p>
     		</dd>
 <dt class="terms">Command line</dt>
 <dd class="terms">
     		<p class="para">To start <span class="app application">Pan</span> from a command line, type the following command,
-    		then press <span class="key keycap">Return</span>:</p>
-    		<p class="para">
-			<span class="cmd command" dir="ltr">pan</span>
-    		</p>
+    		then press <span class="key keycap"><kbd>Enter</kbd></span>:</p>
+    		<div class="screen"><pre class="contents "><span class="cmd command">pan</span></pre></div>
     		</dd>
 </dl></div>
-</div>
+</div></div>
 </div></div>
 <div class="sect2 sect" id="pan-getstart-mainwindow"><div class="inner">
 <div class="hgroup"><h2 class="title">When You Start <span class="app application">Pan</span>
 </h2></div>
-<div class="region">
+<div class="region"><div class="contents">
 <p class="para">When you start <span class="app application">Pan</span>, the following window is displayed:</p>
-<div class=" figure">
+<div class="figure">
 <a name="mainwindow-fig"></a><div class="inner">
 <a href="#" class="zoom" data-zoom-in-title="View images at normal size" data-zoom-out-title="Scale images down"></a><div class="title"><h3><span class="title"><span class="app application">Pan</span> Main Window</span></h3></div>
 <div class="region"><div class="contents">
 	
-	<div class=" screenshot">
-	  <div class="mediaobject"><img src="figures/pan_window.png"></div>
+	<div class="screenshot">
+	  <div class="mediaobject"><img src="figures/pan_window.png" alt="This is the Pan main window"></div>
 	</div>
       </div></div>
 </div>
@@ -63,41 +62,41 @@
 <p class="para">The main <span class="app application">Pan</span> window contains the following elements:
     </p>
 <div class="terms variablelist"><dl class="terms variablelist">
-<dt class="terms"><span class="gui interface">Menubar. </span></dt>
+<dt class="terms"><span class="gui interface">Menubar</span></dt>
 <dd class="terms">
 		<p class="para"> The menubar contains all the commands that you need to run <span class="app application">Pan</span>.</p>
 		</dd>
 <dt class="terms">
-<span class="gui interface">Toolbar.</span> </dt>
+<span class="gui interface">Toolbar</span> </dt>
 <dd class="terms">
 		<p class="para"> The toolbar contains a subset of the commands that you can access from the menubar. It also contains
 			two textboxes that allow you to limit the number of groups and/or the number of articles displayed.</p>
 		</dd>
 <dt class="terms">
-<span class="gui interface">Group Pane.</span> </dt>
+<span class="gui interface">Group Pane</span> </dt>
 <dd class="terms">
 			<p class="para">The Group Pane displays a list of all the newsgroups available on the server.  This list is split into
 				two groups: Subscribed Groups are a user-selected list of favorite groups, Other Groups are the rest of the
 			    available groups from the server.</p>
 		</dd>
 <dt class="terms">
-<span class="gui interface">Header Pane.</span> </dt>
+<span class="gui interface">Header Pane</span> </dt>
 <dd class="terms">
 			<p class="para">The Header Pane displays a list of all the individual article headers available in the selected group.
 				The Header Pane is highly customizable via sorting, threading and scoring.</p>
 		</dd>
 <dt class="terms">
-<span class="gui interface">Body Pane.</span> </dt>
+<span class="gui interface">Body Pane</span> </dt>
 <dd class="terms">
 			<p class="para">The Body Pane displays the text of the selected article header.</p>
 		</dd>
-<dt class="terms"><span class="gui interface">Statusbar. </span></dt>
+<dt class="terms"><span class="gui interface">Status Bar</span></dt>
 <dd class="terms">
 			<p class="para">The Status Bar displays information about current <span class="app application">Pan</span>
 				activity:</p>
 				<div class="list itemizedlist"><ul class="list itemizedlist">
 <li class="list itemizedlist"><p class="para">Current number of connections to the server</p></li>
-<li class="list itemizedlist"><p class="para">Number of uncompleted tasks in the Task Mananger</p></li>
+<li class="list itemizedlist"><p class="para">Number of uncompleted tasks in the Task Manager</p></li>
 <li class="list itemizedlist"><p class="para">Completed percentage of current tasks</p></li>
 <li class="list itemizedlist"><p class="para">Error status of the event log</p></li>
 </ul></div>
@@ -105,18 +104,17 @@
 </dl></div>
 <p class="para">When you right-click in the <span class="app application">Pan</span> window, the application displays
 		a popup menu.  The popup menu contains the most common commands for whichever pane you clicked.</p>
-<p class="para">Like other applications, actions in <span class="app application">Pan</span> can be performed in serveral ways: with the menu, with the toolbar
+<p class="para">Like other applications, actions in <span class="app application">Pan</span> can be performed in several ways: with the menu, with the toolbar
 		or with shortcut keys.  The shortcut key for most menu items is shown in the menu itself, following the menu
 		command.</p>
-</div>
+</div></div>
 </div></div>
 </div>
-</div></div>
 <div class="links nextlinks">
-<a class="nextlinks-prev" href="pan-introduction.html" title="Introduction">Previous</a>  |  <a class="nextlinks-next" href="pan-nutshell.html" title="Usenet in a Nutshell">Next</a>
+<a class="nextlinks-prev" href="pan-introduction.html" title="Introduction">Previous</a><a class="nextlinks-next" href="pan-nutshell.html" title="Usenet in a Nutshell">Next</a>
 </div>
 <div class="clear"></div>
 </div>
 <div class="footer"></div>
-</body>
+</div></body>
 </html>

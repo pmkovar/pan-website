@@ -1,11 +1,40 @@
 
-$.fn.yelp_ui_expander_toggle = function (onlyopen) {
+var __yelp_generate_id_counter__ = 0;
+function yelp_generate_id () {
+  var ret = 'yelp--' + (++__yelp_generate_id_counter__).toString();
+  if ($('#' + ret).length != 0)
+    return yelp_generate_id();
+  else
+    return ret;
+};
+$(document).ready (function () {
+  var highlight_hash = function () {
+    if (location.hash != '') {
+      var sect = $(location.hash);
+      sect.css('background-color',  '#fffacc');
+      window.setTimeout(function () {
+        sect.css({
+          '-webkit-transition': 'background-color 2s linear',
+          '-moz-transition': 'background-color 2s linear',
+          'transition': 'background-color 2s linear',
+          'background-color': 'rgba(1, 1, 1, 0)'
+        });
+      }, 200);
+    }
+  };
+  $(window).bind('hashchange', highlight_hash);
+  highlight_hash();
+});
+
+$.fn.yelp_ui_expander_toggle = function (onlyopen, callback) {
   var expander = $(this);
   var region = expander.children('.inner').children('.region');
   var yelpdata = expander.children('div.yelp-data-ui-expander');
-  var compfunc = function () { return true; };
-  if (expander.is('div.figure'))
-    compfunc = function () { expander.yelp_auto_resize(); };
+  var compfunc = function () {
+    if (expander.is('div.figure')) { expander.yelp_auto_resize(); }
+    if (callback) { callback(); }
+    return true;
+  };
   var title = expander.children('.inner').children('.title');
   if (title.length == 0)
     title = expander.children('.inner').children('.hgroup');
@@ -27,11 +56,6 @@ $(document).ready(function () {
   $('.ui-expander').each(function () {
     var expander = $(this);
     var yelpdata = expander.children('div.yelp-data-ui-expander');
-    var arrow;
-    if (yelpdata.attr('dir') == 'rtl')
-      arrow = $('<span class="ui-expander-arrow-rtl">◂</span>');
-    else
-      arrow = $('<span class="ui-expander-arrow-ltr">▸</span>');
     var region = expander.children('.inner').children('.region');
     var title = expander.children('.inner').children('.title');
     var issect = false;
@@ -42,12 +66,9 @@ $(document).ready(function () {
     if (title.length == 0) {
       return;
     }
-    title.attr('role', 'button').attr('aria-controls', region.attr('id'));
-    if (issect) {
-      title.children('.title').prepend('&#x00A0;&#x00A0;').prepend(arrow);
-    } else {
-      title.children().append('&#x00A0;&#x00A0;').append(arrow);
-    }
+    if (region.attr('id') == '')
+      region.attr('id', yelp_generate_id());
+    title.attr('aria-controls', region.attr('id'));
     var titlespan = title.find('span.title:first');
     var title_e = yelpdata.children('div.yelp-title-expanded');
     var title_c = yelpdata.children('div.yelp-title-collapsed');
@@ -55,7 +76,7 @@ $(document).ready(function () {
       yelpdata.append($('<div class="yelp-title-expanded"></div>').html(titlespan.html()));
     if (title_c.length == 0)
       yelpdata.append($('<div class="yelp-title-collapsed"></div>').html(titlespan.html()));
-    if (yelpdata.attr('data-yelp-expanded') == 'no') {
+    if (yelpdata.attr('data-yelp-expanded') == 'false') {
       expander.addClass('ui-expander-c');
       region.attr('aria-expanded', 'false').hide();
       if (title_c.length != 0)
@@ -72,18 +93,25 @@ $(document).ready(function () {
   });
 });
 $(document).ready(function () {
-  if (location.hash != '') {
-    var target = $(location.hash);
-    var parents = target.parents('div.ui-expander');
-    if (target.is('div.ui-expander'))
-      parents = parents.andSelf();
-    parents.each(function () {
-      $(this).yelp_ui_expander_toggle(true);
-    });
-  }
+  var expand_hash = function () {
+    if (location.hash != '') {
+      var target = $(location.hash);
+      var parents = target.parents('div.ui-expander');
+      if (target.is('div.ui-expander'))
+        parents = parents.andSelf();
+      parents.each(function () {
+        $(this).yelp_ui_expander_toggle(true, function () {
+          window.scrollTo(0, $(target).offset().top);
+        });
+      });
+    }
+  };
+  $(window).bind('hashchange', expand_hash);
+  expand_hash();
 });
 
 yelp_color_text_light = '#2e3436';
+yelp_color_gray_background = '#f3f3f0';
 yelp_color_gray_border = '#babdb6';
 yelp_paint_zoom = function (zoom, zoomed) {
   var ctxt = zoom.children('canvas')[0].getContext('2d');
@@ -204,7 +232,7 @@ function yelp_init_video (element) {
   var video = $(element);
   video.removeAttr('controls');
 
-  var controls = $('<div class="media-controls"></div>');
+  var controls = $('<div class="media-controls media-controls-' + element.nodeName + '"></div>');
   var playControl = $('<button class="media-play"></button>').attr({
     'data-play-label': video.attr('data-play-label'),
     'data-pause-label': video.attr('data-pause-label'),
@@ -218,12 +246,15 @@ function yelp_init_video (element) {
   rangeCanvasCtxt.strokeWidth = 1;
   rangeCanvasCtxt.strokeRect(0.5, 0.5, 103, 19);
   var currentSpan = $('<span class="media-current">0:00</span>');
-  controls.append(playControl, $('<div class="media-range"></div>').append(rangeCanvas), currentSpan);
+  var durationSpan = $('<span class="media-duration">-:--</span>');
+  controls.append(playControl,
+                  $('<div class="media-range"></div>').append(rangeCanvas),
+                  $('<div class="media-time"></div>').append(currentSpan, durationSpan));
   video.after(controls);
 
   var playCanvasCtxt = playCanvas[0].getContext('2d');
   var paintPlayButton = function () {
-    playCanvasCtxt.fillStyle = yelp_color_text_light;
+    playCanvasCtxt.fillStyle = yelp_color_gray_background;
     playCanvasCtxt.clearRect(0, 0, 20, 20);
     playCanvasCtxt.beginPath();
     playCanvasCtxt.moveTo(5, 5);   playCanvasCtxt.lineTo(5, 15);
@@ -231,7 +262,7 @@ function yelp_init_video (element) {
     playCanvasCtxt.fill();
   }
   var paintPauseButton = function () {
-    playCanvasCtxt.fillStyle = yelp_color_text_light;
+    playCanvasCtxt.fillStyle = yelp_color_gray_background;
     playCanvasCtxt.clearRect(0, 0, 20, 20);
     playCanvasCtxt.beginPath();
     playCanvasCtxt.moveTo(5, 5);   playCanvasCtxt.lineTo(9, 5);
@@ -282,10 +313,10 @@ function yelp_init_video (element) {
     currentSpan.text(mins + (secs < 10 ? ':0' : ':') + secs);
     ttmlNodes.each(function () {
       var ttml = this;
-      if (element.currentTime >= parseFloat(ttml.getAttribute('data-begin')) &&
-          (!ttml.hasAttribute('data-end') ||
-           element.currentTime < parseFloat(ttml.getAttribute('data-end')) )) {
-        if (ttml.tagName == 'span')
+      if (element.currentTime >= parseFloat(ttml.getAttribute('data-ttml-begin')) &&
+          (!ttml.hasAttribute('data-ttml-end') ||
+           element.currentTime < parseFloat(ttml.getAttribute('data-ttml-end')) )) {
+        if (ttml.tagName == 'span' || ttml.tagName == 'SPAN')
           ttml.style.display = 'inline';
         else
           ttml.style.display = 'block';
@@ -296,6 +327,14 @@ function yelp_init_video (element) {
     });
   };
   element.addEventListener('timeupdate', timeUpdate, false);
+  var durationUpdate = function () {
+    if (!isNaN(element.duration)) {
+      mins = parseInt(element.duration / 60);
+      secs = parseInt(element.duration - (60 * mins));
+      durationSpan.text(mins + (secs < 10 ? ':0' : ':') + secs);
+    }
+  };
+  element.addEventListener('durationchange', durationUpdate, false);
 
   rangeCanvas.click(function (event) {
     var pct = event.clientX - Math.floor(rangeCanvas.offset().left);
@@ -307,7 +346,8 @@ function yelp_init_video (element) {
   });
 };
 $(document).ready(function () {
-  $('video.media-block').each(function () { yelp_init_video(this) });;
+  $('video, audio').each(function () { yelp_init_video(this) });;
 });
 
-$(document).ready( function () { jQuery.syntax({root: '', blockLayout: 'yelp'}); });
+$(document).ready( function () { jQuery.syntax({root: '', blockLayout: 'yelp',
+theme: false, linkify: false}); });

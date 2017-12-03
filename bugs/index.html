@@ -79,9 +79,10 @@
 		<p>Please read Apache's <a href="http://httpd.apache.org/bug_report.html">bug
 		reporting guidelines</a> first,<br />then make sure your bug report contains:</p>
 		<ul>
-		<li>The version of Pan you're using (ex: 0.112)</li>
+		<li>The version of Pan you're using (e.g., 0.141)</li>
 		<li>A description of the problem.</li>
-		<li><strong>Always</strong> include a <a href="#backtrace">backtrace</a> and/or <a href="#runlog">runlog</a> for crashes, freeze-ups, and runaway programs.</li>
+		<li><strong>Always</strong> include a <a href="#backtrace">backtrace</a> and/or <a href="#runlog">runlog</a>
+		for crashes, freeze-ups, and runaway programs.</li>
 		<li>If the problem is reproducible, <strong>always</strong> include a recipe for us to follow.</li>
 		<li>Anything else you think could be important.  Too much information is better than not enough.</li>
 		</ul>
@@ -92,45 +93,37 @@
 		Runlogs should almost always be included with a bug report.
 		If Pan is crashing, providing this and a backtrace together is
 		extremely helpful.  If Pan isn't working with your news server,
-		a runlog will show the dialogue that Pan and your server are having.
+		a runlog will show the dialog that Pan and your server are having.
 		Best of all a runlog requires no special tools; all you need is to
-		start Pan with the command-line argument <code>--debug</code>
-		in Pan 0.9.4 or higher.
+		start Pan with the command-line argument <code>--debug</code>.
 		</p>
 </div>
 <div class="section">
 <h1><a name="backtrace">Backtraces</a></h1>
 		<p>
-		In cases of crashes, freeze-ups, or runaway programs, a backtrace is often a roadmap to the bug.
+		In cases of crashes, freeze-ups, or runaway programs, a backtrace is often a
+		roadmap to the bug.
 		</p><p>
 		Because of differences in operating systems, news servers, and other variables,
 		it's at best tedious or at worst impossible to reproduce some of the problems reported to us.
 		With tools that come installed on most Unix/Linux systems, though, you can
 		make a roadmap for us in just a couple of minutes.
 		</p><p>
-		If Pan crashed and the bug-buddy Bug Report form popped up, Bug buddy will add
-		a backtrace to the bug report automatically.  If this didn't happen or you don't
-		have Bug Buddy, you can get a backtrace by hand fairly easily.
+		If Pan crashes for you, you can get a backtrace by hand fairly easily.
 		Here is a walk-through of the entire process, including
 		<span style="color: red">the commands you type</span> and
 		<span style="color: blue">a running explanation</span>.</p>
 		<table border="1" cellpadding="6"><tr><td>
 <pre style="font-size: x-small">
-% <span style="color: red">script pan_backtrace</span>
-Script started, file is pan_backtrace
-<span style="color: blue">(Saves session as "pan_backtrace" for mailing)</span>
 % <span style="color: red">uname -a</span> <span style="color: blue">(system information)</span>
-Linux 1.4.3, VIC 20
-% <span style="color: red">gdb pan</span> <span style="color: blue">(Start gdb.  See <a href="#getting_gdb">getting_gdb</a>.)</span>
-Copyright 1998 Free Software Foundation, Inc.
+Linux localhost 1.2.3
+% <span style="color: red">gdb pan</span> <span style="color: blue">(Start gdb.)</span>
 (gdb) <span style="color: red">handle SIGUSR1 nostop noprint</span> <span style="color: blue">(Threads)</span>
 (gdb) <span style="color: red">handle SIG32 nostop noprint</span>
-<span style="color: blue">(If you get a `SIG32 not recognized' error,
-just ignore it and keep going.)</span>
+<span style="color: blue">(If you get a `SIG32 not recognized' error, just ignore it and keep going.)</span>
 (gdb) <span style="color: red">run</span> <span style="color: blue">(Start pan)</span>
-<span style="color: blue">(At this point, use Pan until it freezes
-up or crashes.  If Pan freezes, you'll have
-to type CTRL-C to get the gdb prompt.)</span>
+<span style="color: blue">(At this point, use Pan until it freezes up or crashes.
+If Pan freezes, you'll have to type CTRL-C to get the gdb prompt.)</span>
 Program received signal SIGINT, Interrupt.
 (gdb) <span style="color: red">thread apply all bt</span> <span style="color: blue">(Show backtraces for every thread)</span>
 Thread 7 (LWP      7        ):
@@ -161,9 +154,7 @@ Thread 1 (LWP      1        ):
 #1  0x40351b98 in nntp_handshake ()
 #2  0x40351b44 in download_new_headers ()
 (gdb) <span style="color: red">quit</span> <span style="color: blue">(Quits gdb)</span>
-% <span style="color: red">(type CTRL-D)</span>
-Script done, file is pan_backtrace
-% <span style="color: blue">(attach the file to your email)</span></pre>
+% <span style="color: blue">(attach the terminal output to your email or paste it in a bug report)</span></pre>
 </td></tr>
 </table>
 </div>

@@ -1,96 +1,81 @@
+<!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <title>Tasks</title>
-<link rel="stylesheet" type="text/css" href="en.css">
+<link rel="stylesheet" type="text/css" href="C.css">
 <script type="text/javascript" src="jquery.js"></script><script type="text/javascript" src="jquery.syntax.js"></script><script type="text/javascript" src="yelp.js"></script>
 </head>
-<body>
-<div class="header"><div class="trails"><div class="trail">
+<body><div class="page" role="main">
+<div class="header"><div class="trails" role="navigation"><div class="trail">
 <a class="trail" href="index.html" title="Pan Manual"><span class="app application">Pan</span> Manual</a> » </div></div></div>
 <div class="body">
 <div class="links nextlinks">
-<a class="nextlinks-prev" href="pan-posting.html" title="Posting">Previous</a>  |  <a class="nextlinks-next" href="pan-scoring.html" title="Scoring">Next</a>
+<a class="nextlinks-prev" href="pan-posting.html" title="Posting">Previous</a><a class="nextlinks-next" href="pan-scoring.html" title="Scoring">Next</a>
 </div>
-<div class="sect1 contents" id="pan-tasks"><div class="inner">
 <div class="hgroup"><h1 class="title">Tasks</h1></div>
 <div class="region">
-<p class="para">Certains tasks performed by <span class="app application">Pan</span>, like downloading binary posts or grabbing new headers for a group, can take
+<div class="contents"><p class="para">Certain tasks performed by <span class="app application">Pan</span>, like downloading binary posts or grabbing new headers for a group, can take
 		  a long time. These tasks are queued and performed in the background while <span class="app application">Pan</span> is processing other tasks like
-		  grabbing an article.
-      <div class="list itemizedlist"><ul class="list itemizedlist">
-<li class="list itemizedlist">
-		  <p class="para">
-			<a class="xref" href="pan-tasks.html#pan-tasks-cancel" title="Cancel Last Task">Cancel Last Task</a></p>
-		</li>
-<li class="list itemizedlist">
-		  <p class="para">
-			<a class="xref" href="pan-tasks.html#pan-tasks-taskmanager" title="Task Manager">Task Manager</a></p>
-		</li>
-<li class="list itemizedlist">
-		  <p class="para">
-			<a class="xref" href="pan-tasks.html#pan-tasks-nzb" title="NZB Files">NZB Files</a></p>
-		</li>
-</ul></div> </p>
-<div class="links sectionlinks"><ul>
+		  grabbing an article.</p></div>
+<div class="links sectionlinks" role="navigation"><ul>
 <li class="links"><a class="xref" href="pan-tasks.html#pan-tasks-cancel" title="Cancel Last Task">Cancel Last Task</a></li>
 <li class="links"><a class="xref" href="pan-tasks.html#pan-tasks-taskmanager" title="Task Manager">Task Manager</a></li>
 <li class="links"><a class="xref" href="pan-tasks.html#pan-tasks-nzb" title="NZB Files">NZB Files</a></li>
 </ul></div>
 <div class="sect2 sect" id="pan-tasks-cancel"><div class="inner">
 <div class="hgroup"><h2 class="title">Cancel Last Task</h2></div>
-<div class="region"><p class="para">You can quickly cancel the last task added to the task queue (The Oops command) by selecting:
+<div class="region"><div class="contents"><p class="para">You can quickly cancel the last task added to the task queue by selecting:
 		 <span class="guiseq menuchoice"><span class="gui guimenu">File</span> ▸ <span class="gui guimenuitem">Cancel Last Task</span></span>
-	   .</p></div>
+	   .</p></div></div>
 </div></div>
 <div class="sect2 sect" id="pan-tasks-taskmanager"><div class="inner">
 <div class="hgroup"><h2 class="title">Task Manager</h2></div>
-<div class="region">
+<div class="region"><div class="contents">
 <p class="para">Background tasks can be manipulated by using the Task Manager.  The Task Manager can be accessed with
 		 <span class="guiseq menuchoice"><span class="gui guimenu">File</span> ▸ <span class="gui guimenuitem">Task Manger</span></span>
 		 or by left-clicking in the task area of the Status Bar at the bottom of the <span class="app application">Pan</span> screen.</p>
 <p class="para"> The Task Manger window is composed of the following parts:</p>
 <div class="terms variablelist"><dl class="terms variablelist">
 <dt class="terms">
-<span class="gui guilabel">Toolbar.</span> </dt>
+<span class="gui guilabel">Toolbar</span> </dt>
 <dd class="terms">
 					<p class="para"> The toolbar contains all the commands you need to manipulate the tasks in the Task Manger
 						Window.</p>
 				</dd>
 <dt class="terms">
-<span class="gui guilabel">Informational Area.</span> </dt>
+<span class="gui guilabel">Informational Area</span> </dt>
 <dd class="terms">
 					<p class="para"> The Informational Area displays the number of queued tasks, the amount of data that needs to
 						downloaded to complete the queued tasks, the current download rate and the estimated time needed
 						to complete the queued tasks.</p>
 				</dd>
 <dt class="terms">
-<span class="gui guilabel">Task List.</span> </dt>
+<span class="gui guilabel">Task List</span> </dt>
 <dd class="terms">
 					<p class="para"> A list of queued tasks.  Each row is a separate task.</p>
 				</dd>
 </dl></div>
 <p class="para">In order to manipulate a task, click on it and the row will be highlighted.  Then click on one of the
 			buttons in the toolbar.</p>
-<div class="note note-tip tip" title="Tip"><div class="inner"><div class="region"><div class="contents"><p class="para">If <span class="app application">Pan</span> is shutdown whiles tasks are still waiting in the task manager, the task list is saved to disk
-				and resumed when <span class="app application">Pan</span> is restarted. This, however is not true for upload tasks at the moment. In the next version,
-				this will be possible.</p></div></div></div></div>
-</div>
+<div class="note note-tip" title="Tip"><div class="inner"><div class="region"><div class="contents"><p class="para">If <span class="app application">Pan</span> is shutdown whiles tasks are still waiting in the task manager, the task list is saved to disk
+				and resumed when <span class="app application">Pan</span> is restarted. This, however, is not true for upload tasks in the current version.</p></div></div></div></div>
+</div></div>
 </div></div>
 <div class="sect2 sect" id="pan-tasks-nzb"><div class="inner">
 <div class="hgroup"><h2 class="title">NZB Files</h2></div>
-<div class="region"><p class="para"><span class="app application">Pan</span> saves its task list in <span class="file filename" dir="ltr">~/.pan2/tasks.nzb</span> file.  You can import other task lists
+<div class="region"><div class="contents"><p class="para"><span class="app application">Pan</span> saves its task list in <span class="file filename">$HOME/.pan2/tasks.nzb</span> file.  You can import other task lists
 			into <span class="app application">Pan</span> by choosing
 			 <span class="guiseq menuchoice"><span class="gui guimenu">File</span> ▸ <span class="gui guimenuitem">Import NZB Files</span></span>
-		.</p></div>
+		.</p></div></div>
 </div></div>
 </div>
-</div></div>
 <div class="links nextlinks">
-<a class="nextlinks-prev" href="pan-posting.html" title="Posting">Previous</a>  |  <a class="nextlinks-next" href="pan-scoring.html" title="Scoring">Next</a>
+<a class="nextlinks-prev" href="pan-posting.html" title="Posting">Previous</a><a class="nextlinks-next" href="pan-scoring.html" title="Scoring">Next</a>
 </div>
 <div class="clear"></div>
 </div>
 <div class="footer"></div>
-</body>
+</div></body>
 </html>

@@ -53,7 +53,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
   <table class="sec-table">
     <tr>
     <td style="font-size: medium">
-    <a href="http://pan.rebelbase.com/download/releases/0.141/source/">pan 0.141</a>
+    <a href="http://pan.rebelbase.com/download/releases/0.143/source/">pan 0.143</a>
     <span style="color: red">(beta)</span></td>
     </tr>
   </table>
@@ -158,26 +158,30 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 <!-- GIT -->
 <div class="section">
   <h1>Git Repository</h1>
-  <p>If you want to try Pan between releases, you can get the sources from the official
-  GNOME Git repository at <a href="http://git.gnome.org/browse/pan2/">http://git.gnome.org/browse/pan2/</a>.
-  For details on using Git, see <a href="https://wiki.gnome.org/Git">https://wiki.gnome.org/Git</a>.</p>
+  <p>If you want to try Pan between releases, you can get the latest sources from the official
+  GNOME Git repository at <a href="http://git.gnome.org/browse/pan2/">http://git.gnome.org/browse/pan2/</a>.</p>
   <p>To clone the Git repository, run:</p>
   <pre>git clone git://git.gnome.org/pan2</pre>
-  <p>To clone the older, archived version, run:</p>
+  <p>To clone the older, archived version of Pan written in C, run:</p>
   <pre>git clone git://git.gnome.org/archive/pan</pre>
+  <p>For details on using Git, see <a href="https://wiki.gnome.org/Git">https://wiki.gnome.org/Git</a>.</p>
+
+  <h2>GitHub Mirror</h2>
+  <p>If you prefer using GitHub, there is a <a href="https://github.com/GNOME/pan2">read-only mirror</a> of the Pan repository available:</p>
+  <pre>git clone https://github.com/GNOME/pan2.git</pre>
+
   <h2>Compiling from Source</h2>
   <p>If all goes well, running <code>./autogen.sh; make</code> in the <code>pan2</code> directory will
   result in the executable <code>pan2/pan/gui/pan</code>.</p>
-  <p>Compiling Pan requires the header files for <code>gtk2</code> and <code>gmime</code>.
-  On most systems these are optional packages named <code>gtk2-devel</code> and <code>gmime-devel</code>.
-  You will need one more optional package for a basic compile run, <code>gnome-common</code>.</p>
+  <p>Compiling Pan requires the header files for <code>gtk2</code> (or <code>gtk3</code>) and <code>gmime</code>.
+  On most systems these are optional packages named <code>gtk2-devel</code> (or <code>gtk3-devel</code>) and <code>gmime-devel</code>.</p>
   <p>If you plan to use advanced features like SSL with <code>GnuTLS</code> or <code>GNOME Keyring</code> password support,
   you will have to install their appropriate development packages or compile from source.
   See <a href="https://git.gnome.org/browse/pan2/plain/README">README</a>
   for more details on the required versions of these add-ins.</p>
   <p>Remaining tools typically come built-in on systems configured for development:
   <code>gcc</code>, <code>m4</code>, <code>automake</code>, <code>autoconf</code>, <code>pkg-config</code>,
-  and <code>intltool</code>.</p>
+  and <code>gettext</code>.</p>
 <!--
   <h2>K. Haley's bugfix &amp; testing repository</h2>
   <p>If you want to use the bleeding edge of Pan, you can clone <a href="https://github.com/lostcoder/pan2">K. Haley's
