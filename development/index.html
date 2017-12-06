@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" >
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	<meta name="keywords" content="pan,newsreader,usenet,nntp,gnome,gtk,linux,windows" />
+	<meta name="description" content="Pan is a Usenet newsreader that's good at both text and binaries." />
+	<meta name="robots" content="all" />
+	<title>Pan - A GNOME Newsreader</title>
+	<style type="text/css" media="all">
+		@import "../main.css";
+	</style>
+</head>
+<body>
+<div id="body">
+	<div id="head"></div>
+	<div id="menu">
+    <a href="../">what's new</a>
+    <a href="../screenshots/">screenshots</a>
+    <a href="../download/">download</a>
+    <a href="../tipjar/">tip jar</a>
+    <a href="../requirements/">requirements</a>
+    <a href="../features/">features</a>
+    <a href="../roadmap/">roadmap</a>
+    <br />
+    <a href="../manual/">manual</a>
+    <a href="../faq/">faq</a>
+    <a href="../oldnews/">news archives</a>
+    <a href="../mailing_lists/">mailing lists</a>
+    <a href="../bugs/">bug reports</a>
+    <a href="../contact/">contact</a>
+    <a href="../development/">development</a>
+    <a href="https://wiki.gnome.org/Apps/Pan">wiki</a>
+  </div>
+  <div id="content">
+    <div class="section" style="text-align: center">
+      <script type="text/javascript"><!--
+      google_ad_client = "pub-5848608092248775";
+      google_ad_width = 468;
+      google_ad_height = 60;
+      google_ad_format = "468x60_as";
+      google_ad_type = "text_image";
+      google_ad_channel ="";
+      google_color_border = "CCCCCC";
+      google_color_bg = "FFFFFF";
+      google_color_link = "000000";
+      google_color_url = "666666";
+      google_color_text = "333333";
+      //--></script>
+     <script type="text/javascript"
+     src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+     </script>
+     <div style="font-size: x-small">(Proceeds from the above ads go to rebelbase.com for hosting Pan.<br/>
+     Proceeds from the <a href="tipjar/">tip jar</a> go to Pan's programmers.)</div>
+   </div>
+
+<div class="section">
+  <h1>Contributing to Pan Development</h1>
+  <p>Want to get involved and start contributing to the Pan development?</p>
+  <p>Clone the Pan repository, compile the program from source, and submit a
+  patch by <a href="../bugs/">filing a bug</a> or sending your patch to the
+  <a href="../mailing_lists/">Pan mailing list</a>.</p>
+  <p>All contributions are welcome! You can also contribute by
+  <a href="https://l10n.gnome.org/module/pan2/">translating Pan into your
+  language</a> or by <a href="../manual/">updating Pan documentation</a>.</p>
+</div>
+
+<div class="section">
+  <h1>Git Repository</h1>
+  <p>Get the latest sources from the official Pan Git repository at
+  <a href="http://git.gnome.org/browse/pan2/">http://git.gnome.org/browse/pan2/</a>.</p>
+  <p>To clone the Git repository, run:</p>
+  <pre>git clone git://git.gnome.org/pan2</pre>
+  <p>To clone the older, archived version of Pan written in C, run:</p>
+  <pre>git clone git://git.gnome.org/archive/pan</pre>
+  <p>For details on using Git, see <a href="https://wiki.gnome.org/Git">https://wiki.gnome.org/Git</a>.</p>
+
+  <h2>GitHub Mirror</h2>
+  <p>If you prefer using GitHub, there is a <a href="https://github.com/GNOME/pan2">read-only mirror</a> of the Pan repository available:</p>
+  <pre>git clone https://github.com/GNOME/pan2.git</pre>
+</div>
+
+<div class="section">
+  <h1>Compiling from Source</h1>
+  <p>Compiling Pan requires the header files for <code>gtk2</code> (or <code>gtk3</code>) and <code>gmime</code>.
+  On most systems these are optional packages named <code>gtk2-devel</code> (or
+  <code>gtk3-devel</code>) and <code>gmime-devel</code>.</p>
+  <p>If you plan to use advanced features like SSL with <code>GnuTLS</code> or
+  <code>GNOME Keyring</code> (or <code>libsecret</code>) password support,
+  you will have to install their appropriate development packages or compile from source.
+  See <a href="https://git.gnome.org/browse/pan2/plain/README">README</a>
+  for more details on the required versions of these add-ins.</p>
+  <p>Remaining tools typically come built-in on systems configured for development:
+  <code>gcc</code>, <code>m4</code>, <code>automake</code>, <code>autoconf</code>, <code>pkg-config</code>,
+  and <code>gettext</code>.</p>
+  <p>If all goes well, running <code>./autogen.sh &amp;&amp; make</code> in your repository clone will
+  result in the executable <code>pan2/pan/gui/pan</code>.</p>
+  <p>If you are compiling Pan from within a downloaded source archive, run
+  <code>./configure &amp;&amp; make</code> instead.</p>
+  <p>You can install the executable and other Pan files by running <code>sudo
+  make install</code>.</p>
+</div>
+
+</div>
+	<div id="foot">
+		Original site design by <a href="http://www.oswd.org/">Davide Rognoni</a>.
+	</div>
+</div>
+</body>
+</html>
