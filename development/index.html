@@ -54,28 +54,35 @@
 
 <div class="section">
   <h1>Contributing to Pan Development</h1>
-  <p>Want to get involved and start contributing to the Pan development?</p>
-  <p>Clone the Pan repository, make your changes to the code, compile the
-  program, and submit a patch by <a href="../bugs/">filing a bug</a> or sending
-  your patch to the <a href="../mailing_lists/">Pan mailing list</a>.</p>
-  <p>All contributions are welcome! You can also contribute by
-  <a href="https://l10n.gnome.org/module/pan2/">translating Pan into your
-  language</a> or by <a href="../manual/">updating Pan documentation</a>.</p>
+  <p>Want to get involved and start contributing to the Pan development?
+  All contributions are welcome!</p>
+  <p>Get the latest sources from the official Pan Git repository at
+  <a href="https://gitlab.gnome.org/GNOME/pan/">https://gitlab.gnome.org/GNOME/pan/</a>.</p>
+  <ul>
+    <li>First, <a href="https://gitlab.gnome.org/users/sign_in">sign into</a>
+    <a href="https://gitlab.gnome.org/">gitlab.gnome.org</a>.</li>
+    <li><a href="https://gitlab.gnome.org/profile/keys">Add</a> your SSH key.</li>
+    <li><p><a href="https://gitlab.gnome.org/GNOME/pan/forks/new">Fork</a> the Pan repository.</p></li>
+    <li><p>Clone the forked repository:</p>
+    <pre>git clone git@gitlab.gnome.org:&lt;USERNAME&gt;/pan.git</pre></li>
+    <li>Make your changes to the code.</li>
+    <li>Compile the program to see if everything works as expected.</li>
+    <li><a href="https://gitlab.gnome.org/GNOME/pan/merge_requests/new">Submit
+    a new merge request</a> to have your changes reviewed by other Pan contributors.</li>
+  </ul>
+
+  <h2>GitHub Mirror</h2>
+  <p>If you prefer using GitHub, there is a <a href="https://github.com/GNOME/pan">read-only
+  mirror</a> of the Pan repository available:</p>
+  <pre>git clone https://github.com/GNOME/pan.git</pre>
+
 </div>
 
 <div class="section">
-  <h1>Git Repository</h1>
-  <p>Get the latest sources from the official Pan Git repository at
-  <a href="http://git.gnome.org/browse/pan2/">http://git.gnome.org/browse/pan2/</a>.</p>
-  <p>To clone the Git repository, run:</p>
-  <pre>git clone git://git.gnome.org/pan2</pre>
-  <p>To clone the older, archived version of Pan written in C, run:</p>
-  <pre>git clone git://git.gnome.org/archive/pan</pre>
-  <p>For details on using Git, see <a href="https://wiki.gnome.org/Git">https://wiki.gnome.org/Git</a>.</p>
-
-  <h2>GitHub Mirror</h2>
-  <p>If you prefer using GitHub, there is a <a href="https://github.com/GNOME/pan2">read-only mirror</a> of the Pan repository available:</p>
-  <pre>git clone https://github.com/GNOME/pan2.git</pre>
+  <h1>Translations and Documentation</h1>
+  <p>You can also contribute by
+  <a href="https://l10n.gnome.org/module/pan/">translating Pan into your
+  language</a> or by <a href="../manual/">updating Pan documentation</a>.</p>
 </div>
 
 <div class="section">
@@ -86,7 +93,7 @@
   <p>If you plan to use advanced features like SSL with <code>GnuTLS</code> or
   <code>GNOME Keyring</code> (or <code>libsecret</code>) password support,
   you will have to install their appropriate development packages or compile from source.
-  See <a href="https://git.gnome.org/browse/pan2/plain/README">README</a>
+  See <a href="https://gitlab.gnome.org/GNOME/pan/raw/master/README">README</a>
   for more details on the required versions of these add-ins.</p>
   <p>Remaining tools typically come built-in on systems configured for development:
   <code>gcc</code>, <code>m4</code>, <code>automake</code>, <code>autoconf</code>, <code>pkg-config</code>,
@@ -97,6 +104,12 @@
   <code>./configure &amp;&amp; make</code> instead.</p>
   <p>You can install the executable and other Pan files by running <code>sudo
   make install</code>.</p>
+</div>
+
+<div class="section">
+  <h1>Archived Version</h1>
+  <p>To clone the older, archived version of Pan written in C, run:</p>
+  <pre>git clone git://git.gnome.org/archive/pan</pre>
 </div>
 
 </div>
